@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programación en Java</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Ejercicio para trabajar con elementos como div, span, pre y enlaces" />
+    <meta name="author" content="Sonia Gutierrez" />
+    <link rel="stylesheet" type="text/css" href="../estilos/estilos.css">
+</head>
+
+<body>
+    <div id="divContenedor">
+        <!-- cabecera del documento -->
+        <div id="intro">
+            <img src="../imagenes/logoJava.jpg" alt="logotipo Java" />
+            <!-- Menú de navegación -->
+            <div id="menu">
+                <ul>
+                    <li><a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Instalar
+                            JDK</a></li>
+                    <li><a href="#historia">Historia de Java</a></li>
+                    <li><a href="#primerosPasos">Primeros pasos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- cuerpo principal del documento -->
+        <div id="historia">
+            <h1>Un poco de historia para comenzar...</h1>
+            <div id="presentacion1">
+                <p>Java es un lenguaje que aparece en 1995. Para hacernos una idea, tiene más o menos el mismo tiempo de
+                    vida que otros lenguajes populares como Python o PHP, pero sin embargo Java es totalmente
+                    revolucionario. Podemos decir que el motivo
+                    de ser tan conocido e innovador es que tiene una filosofía única: <span id="lema">"escribe una vez y
+                        ejecuta en cualquier lugar" ("write once, run everywhere").</span> En otras palabras, lo
+                    programas una vez y lo ejecutas en cualquier
+                    sistema. Esa filosofía es la que hizo a Java un mito, pero además Java tiene algunas características
+                    que lo hacen muy útil: es de los lenguajes más fuertes, con mayor cantidad de librerías para hacer
+                    cualquier tipo de cosa y con una
+                    de las mayores comunidades. Además, Java es un lenguaje de los mejor pagados en la actualidad.</p>
+            </div>
+
+            <div id="presentacion2">
+                <p>Java fue desarrollado por Sun Microsystems, pero es a James Arthur Gosling al que se le considera el
+                    padre del lenguaje. Actualmente Java es propiedad de Oracle, que compró a Sun y es la responsable de
+                    su comercialización y la continuidad
+                    del desarrollo del lenguaje. Recientemente, Java ha tenido un nuevo florecimiento gracias a que
+                    Google usó el lenguaje como base para el desarrollo del sistema operativo Android y como lenguaje
+                    nativo para el desarrollo de aplicaciones
+                    para sus smartphones. No obstante, Java es usado en infinidad de entornos y de aplicaciones
+                    tradicionalmente.</p>
+            </div>
+
+            <div id="finPresentacion">
+                <h2>Para saber mas...</h2>
+                <a href=https://desarrolloweb.com/articulos/iniciacion-java-caracteristicas-programacion-ideeclipse.html" title="
+                    ir a... ">Saber más</a>
+            </div>
+        </div>
+
+        <!-- pie de página -->
+        <div id="primerosPasos">
+                    <h1>Primeros pasos con Java</h1>
+                    <div id="holaMundo">
+                        <h3>Hola Mundo</h3>
+                        <p>La aplicación más pequeña posible es la que simplemente imprime un mensaje en la pantalla.
+                            Tradicionalmente, el mensaje suele ser "Hola Mundo! ". Esto es justamente lo que hace el
+                            siguiente fragmento de código:</p>
+                        <pre id="codigoJava">
+                    // Aplicación HolaMundo de ejemplo
+                    //
+                    class HolaMundoApp {
+                        public static void main( String args[] ) {
+                            System.out.println( "Hola Mundo! " );
+                            }
+                       }
+                </pre>
+                    </div>
+                    <div id="explicacionHolaMundo ">
+                        <p>
+                            Hay que ver en detalle la aplicación anterior, línea a línea. Esas líneas de código
+                            contienen los componentes mínimos para imprimir Hola Mundo! en la pantalla. Es un ejemplo
+                            muy simple, que no instancia objetos de ninguna otra clase; sin embargo, accede a otra clase
+                            incluida en el JDK.<br>
+                            <span class="resaltarCodigo"> // Aplicación HolaMundo de ejemplo
+                                //</span>
+                            Estas dos primeras líneas son comentarios. Hay tres tipos de comentarios en Java, // es un
+                            comentario orientado a línea.<br>
+                            <span class="resaltarCodigo">class HolaMundoApp { </span>
+                            Esta línea declara la clase HolaMundoApp. El nombre de la clase especificado en el fichero
+                            fuente se utiliza para crear un fichero nombredeclase.class en el directorio en el que se
+                            compila la aplicación. En este caso, el compilador creará un fichero llamado
+                            HolaMundoApp.class.<br>
+
+                            <span class="resaltarCodigo">public static void main( String args[] ) {</span>
+                            Esta línea especifica un método que el intérprete Java busca para ejecutar en primer lugar.
+                            Igual que en otros lenguajes, Java utiliza una palabra clave main para especificar la
+                            primera función a ejecutar. En este ejemplo tan simple no se pasan argumentos.
+                            public significa que el método main() puede ser llamado por cualquiera, incluyendo el
+                            intérprete Java.
+                            static es una palabra clave que le dice al compilador que main se refiere a la propia clase
+                            HolaMundoApp y no a ninguna instancia de la clase. De esta forma, si alguien intenta hacer
+                            otra instancia de la clase, el método main() no se instanciaría.
+                            void indica que main() no devuelve nada. Esto es importante ya que Java realiza una estricta
+                            comprobación de tipos, incluyendo los tipos que se ha declarado que devuelven los métodos.
+                            args[] es la declaración de un array de Strings. Estos son los argumentos escritos tras el
+                            nombre de la clase en la línea de comandos:
+                            %java HolaMundoApp arg1 arg2 ...<br>
+
+                            <span class="resaltarCodigo">System.out.println( "Hola Mundo! " );</span>
+                            Esta es la funcionalidad de la aplicación. Esta línea muestra el uso de un nombre de clase y
+                            método. Se usa el método println() de la clase out que está en el paquete System.
+                        </p>
+                    </div>
+                    <div id="imagenesFinales">
+                        <div id="imagen1"><img src="../imagenes/java1.jpg" alt="" /></div>
+                        <div id="imagen2"><img src="../imagenes/java2.jpg" alt="" /></div>
+                    </div>
+            </div>
+            <div id="final">
+                <a href="#intro">Subir</a>
+            </div>
+        </div>
+
+</body>
+
+</html>

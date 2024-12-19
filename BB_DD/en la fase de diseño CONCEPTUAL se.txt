@@ -1,0 +1,2 @@
+en la fase de diseño CONCEPTUAL se crea el modelo entidad relación. Su objetivo es representar la información obtenida del USUARIO mediante ESPECIFICACIÓN de REQUISITOS del software.
+En la fase de diseño LÓGICO se crea el modelo relacional, que es un modelo más TÉCNICO que el modelo entidad relación

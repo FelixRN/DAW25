@@ -1,0 +1,47 @@
+/**
+Comentario
+*/
+
+*{
+    font-size: 18px;
+}
+
+p {
+    color:  black;
+}
+
+form {
+    Text-align: center;
+    }
+
+
+    input{
+        width: 500px;
+        padding-top: 2%;
+        padding: 2%;
+        border: dotted 2px;
+        margin: 1%;
+    }
+
+p span{color: black;}
+
+#ex1{
+text-align: left;
+background-color: #ffcb33;
+}
+
+.ex2{
+text-align: right;
+background-color: #e4f4be;
+}
+
+button {
+    display: block; /* Asegura que el botón sea un elemento de bloque */
+    margin: 1% auto; /* Centra horizontalmente con espacio arriba y abajo */
+    
+}
+/**div{
+margin: 0 auto;
+margin-top: 1%;
+width: 3%;
+}

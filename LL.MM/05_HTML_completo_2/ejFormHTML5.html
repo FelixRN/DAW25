@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejemplo formularios HTML5</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form method="POST" target="_blank">
+        <input type="search" name="buscaDeporte" placeholder="jugador, disciplina,..."> <input type="submit"
+            value="Buscar"><br><br>
+        Cantidad: <input type="number" min="1" max="10" step="0.5"><br><br>
+        Volumen: <input type="range" min="0" max="1000" step="5"><br><br>
+        Hora: <input type="time"><br><br>
+        <datalist id="listaurl">
+            <option value="www.google.es">
+            <option value="www.calasanzsalamanca.es">
+            <option value="www.aytosalamanca.es">
+            <option value="www.usal.es">
+        </datalist><br><br>
+        Url: <input type="url" value="http://www.google.com" list="listaurl">
+        Email: <input type="email" placeholder="Ej.: usuario@calasanzsalamanca.es" required><br><br>
+        Fecha: <input type="date"><br><br>
+        Fecha y hora local: <input type="datetime-local"><br><br>
+        Selecciona un color: <input type="color"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>
+        <h1> Elementos de audio y video</h1>
+    </p>
+    <div>
+        <video src="mivideo.mp4" controls>Tu navegador no soporta la etiqueta video</video>
+        <video controls>
+            <source src="mivideo.mp4" type="video/mp4">
+            <source src="mivideo.ogg" type="video/ogg">
+            <source src="mivideo.webm" type="video/webm">
+        </video>
+        <audio src="miaudio.mp4" autoplay controls>Tu navegador no soporta la etiqueta audio</audio>
+        <audio controls>
+            <source src="miaudio.mp3" type="audio/mp3">
+            <source src="miaudio.ogg" type="audio/ogg">
+            <source src="miaudio.webm" type="audio/webm">
+        </audio>
+    </div>
+
+    <h1>Elemento canvas</h1>
+        <canvas id="canvas" height="200"></canvas>
+</body>

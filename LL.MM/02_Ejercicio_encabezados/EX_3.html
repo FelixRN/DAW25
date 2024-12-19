@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+            <meta charset="utf-8">
+            <link rel="icon" type="image/x-icon" href="imagenes/logo.ico.jpg" width="80px" height="80px" >
+            <meta name="author" content="Felix Rojas">
+            <meta name="description" content="html">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="refresh" content="60; URL=http://www.google.com/">
+            <link rel="stylesheet" href="style/estilos.css">
+            <img src="imagenes/LN_KeyArt.jpg" alt="Es una imgagen con texto HTML"/>
+            <title>Ejercicio 3</title>    
+        </head>
+
+    <body>   
+        <h1>encabezado 1</h1>
+        <h2>encabezado 2</h2>
+
+        <!-- Nos retoma la fecha (falta mejorar)-->
+        <p id="demo"></p>  
+        <script>
+        const d = new Date("2022-03-25");
+        document.getElementById("demo").innerHTML = d;
+        </script>
+
+<!-- Nos da la hora actual (falta explicación) -->
+        <input type="date" id="start" name="trip-start" value="2004-09-25" min="2018-01-01" max="2018-12-31" />        
+            <p id="display-time">
+                <script>
+                    function myFunc()  {
+                        var now = new Date();
+                        var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                        document.getElementById('display-time').innerHTML = time;
+                    }
+                    setInterval(myFunc, 1000);
+                </script>
+            </p>
+
+    </body>    
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio plus</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <h1>Introducir datos de cliente </h1>
+    <form>
+        <label for="UserName">Nombre:</label>
+        <input type="text" id="UserName" name="UserName" placeholder="Jhones">
+
+        <label for="UserLastName">Apellido</label>
+        <input type="text" id="UserLastName" name="UserName" placeholder="Jhones">
+        <br>
+
+        <label for="User">Usuario</label>
+        <input type="text" id="UserName" name="UserName" placeholder="xxx">
+        <br>
+
+        <label for="Passwoord">Contraseña</label>
+        <input type="password" required>
+        <br>
+
+        <label for="Socio">Socio</label>
+        <input type="checkbox" required>
+        <br>
+
+        <label for="Sexo">SEXO</label>
+        <input type="radio" name="radio">
+        <input type="radio" name="radio">
+        <p>Aficiones:</p>
+        <label>Deportes<input type="checkbox" name="Box" required></label><br>
+        <label>Cine<input type="checkbox" name="Box" required></label><br>
+        <label>Lectura<input type="checkbox" name="Box" required></label> <br>
+        <p>Subir foto:<input type="file" name="file"></p> 
+        
+            <button type="submit" name="Send">Enviar</button>
+            <button type="reset" name="Clear" value="Limpiar">Limpiar</button>
+            <button oneclick="window.close();" type="button">Cerrar</button>
+        
+    </form>
+</body>
+</html>

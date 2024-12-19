@@ -1,0 +1,38 @@
+#box1{
+    float: left;
+    width: 55%;
+    margin-right: 7%;
+    height: 70px;
+}
+
+#box2{
+    float: left;
+    padding: 1%;
+    max-height: 145px;
+    width: 45%;
+    margin-right: 2%;
+    }
+    
+#box3{
+    float: left;
+    padding: 1%;
+    height: 10%;
+    width: 45%;
+    margin-right: 2%;
+    }
+
+.tipo1{
+width: 200px;
+}
+
+.tipo2{
+    width: 20%;
+}
+
+.tipo3{
+    width: 70%;
+}
+
+div {
+    clear: both;
+}

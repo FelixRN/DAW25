@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <form>
+        <label>
+            <input type="radio" name="Radio" required> Señor
+        </label>
+        <label>
+            <input type="radio" name="Radio" required> Señora
+        </label>
+        <br>
+
+        <label for="UserName">Nombre:</label>
+        <input type="text" id="UserName" name="UserName" placeholder="David Jhones">
+        <br>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" placeholder="abc@gmail.com">
+        <br>
+
+        <label for="ageRange">Rango de edad:</label>
+        <select id="ageRange" name="ageRange">
+            <option>Entre 18 y 29</option>
+            <option>Entre 30 y 45</option>
+            <option>Más de 45</option>
+        </select>
+        <br>
+
+        <div class="botones-container">
+            <input class="boton" type="submit" name="Send" value="Enviar">
+            <input class="boton" type="reset" name="Clear" value="Limpiar">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../estilos/estilos.css" />
+    <title>Mapa de imágenes</title>
+  </head>
+
+  <body>
+    <div>
+      <img src="../imagenes/turismoEspana.jpg"  alt="Logotipo de turismo en España"/>
+    </div>
+    <div>
+      <img src="../imagenes/mapa.gif" usemap="#mapa1" alt="mapa de españa" />
+    </div>
+
+    <map name="mapa1">
+      <area
+        href="https://www.turismocastillayleon.com/"
+        alt="Página de turismo de Castilla y León"
+        shape="poly"
+        coords="234,126,232,118,247,101,243,90,230,91,232,77,242,64,259,63,265,58,280,58,289,62,296,56,306,58,323,52,
+            333,45,335,55,343,59,352,55,369,75,383,71,382,63,376,62,393,49,410,48,422,61,415,70,427,82,418,85,415,112,427,
+            122,444,123,455,115,464,119,466,130,476,126,478,142,470,150,470,159,464,160,463,173,466,178,446,183,437,171,
+            426,165,412,168,396,176,380,188,362,210,344,237,337,230,328,241,311,242,310,231,301,238,289,228,283,231,269,
+            218,240,232,244,210,242,195,238,185,245,178,255,170,272,150,264,141,256,147,255,126,244,124,235"
+      />
+      <area
+        href="https://www.holaislascanarias.com/"
+        alt="Página de turismo de lasIslas Canarias"
+        shape="rect"
+        coords="0,448,244,542"
+      />
+      <area
+        href="https://turismodemurcia.es/es"
+        alt="Página de turismo de la comunidad de Murcia"
+        shape="circle"
+        coords="497,376,50"
+      />
+    </map>
+  </body>
+</html>

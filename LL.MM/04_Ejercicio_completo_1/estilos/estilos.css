@@ -1,0 +1,54 @@
+#lema {
+    color: blueviolet;
+    background-color: cornflowerblue;
+    ;
+}
+
+#historia {
+    border: 1px solid #000000;
+    overflow: hidden;
+}
+
+#presentacion1 {
+    float: left;
+    width: 49%;
+    border-right: 1px black solid;
+}
+
+#presentacion2 {
+    float: right;
+    width: 49%;
+    border-left: 1px black solid;
+}
+
+#finPresentacion,
+#final {
+    clear: both;
+    border-top: 3px black solid;
+}
+
+h2 {
+    color: aquamarine;
+    background-color: darkblue;
+}
+
+#codigoJava {
+    border: 4px darkgoldenrod dashed;
+    text-align: center;
+}
+
+.resaltarCodigo {
+    color: crimson;
+    font-weight: bold;
+}
+
+#imagen1 {
+    float: left;
+    width: 49%;
+}
+
+#imagen2 {
+    text-align: right;
+    float: right;
+    width: 49%;
+}

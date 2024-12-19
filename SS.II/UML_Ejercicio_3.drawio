@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Página-1" id="JACaH02ljvrs-Zl2PUO5">
+    <mxGraphModel dx="989" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="juviar_X7tFT0H4g_44c-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="285" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-12" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-3" target="juviar_X7tFT0H4g_44c-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-3" value="Consultar datos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="274" y="330" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-4" value="Comprobar alta" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="130" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="299.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-5" value="Dar de baja" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="274" y="215" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="269.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-6" value="Dar de alta" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="130" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="349.9999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-7" value="Modificar datos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="410" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-8" value="Localizar detalles" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-15" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-6" target="juviar_X7tFT0H4g_44c-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="370" as="sourcePoint" />
+            <mxPoint x="400" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-16" value="Eliminar definitivamente" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="215" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-17" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-3" target="juviar_X7tFT0H4g_44c-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="175" as="sourcePoint" />
+            <mxPoint x="550" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-18" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-7" target="juviar_X7tFT0H4g_44c-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="185" as="sourcePoint" />
+            <mxPoint x="560" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="juviar_X7tFT0H4g_44c-19" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="juviar_X7tFT0H4g_44c-16" target="juviar_X7tFT0H4g_44c-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="175" as="sourcePoint" />
+            <mxPoint x="550" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

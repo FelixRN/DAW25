@@ -1,0 +1,45 @@
+h1,h2{
+    text-align: center;
+}
+
+.con{
+    text-align: right;
+}
+.festivos{
+    
+    width: 50%;
+    background-color: red;
+    border: 2px solid green;
+    float: left;
+    height: 200%;
+}
+
+.conmemoracion{
+    width: 45%;
+    background-color: red;
+    border: 2px solid green;
+    float: right;
+    height: 200%;
+}
+
+img{
+    margin: 5px solid green;
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+
+.texto{
+    border: 2px solid #228B22;
+    background-color: yellow;
+    clear: both;
+}
+
+.resaltar1, .resaltar2, .resaltar3{
+    color: green;
+}
+
+.nuevapag{
+    color: yellow;
+}

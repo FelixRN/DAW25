@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <table>
+        <caption>Lista de las personas más ricas</caption>
+
+        <tr>
+        <th>Posición</th>
+        <th>Nombre</th>
+        <th>Millones de euros</th>
+        <th>Compañia</th>
+        </tr>
+
+        <tr>
+            <td >1º</td>
+            <td >J.Bezos</td>
+            <td class = "money" id="money1">131.000</td>
+            <td>Amazon</td>
+        </tr>
+
+        <tr>
+            <td>2º</td>
+            <td>B. Gates</td>
+            <td class = "money" id="money2">96.500</td>
+            <td>Microsoft</td>
+        </tr>
+
+        <tr>
+            <td >3º</td>
+            <td >W. Buffet</td>
+            <td class = "money" id="money3">82.500</td>
+            <td>Berkshire Hathaway</td>
+        </tr>
+
+        <tr>
+            <td>4º</td>
+            <td>B. Arnault</td>
+            <td class = "money" id="money4">76.000</td>
+            <td>LVMH</td>
+        </tr>
+
+        <tr>
+            <td>5º</td>
+            <td>C. Slim</td>
+            <td class = "money" id="money5">64.000</td>
+            <td rowspan="2">Telmex</td>
+        </tr>
+
+        <tr>
+            <td>6º</td>
+            <td>A. Ortega</td>
+            <td class = "money" id="money6">62.000</td>
+        </tr>
+
+        <tr>
+            <td>7º</td>
+            <td>L. Ellison</td>
+            <td class = "money" id="money7">62.500</td>
+            <td>Oracle</td>
+        </tr>
+
+        <tr>
+            <td>8º</td>
+            <td>M. Zuckerberg</td>
+            <td class = "money" id="money8">62.300</td>
+            <td>Facebook</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Total</td>
+            <td id= total colspan="2">637.500</td>
+        </tr>
+    </table>
+
+    <script>
+        // Función para calcular el total de la columna "Millones de euros"
+        function calculateTotal() {
+            const moneyCells = document.querySelectorAll('.money');
+            let total = 0;
+
+            moneyCells.forEach(cell => {
+                total += parseFloat(cell.textContent);
+            });
+
+            document.getElementById('total').textContent = total.toLocaleString("es-ES");
+        }
+    </script>
+
+</body>
+</html>

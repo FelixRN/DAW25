@@ -1,0 +1,28 @@
+#contenedorGeneral {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#menu {
+    height: 50px;
+    background-color: #B2D6FF;
+}
+
+#barraLateral {
+    float: left;
+    width: 20%;
+    height: 150px;
+    background-color: #F09A9D;
+}
+
+#infoPrincipal {
+    float: left;
+    width: 65%;
+    height: 300px;
+    background-color: #F5CF8E;
+}
+
+#piePagina {
+    height: 120px;
+    background-color: #D6E9FE;
+}

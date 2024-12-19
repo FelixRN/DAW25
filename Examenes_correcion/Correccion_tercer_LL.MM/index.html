@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilos/estilos.css" />
+    <title>Hermanos de Sangre</title>
+  </head>
+  <body>
+    <div id="cabecera">
+      <h1>HERMANOS DE SANGRE</h1>
+      <img src="./img/cabecera.jpg" alt="Reparto orginal de la serie" />
+    </div>
+    <div id="divCentral">
+      <h2>Datos por capítulos</h2>
+      <table>
+        <tr>
+          <th colspan="3" class="actorPresente">Datos capítulos</th>
+          <th colspan="9" class="actorPresente">
+            Actores principales por capítulo
+          </th>
+        </tr>
+        <tr>
+          <th>Capítulo</th>
+          <th>Rating</th>
+          <th>Duración</th>
+          <th>Nicholas Aaron</th>
+          <th>Kirk Acevedo</th>
+          <th>Doug Allen</th>
+          <th>Eion Bailey</th>
+          <th>Philip Barantini</th>
+          <th>David Blair</th>
+          <th>Ben Caplan</th>
+          <th>William Armstrong</th>
+          <th>Jamie Barber</th>
+        </tr>
+        <tr>
+          <td>Currahee</td>
+          <td>8,6</td>
+          <td>70</td>
+          <td rowspan="5" class="actorPresente">x</td>
+          <td rowspan="2" class="actorPresente">x</td>
+          <td class="actorPresente">x</td>
+          <td class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Day of Days</td>
+          <td>9,1</td>
+          <td>49</td>
+          <td></td>
+          <td></td>
+          <td rowspan="2" class="actorPresente">x</td>
+          <td class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Carentan</td>
+          <td>9</td>
+          <td>62</td>
+          <td></td>
+          <td rowspan="5" class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Replacements</td>
+          <td>8,8</td>
+          <td>57</td>
+          <td rowspan="4" class="actorPresente">x</td>
+          <td rowspan="2" class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Crossroads</td>
+          <td>8,8</td>
+          <td>53</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Bastogne</td>
+          <td>9,2</td>
+          <td>64</td>
+          <td></td>
+          <td></td>
+          <td class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td class="actorPresente">x</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>The breaking Point</td>
+          <td>9,4</td>
+          <td>69</td>
+          <td class="actorPresente">x</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="actorPresente">x</td>
+        </tr>
+      </table>
+    </div>
+    <div id="enlacesSerie">
+      <h2>Mas información</h2>
+      <iframe
+        class="elementosFrame"
+        src="https://es.wikidat.com/info/band-of-brothers"
+      ></iframe>
+      <iframe
+        class="elementosFrame"
+        src="https://www.youtube.com/embed/1OMNQozX0RU"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="formulario">
+      <h3>Valora la serie</h3>
+      <form action="https://www.imdb.com/list/ls560868347/" method="get">
+        <label for="nombre" class="etiquetasInput"> Nombre </label>
+        <input type="text" name="nombre" id="nombre" /> <br>
+        <label for="edad"  class="etiquetasInput"> Edad </label>
+        <select name="edad" id="edad">
+            <option value="0"> Menos de 16</option>
+            <option value="1" selected> Entre 16 y 29</option>
+            <option value="2"> 30 o mas</option>
+        </select>  <br>
+
+        <div id="valoracion">
+            <label for="rating"> Valora la serie de 1 a 5 </label> <br>
+            <input type="radio" name="rating" id="uno" value="1"> <label for="uno">1</label>
+            <input type="radio" name="rating" id="dos" value="2"> <label for="dos">2</label>
+            <input type="radio" name="rating" id="tres" value="3"> <label for="tres">3</label>
+            <input type="radio" name="rating" id="cuatro" value="4"> <label for="cuatro">4</label>
+            <input type="radio" name="rating" id="cinco" value="5"> <label for="cinco">5</label>
+            <textarea name="opinion" id="opinion" cols="30" rows="10" maxlength="150" placeholder="Escribe, en máximo 150 caracteres, tu opinión sobre la serie"></textarea> <br>
+            <input type="submit" value="Enviar" />
+          <input type="reset" value="Cancelar" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

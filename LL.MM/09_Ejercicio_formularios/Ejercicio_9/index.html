@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="ISO 8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Felix Rojas">
+    <meta name="description" content="html">
+    <meta name="keywords" content="fff">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Dog D. Dog</title>
+</head>
+<body>
+    <h1>Dog D. Dog</h1>
+    <h2>About</h2>
+    <p>Woof woof!</p>
+    <p>Hi, i´m Dog. I love <span>User Interface Design.</span></p>
+    <h2>Courses</h2>
+
+    <!--Ingresar tabla-->
+    <table>
+        <caption>Here are some courses I´v taken:</caption>
+<tr>
+    <th>Course Number</th>
+    <th>Course Title</th>
+    <th>Semester Taken</th>
+</tr>
+
+<tr><td class="c" colspan="3">For Credit</td></tr>
+
+<tr class="bg">
+    <td class="a">6.813</td>
+    <td>User Interface Design</td>
+    <td class="b" >Spring 2014</td>
+</tr>
+
+<tr>
+    <td class="a">6.034</td>
+    <td>Artificial Intelligence</td>
+    <td>Fall 2013</td>
+</tr>
+
+<tr class="bg">
+    <td class="a">6.006</td>
+    <td>Introduction to Algorithms</td>
+    <td>Fall 2013</td>
+</tr>
+
+<tr><td class="c" colspan="3">Listener</td></tr>
+
+<tr class="bg">
+    <td class="b">6.867</td>
+    <td>Machine Learning</td>
+    <td>Fall 2013</td>
+</tr>
+<tr>
+    <td class="b">6.830</td>
+    <td>Database Systems</td>
+    <td>Fall 2012</td>
+</tr>
+
+    </table>
+
+    <h2>Interests</h2>
+    <p>I am interested <span>HCI</span>, memesn adn youtube videos.</p>
+    <h2>Submit Pet Information</h2>
+    <p>Would love to know what kinds of pets you `own`(you´ll never own me). Submit below!</p>
+    <form>
+        <label for="text" >Name:</label>
+        <input type="text" name="text" required> <br>
+
+        <label for="text" >Phylum</label>
+        <input type="text" name="text" required> <br>
+
+        <label for="text" >Gender</label>
+        <input type="text" name="text" required> <br>
+
+        <input type="submit" name="submit" required> <br>
+
+    </form>
+
+    <fieldset>
+<h2>Job Details:</h2>
+
+<form>
+    <label class="left" for="text" >Job Title:</label>
+    <input class="right" type="text" name="text" required> <br>
+
+    <label class="left" for="description" >Description:</label>
+    <select class="des" name="select" size="2">
+        <option value="" selected> </option>
+        <option value="" ></option>
+        
+    </select>
+    <p>Brief Description should have atmost 500 chatacters</p>
+
+    <label class="left" for="text" >Company Name:</label>
+    <input class="right" type="text" name="text" required> <br>
+
+    <label class="left" for="number" >Contact number:</label>
+    <input class="right" type="number" name="number" required> <br>
+
+    <label class="left" for="Email" >Email:</label>
+    <input class="right" type="email" name="Email" required> <br>
+
+    <label class="left" for="checkbox" >Work Status</label>
+        <input class="right" type="checkbox" name="check" required> Full Time
+        <input class="right" type="checkbox" name="check" required> Part Time
+        <input class="right" type="checkbox" name="check" required> Per Dim
+        <input class="right" type="checkbox" name="check" required> Others<br>
+
+    <label class="left" for="Salary" >Salary</label>
+    <input class="right" type="text" name="text">
+
+    <select id="select1" size="1">
+        <optgroup label="US Dollar">
+            <option value="opcion1">US Dollar</option>
+        </optgroup>
+    </select>
+
+    <select id="select2" size="1">
+        <optgroup label="Yearly">
+            <option value="opcion1">Yearly</option>
+        </optgroup>
+    </select> <br>
+
+    <label class="left" for="number" >Experience(Years)</label>
+    <input class="right" type="number" name="number" required> <br>
+
+    <label class="left" for="text" >Locations</label>
+    <input class="right" type="text" name="text"> <br>
+
+    <label class="left" for="Qualifications" >Qualifications:</label>
+    <select name="select" size="4">
+        <option value="Any" >Any</option>
+        <option value="High School" >High School</option>
+        <option value="Associate" >Associate</option>
+        <option value="Pre Bachelors" >Pre Bachelors</option>
+    </select>
+    <input type="submit" name="Send" value="ADD>>">
+    <input type="reset" name="Send" value="<<Remove">
+    <select class="des2" name="select" size="4">
+        <option value="Any" >Any</option>
+    </select><br>
+    
+    
+    <input type="submit" name="Send" value="Submit">
+    <input  type="reset" name="Send" value="Reset">
+    
+</form>
+
+    </fieldset>
+
+
+</body>
+</html>

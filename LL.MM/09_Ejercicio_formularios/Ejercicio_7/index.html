@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Formulario de pedido</legend>
+    
+    <h1>Paso 1. Identificación</h1>
+<form>
+    <fieldset id ="box1">
+        <legend>Datos del cliente</legend>
+        <labe for="email">Correo electrónico</labe>
+        <input type="email" name="email" required><br>
+        
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" name="password" required> <br>
+        (Longitud mínima 6 caracteres)
+    </fieldset>
+
+    <fieldset>
+        <legend>Tipo de cliente</legend><br>
+        <input type="radio" name="check" required> 
+        <label for="radio">Particular</label> <br>
+        
+        <input type="radio" name="check" required> 
+        <label for="radio">Asociación</label><br>
+        
+        <input type="radio" name="check" required> 
+        <label for="radio">Empresa</label><br>
+        
+    </fieldset>
+
+    <h1>Paso 2.Pedido</h1>
+    <fieldset id="box2">
+        <legend>Datos del producto </legend>
+        <select id="select" size="8">
+            <optgroup label="Libros">
+                <option value="opcion1">Recetas</option>
+                <option value="opcion2">Historia</option>
+                <option value="opcion3">Técnicos</option>
+            </optgroup>
+
+                <optgroup label="Calendarios">
+                <option value="opcion1">Escolares</option>
+                <option value="opcion2">Anuales</option>
+            </optgroup>
+                <optgroup label="Material Escolar">
+                <option value="opcion1">Pinturas</option>
+                <option value="opcion2">Rotuladores</option>
+                <option value="opcion3">Cuadernos</option>
+                <option value="opcion4">Gomas</option>
+            </optgroup>
+            </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>Información de interés</legend>
+        <label for="textarea">Comentarios</label><br>
+        <textarea rows="5" cols="30"></textarea><br>
+        <input type="checkbox" name="Aceptar" required>
+        <label>Acepto recibir información publicitaria</label>
+    </fieldset>
+
+
+    <h3>Paso 3. Pago</h3>
+    <form>
+    <fieldset id="box3">
+        <legend>Datos del envio </legend>
+        <label for="direccion">Dirección</label>
+        <input class="tipo1" type="text" name="direccion" required> <br>
+        <label for="ciudad">Ciudad</label>
+        <input class="tipo2" type="text" name="ciudad" required>
+        <label for="cp">Código postal</label>
+        <input class="tipo2" type="number" name="cp" required>
+    </fieldset>    
+    
+
+    <fieldset>
+        <legend>Datos Bancarios</legend>
+        <label for="nombreE">Nombre de la entidad</label>
+        <input type="text" name="nombreE" required> <br>
+        <label for="numCuenta">Nº de cuenta</label>
+        <input class="tipo3" type="number" name="numCuenta" required> <b>
+    </fieldset>    
+    
+    <div>
+    <input  type="submit" name="boton" value="COMPRAR">
+    <input  type="reset" name="boton" value="LIMPIAR FORMULARIO">
+    <div>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    
+}
+
+#p1{
+    text-align: center;
+}
+
+#id1{
+    background-color: rgb(118, 180, 159);
+}
+
+#id2{
+    width: 45%;
+    float: left;
+    background-color: rgb(154, 228, 154);
+    border: 2px solid black;
+}
+
+#span1{
+    color: brown;
+}
+
+#span2{
+    color: blueviolet;
+    font-style: italic ;
+}
+
+#id3{
+    width: 45%;
+    border: 2px solid black;
+    background-color: hwb(84 45% 4%);
+    float: right;
+    
+}
+
+#id4{
+    width: 45%;
+    border: 2px solid black;
+    background-color: hwb(84 45% 4%);
+    float: right;
+}
+
+#img1 {
+    width: 20%;
+    float: left;
+    clear: both;
+}
+
+#img2 {
+    width: 200px;
+    float: right;
+    
+}

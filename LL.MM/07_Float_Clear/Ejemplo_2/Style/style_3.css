@@ -1,0 +1,27 @@
+#p1{
+    background-color: aqua;
+    height: 50px;
+    margin: 0%;
+}
+
+#p2{
+    background-color: brown;
+    float: left;
+    width: 20%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#p3{
+    background-color: blanchedalmond;
+    float:left;
+    width: 65%;
+    height: 300px;
+    margin: 0%
+}
+
+#p4{
+    background-color: blue;
+    height: 120px;
+    
+}

@@ -1,0 +1,35 @@
+/* Estilo del formulario */
+form {
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 2px dotted red;
+    font-family: Arial, sans-serif;
+}
+
+/* Alinear etiquetas e inputs */
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 166px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de los botones */
+.botones-container {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.boton {
+    margin-right: 10px;
+    padding: 5px 10px;
+}

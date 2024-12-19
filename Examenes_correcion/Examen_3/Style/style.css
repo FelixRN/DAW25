@@ -1,0 +1,33 @@
+table{
+    margin-left: 18%;
+    border-collapse: collapse;
+    border: 1px solid #808080
+}
+
+th,tr,td{
+    text-align: center;
+    border: 1px solid #808080;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+h1,h2{
+    text-align: center;
+    background-color: #dcdcdc;
+    color:#dcdcdc;
+}
+video{
+    float: right;
+}
+
+.bg{
+    background-color: #dcdcdc;
+}
+
+form{
+    border-radius: 5%;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #dcdcdc;
+}

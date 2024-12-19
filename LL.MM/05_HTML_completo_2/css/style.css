@@ -1,0 +1,22 @@
+header,section,footer{
+    border: 2px solid red;
+    margin: 3px;
+}
+article,nav, aside {
+    border: 2px solid forestgreen;
+    margin: 3px;
+}
+#article1 {
+    float: left;
+    width: 48%;
+}
+#article2 {
+    float: right;
+    width: 48%;
+}
+#finBLoques {
+    clear: both;
+}
+.resalta {
+    background-color: darkcyan;
+}

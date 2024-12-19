@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmuebles a vender</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <form>
+    <select id="select">
+        <optgroup label="Inmueble">
+            <option value="opcion1">Casa individual</option>
+            <option value="opcion2">Piso</option>
+            <option value="opcion3">Adosado</option>
+        </optgroup>
+    </select><br>
+<p>
+        <label>Calle: <input type="text" name="text" pattern="(C/|Vía|via)[A-z|\s]+" required></label> <br>
+        <label>Numero: <input type="number" name="number" required></label> <br>
+        <label>Piso y puerta: <input type="text" name="pyp" pattern="\d+º[A-z]"></label> <br>
+        <label>Correo: <input type="email" name="email" pattern="[A-z|\d]+@[A-z]+(.es)" required></label> <br>
+        <label>Telefono: <input type="tel" name="Telefono" pattern="(\d{3} ){2}\d{3}"></label> <br>
+        <label for="textarea">Comentarios</label><br>
+        <textarea rows="5" cols="30" maxlength="500" placeholder="Max 500 caracteres"></textarea><br>
+        <label>Dirección <input type="url" name="url"></label>
+
+        <div>
+            <input  type="submit" name="boton" value="Enviar">
+            <input  type="reset" name="boton" value="Limpiar">
+        <div>
+
+        <input type="date">
+        </form>
+
+
+</body>
+</html>

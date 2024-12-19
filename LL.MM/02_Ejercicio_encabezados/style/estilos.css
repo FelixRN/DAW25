@@ -1,0 +1,13 @@
+h1 {
+    color: blue;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(205, 228, 27);
+    background-color: rgb(146, 125, 228);
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,12 @@
+form{
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    outline-color: red;
+    outline-style: dotted;
+}
+.boton-container{
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}

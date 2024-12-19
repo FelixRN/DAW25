@@ -1,0 +1,12 @@
+h1 {
+    width: 25%;
+    background-color: bisque;
+    font-size: px;
+    float: left;
+}
+
+#p1 {
+    width:55%;
+    float: right;
+    background-color: aquamarine;
+}

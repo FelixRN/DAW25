@@ -1,0 +1,42 @@
+h1{
+    text-align: left;
+    font-weight:bold ;
+}
+
+p{
+    font-weight: bold;
+    margin: 0%;
+}
+
+#form1{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    border: 2px solid yellow;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#form2{
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px dotted blue;
+    padding: 10px;
+    
+}
+label{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+button {
+    display: block; /* Asegura que el botón sea un elemento de bloque */
+    margin: 1% auto; /* Centra horizontalmente con espacio arriba y abajo */
+    
+}
+/**div{
+margin: 0 auto;
+margin-top: 1%;
+width: 3%;
+}

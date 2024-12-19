@@ -1,0 +1,27 @@
+
+form {
+    text-align: left;
+    width: 300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+input{
+    width: 166px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input:invalid{
+    border: 2px solid red;
+}
+
+label, select {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+div{
+    text-align: center;
+}
