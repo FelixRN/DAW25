@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/examen-lenguajes.css">
+    <title>examen-lenguajes</title>
+</head>
+<body>
+    <h1>Frutas de temporada</h1>
+    <div id="table">
+        <table>
+            <tr>
+                <th rowspan="2">frutas</th>
+                <th colspan="3">otoño</th>
+                <th colspan="3">invierno</th>
+                <th colspan="3"> primavera</th>
+                <th colspan="3">verano</th>
+            </tr>
+            <tr>
+                <td><span>Enero</span></td>
+                <td>febrerio</td>
+                <td>marzo</td>
+                <td>abril</td>
+                <td>mayo</td>
+                <td>junio</td>
+                <td>julio</td>
+                <td>agosto</td>
+                <td>septiembre</td>
+                <td>octubre</td>
+                <td>noviembre</td>
+                <td>diciembre</td>
+            </tr>
+            <tr>
+                <th>Manzanas</th>
+                <td class="x">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="5">x</td>
+                
+            </tr>
+            <tr>
+                <th>Peras</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="5">x</td>
+                <td></td>
+               
+            </tr>
+            <tr>
+                <th>Naranjas</th>
+                <td class="x" colspan="4">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="2">x</td>
+            </tr>
+            <tr>
+                <th>cerezas</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="3">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th>Kakis</th>
+                <td></td>
+                <td class="x" colspan="4">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>fresas</th>
+                <td></td>
+                <td class="x" colspan="4">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <th>sandia</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="3">x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Granadina</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="x" colspan="3">x</td>
+                <td></td>
+            </tr>
+        </table>
+    <p>Si quereis información de alguna fruta, que no este la tabla anterior, rellena formulario</p>
+    
+    <div id="tabla1">
+        <fieldset id="formulario1">
+            <legend>datos de contacto</legend>
+    
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required title="Ingrese un nombre valido">
+            <br>
+
+            <label for="nombre">n.telefono</label>
+            <input type="number" id="number" name="numbre" maxlength="12"  minlength=9 >
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required title="Ingrese un email válido">
+            <br>
+
+            <!-- Categoría -->
+            <label for="categoria">preferencia de contacto</label>
+            <select name="categoria" id="categoria" required>
+                <option value="" disabled selected>llamada de telefono</option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+            </select>
+            <br>
+        </fieldset>
+    
+        <fieldset id="formulario2">
+            <legend>datos de consulta</legend>
+            
+            <label for="nombre">Nombre de la fruta:</label>
+            <input type="text" id="nombre" name="nombre" >
+            <br>
+        
+            <label for="estilo">variedad</label>
+            <input type="text" id="variedad" name="estilo" required maxlength="30" title="El estilo no puede estar vacío y debe tener máximo 30 caracteres">
+            <br>
+        
+            <!-- Botón -->
+            <button id="boton" onclick="location.href='https://'">enviar</button>
+            <button  type="" id="limpiar">limpiar</button>
+        </fieldset>
+    </div>
+    <div id="pagina">
+        <a href="https://soydetemporada.es/"></a>
+    </div>
+</body>
+</html>

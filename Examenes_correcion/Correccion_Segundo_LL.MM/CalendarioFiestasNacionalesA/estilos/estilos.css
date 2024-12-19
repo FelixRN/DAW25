@@ -1,0 +1,88 @@
+/* Estilos Compartidos */
+body {
+  background-color: #f4f4f4;
+}
+
+h1 {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/*Estilos para el documento index.html*/
+#divPrincipalIndex {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  overflow: hidden;
+  border: 3px solid #d32f2f;
+}
+
+.textoResaltado {
+  color: #228b22;
+}
+
+#divTexto {
+  background-color: #f0e68c;
+  float: left;
+  width: 60%;
+  height: 210px;
+  text-align: justify;
+}
+
+#divEnlace,
+#divInfoDias {
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#divEnlace {
+  float: right;
+  width: 30%;
+  height: 210px;
+}
+
+a {
+  color: #ffeb3b;
+}
+
+#divInfoDias {
+  clear: both;
+}
+
+h2 {
+  text-align: center;
+  color: #ffeb3b;
+}
+
+.estiloBorde {
+  border: 3px solid #228b22;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #fff;
+}
+
+dl {
+  width: 80%;
+  margin: auto;
+}
+
+#imagenFinal {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#imagenFinal img {
+  border: 3px solid #228b22;
+  padding: 10px;
+}
+
+/*Estilos para el documento calendarioFestivos.html*/
+#contenedorPrincipal {
+  width: 80%;
+  background-color: #f0e68c;
+  margin: auto;
+  text-align: center;
+}
