@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Página-1" id="bcZHISsMfBiBi0OTYlfV">
+    <mxGraphModel dx="819" dy="478" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-1" value="Clase" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="257" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-2" value="Propiedades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="7" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-3" value="Metodos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="457" y="270" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-4" value="Objeto" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="257" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-5" value="Constructor" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="457" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-6" value="Instanciar" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="457" y="120" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-14" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-1" target="jnCE3c8awurnjqUj1PzJ-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="437" y="230" as="sourcePoint" />
+            <mxPoint x="357" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-17" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-2" target="jnCE3c8awurnjqUj1PzJ-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="177" y="270" as="sourcePoint" />
+            <mxPoint x="327" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-18" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-3" target="jnCE3c8awurnjqUj1PzJ-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="397" y="280" as="sourcePoint" />
+            <mxPoint x="417" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-19" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-3" target="jnCE3c8awurnjqUj1PzJ-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="341" y="340" as="sourcePoint" />
+            <mxPoint x="401" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-20" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-3" target="jnCE3c8awurnjqUj1PzJ-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="407" y="380" as="sourcePoint" />
+            <mxPoint x="407" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-21" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Al crear un objeto, nos permite trabajar con el de la manera más adecuda, podemos usar métodos o no.&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="327" y="320" width="111" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-22" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-weight: normal; font-size: 11px;&quot;&gt;Un objeto tendrá que tener sus propiedades para poder trabajar con el.&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="127" y="310" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-23" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-6" target="jnCE3c8awurnjqUj1PzJ-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="497" y="160" as="sourcePoint" />
+            <mxPoint x="497" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-25" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-weight: normal; font-size: 11px;&quot;&gt;Al crear un método se tendra que crear un constructor para así poder acceder a la muchas funcionalidades que nos da.&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="587" y="350" width="233" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-28" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-weight: normal; font-size: 11px;&quot;&gt;Para poder llamar al método, debemos instanciarlo para que de esa manera usarlo.&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="397" y="20" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jnCE3c8awurnjqUj1PzJ-31" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=default;align=center;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=none;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.048;entryY=0.693;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jnCE3c8awurnjqUj1PzJ-4" target="jnCE3c8awurnjqUj1PzJ-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="377" y="180" as="sourcePoint" />
+            <mxPoint x="377" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
