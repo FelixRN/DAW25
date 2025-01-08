@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name new</title>
+    <link rel="stylesheet" type="text/css" href="Style/style.css">
+</head>
+<body>
+    <img src="img/recortada.png"  alt="logotipo periódico" />
+    <h1>Periódico nacional Deuts</h1> <p></p>
+    <input type="date" id="display-hour" name="trip-start" value="2004-09-25" min="2018-01-01" max="2018-12-31" />        
+    <p id="display-time">
+        <script>
+            function myFunc()  {
+                var now = new Date();
+                var time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+                document.getElementById('display-time').innerHTML = time;
+            }
+            setInterval(myFunc, 1000);
+        </script>
+    </p>
+
+    <div id="Secciones">
+        <ul>
+            <li><a href="https://www.Seccion1">Seccion 1</a></li>
+            <li><a href="https://www.Seccion2">Seccion 2</a></li>
+            <li><a href="https://www.Seccion3">Seccion 3</a></li>
+            <li><a href="https://www.Seccion4">Seccion 4</a></li>
+        </ul>
+    </div>
+
+
+    <div id="Publicidad">
+        <img src="img/publicidad.jpg"  alt="publicidad" />
+    </div>
+</body>
+</html>
