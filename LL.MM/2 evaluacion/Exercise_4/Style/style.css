@@ -10,14 +10,21 @@ img {
     float: right;
 }
 
-#Secciones{
-    border:1px solid black;
-    width: 250px;
+#Cabecera{
+    background:rgb(240, 240, 240) ;
 }
 
-#Publicidad{
+#Secciones{
+    border:1px solid rgb(211, 207, 207);
+    width: 18%;
+    height: 50em;
+}
+
+#publicidad{
     float: right;
-    margin-right:10% ;
+    border:1px solid rgb(211, 207, 207);
+    width: 18%;
+    height: 50em;
     
 }
 h1 {
