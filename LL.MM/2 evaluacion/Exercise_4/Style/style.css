@@ -1,33 +1,30 @@
-img {
-    margin-left:25%;
-}
-#display-hour{
-    float:right;
-    margin: 12px;
-}
-
-#display-time{
-    float: right;
-}
-
-#Cabecera{
-    background:rgb(240, 240, 240) ;
-}
-
-#Secciones{
-    border:1px solid rgb(211, 207, 207);
-    width: 18%;
-    height: 50em;
-}
-
-#publicidad{
-    float: right;
-    border:1px solid rgb(211, 207, 207);
-    width: 18%;
-    height: 50em;
-    
-}
 h1 {
     text-align: center;
     font-size: 80px;
+}
+#contenedorGeneral {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#barraLateral {
+    float: left;
+    width: 20%;
+    height: 80em;
+    background-color: #F09A9D;
+    overflow: scroll;
+}
+
+#contenidoPrin, #contenidoPrin02, #contenidoPrin03 {
+    float: left;
+    width: 65%;
+    height: auto;
+    background-color: #F5CF8E;
+    margin: 10px;
+}
+
+#piePagina {
+    height: 80em;
+    background-color: #D6E9FE;
+    overflow: scroll;
 }
