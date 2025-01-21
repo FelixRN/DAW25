@@ -23,8 +23,6 @@ body {
     font-size: 48px;
     font-weight: bold;
 }
-
-/* Sidebars */
 .sidebar-left, .sidebar-right {
     position: fixed;
     top: 200px;
@@ -47,18 +45,10 @@ body {
     padding: 20px;
 }
 
-.main-story {
-    margin-bottom: 30px;
-}
-
 .secondary-stories {
     display: flex;
     gap: 20px;
     margin-bottom: 30px;
-}
-
-.secondary-story {
-    flex: 1;
 }
 
 .bottom-section {
@@ -78,16 +68,12 @@ body {
 }
 
 /* Navigation */
-.nav-menu {
+.menu {
     list-style: none;
     padding: 0;
 }
 
-.nav-menu li {
-    margin-bottom: 10px;
-}
-
-.nav-menu a {
+.menu a {
     text-decoration: none;
     color: #000;
 }
@@ -99,15 +85,3 @@ body {
     text-align: center;
 }
 
-/* Story styles */
-.story {
-    margin-bottom: 20px;
-}
-
-.story h2 {
-    margin-top: 0;
-}
-
-.story p {
-    line-height: 1.6;
-}

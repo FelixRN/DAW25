@@ -1,6 +1,6 @@
 # Torres de Hanoi
 Realiza un juego "Hanoi" en donde tendras que pasar todos los discos a la comunna destino y dejarlos como estaban, de mayor a menor
-- Debes de tener un mínimo de 2 palos y máximo 3 
+- Debes de tener un mínimo de 2 palos y máximo 3
 - Los discos los introducira el usuario por teclado
 - Los discos estaran en el primer palo(Origen)
 - Segundo palo(Auxiliar)
@@ -16,7 +16,7 @@ Realiza un juego "Hanoi" en donde tendras que pasar todos los discos a la comunn
 - Creamos la clase Main donde llamaremos a la clase Scanner e introduciremos las propiedades donde se guardarn los datos:
 ```java
     Scanner scanner = new Scanner(System.in);
-    int numeroTorres = 0;   
+    int numeroTorres = 0;
     int numeroDiscos = 0;
 ```
 - Solicitamos el número de palos al usuario para el programa con su comprobación:
@@ -58,7 +58,7 @@ do {
 - Creamos una clase para definir el funcionamiento del juego(Recursividad):
 
 Creamos una función llamada **resolver** con las siguientes propiedades:
-- 
+-
 - int numeroDisc
 - String origen
 - String auxiliar
@@ -72,7 +72,7 @@ public class Hanoi {
 ## **Funcion recursiva**
 
 ### Creamos una funcion **recursiva** para resolver el juego
-- Movemos los discos desde una posición inicial llamada "origen" hasta el "destino" utilizando una torre intermetdia "auxiliar 
+- Movemos los discos desde una posición inicial llamada "origen" hasta el "destino" utilizando una torre intermetdia "auxiliar
 - Se imprime por pantalla cada movimiento que se ha hecho para solucionar el problema
 
 ```java

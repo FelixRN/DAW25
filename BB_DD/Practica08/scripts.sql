@@ -21,7 +21,7 @@ alter table reservas drop id_habitacion;
 alter table habitaciones drop id_habitacion;
 
 -- 7 "Cambiar(re-nombrar) campo de una columna"
-alter table reservas rename column fecha to fecha_reserva;
+alter table reservas change column fecha fecha_reserva date;
 
 -- 8 Agregar/establecer clave primaria
 alter table habitaciones add primary key(id_hotel,numero,planta);

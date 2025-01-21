@@ -19,11 +19,10 @@ public class Hanoi {
         private boolean juegoCompletado() {
         // El juego está completo si el número de discos en la torre de destino (torres[2]) es igual al total de discos
         return tope[0] == -1 && tope[1] == -1 && tope[2] == torres[2].length - 1;
-        }          
+        }
 
 
 
-    // Método principal para resolver las Torres de Hanoi
     // Método principal para resolver las Torres de Hanoi
 public void resolver(int numeroDisc, int origen, int auxiliar, int destino) {
     if (numeroDisc == 1) {
@@ -77,6 +76,4 @@ public void resolver(int numeroDisc, int origen, int auxiliar, int destino) {
         }
         System.out.println();
     }
-
-    
 }
