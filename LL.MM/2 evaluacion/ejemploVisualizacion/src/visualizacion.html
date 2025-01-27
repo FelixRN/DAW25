@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS Visualización</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <h1>Opciones de visualización de cajas</h1>
+    <!-- *******************************************************-->
+    <div id="divGeneral">
+        <h2>Elemento de línea que se comporta como elemento de bloque</h2>
+        <!--Comprobar que pasa si quitamos la propiedad display en la regla css a:link-->
+        <nav>
+            <a href="#"> ASIR</a>
+            <a href="#"> DAM</a>
+            <a href="#"> DAW</a>
+        </nav>
+    </div>
+    <!-- *******************************************************-->
+    <div id="divGeneral2">
+        <h2>Elemento oculto con display:none</h2>
+        <div>
+            <img src="../img/img1.jpg">
+            <img src="../img/img2.jpg">
+            <img src="../img/img3.jpg">
+        </div>
+        <div id="secundario">
+            <img src="../img/img1.jpg">
+            <img id="dosnone" src="../img/img2.jpg">
+            <img src="../img/img3.jpg">
+        </div>
+    </div>
+    <!-- *******************************************************-->
+    <div id="divGeneral2">
+        <h2>Elemento oculto con visibility:hidden</h2>
+        <div>
+            <img src="../img/img1.jpg">
+            <img src="../img/img2.jpg">
+            <img src="../img/img3.jpg">
+        </div>
+        <div id="secundario">
+            <img src="../img/img1.jpg">
+            <img id="doshidden" src="../img/img2.jpg">
+            <img src="../img/img3.jpg">
+        </div>
+    </div>
+    <!-- *******************************************************-->
+    <div id="divGeneral">
+        <h2>Desbordamientos: overflow</h2>
+        <div id="divOverflow">
+            <p id="ovHidden">Margaret o Meg, la mayor de las cuatro chicas, tenía dieciséis años; era muy bonita,
+                regordeta y rubia; tenía los ojos grandes, abundante pelo castaño claro, boca delicada y
+                unas manos blancas, de las cuales se vanagloriaba un poco. Jo, que tenía quince años, era
+                muy alta, esbelta y morena, y le recordaba a uno un potro; nunca parecía saber qué hacer
+                con sus largas extremidades, que se le atravesaban en el camino. Tenía la boca decidida, la
+                nariz respingada, ojos grises muy penetrantes, que parecían verlo todo, y se ponían
+                alternativamente feroces, burlones o pensativos. Su única belleza era su cabello, hermoso
+                y largo, pero generalmente lo llevaba descuidadamente recogido en una redecilla para
+                que no le estorbara; los hombros cargados, las manos y los pies grandes y un aire de
+                abandono en su vestido y la tosquedad de una chica que se hacía rápidamente mujer a
+                pesar suyo. Elizabeth o Beth tenía unos trece años; su cara era rosada, el pelo liso y los
+                ojos claros; había cierta timidez en el ademán y en la voz; pero una expresión llena de paz,
+                que rara vez se turbaba. Su padre la llamaba "Pequeña Tranquilidad", y el nombre era muy
+                adecuado, porque parecía vivir en un mundo feliz, su propio reino, del cual no salía sino
+                para encontrar a los pocos a quienes amaba y respetaba. Aunque fuese la más joven, Amy
+                era una persona importantísima, al menos en su propia opinión. Una verdadera virgen de
+                la nieve; los ojos azules, el pelo color de oro, formando bucles sobre las espaldas, pálida y
+                grácil, siempre se comportaba como una señorita cuidadosa de sus maneras.</p>
+            <p id="ovScroll">Margaret o Meg, la mayor de las cuatro chicas, tenía dieciséis años; era muy bonita,
+                regordeta y rubia; tenía los ojos grandes, abundante pelo castaño claro, boca delicada y
+                unas manos blancas, de las cuales se vanagloriaba un poco. Jo, que tenía quince años, era
+                muy alta, esbelta y morena, y le recordaba a uno un potro; nunca parecía saber qué hacer
+                con sus largas extremidades, que se le atravesaban en el camino. Tenía la boca decidida, la
+                nariz respingada, ojos grises muy penetrantes, que parecían verlo todo, y se ponían
+                alternativamente feroces, burlones o pensativos. Su única belleza era su cabello, hermoso
+                y largo, pero generalmente lo llevaba descuidadamente recogido en una redecilla para
+                que no le estorbara; los hombros cargados, las manos y los pies grandes y un aire de
+                abandono en su vestido y la tosquedad de una chica que se hacía rápidamente mujer a
+                pesar suyo. Elizabeth o Beth tenía unos trece años; su cara era rosada, el pelo liso y los
+                ojos claros; había cierta timidez en el ademán y en la voz; pero una expresión llena de paz,
+                que rara vez se turbaba. Su padre la llamaba "Pequeña Tranquilidad", y el nombre era muy
+                adecuado, porque parecía vivir en un mundo feliz, su propio reino, del cual no salía sino
+                para encontrar a los pocos a quienes amaba y respetaba. Aunque fuese la más joven, Amy
+                era una persona importantísima, al menos en su propia opinión. Una verdadera virgen de
+                la nieve; los ojos azules, el pelo color de oro, formando bucles sobre las espaldas, pálida y
+                grácil, siempre se comportaba como una señorita cuidadosa de sus maneras.</p>
+            <p id="ovAuto">Margaret o Meg, la mayor de las cuatro chicas, tenía dieciséis años; era muy bonita,
+                regordeta y rubia; tenía los ojos grandes, abundante pelo castaño claro, boca delicada y
+                unas manos blancas, de las cuales se vanagloriaba un poco. Jo, que tenía quince años, era
+                muy alta, esbelta y morena, y le recordaba a uno un potro; nunca parecía saber qué hacer
+                con sus largas extremidades, que se le atravesaban en el camino. Tenía la boca decidida, la
+                nariz respingada, ojos grises muy penetrantes, que parecían verlo todo, y se ponían
+                alternativamente feroces, burlones o pensativos. Su única belleza era su cabello, hermoso
+                y largo, pero generalmente lo llevaba descuidadamente recogido en una redecilla para
+                que no le estorbara; los hombros cargados, las manos y los pies grandes y un aire de
+                abandono en su vestido y la tosquedad de una chica que se hacía rápidamente mujer a
+                pesar suyo. Elizabeth o Beth tenía unos trece años; su cara era rosada, el pelo liso y los
+                ojos claros; había cierta timidez en el ademán y en la voz; pero una expresión llena de paz,
+                que rara vez se turbaba. Su padre la llamaba "Pequeña Tranquilidad", y el nombre era muy
+                adecuado, porque parecía vivir en un mundo feliz, su propio reino, del cual no salía sino
+                para encontrar a los pocos a quienes amaba y respetaba. Aunque fuese la más joven, Amy
+                era una persona importantísima, al menos en su propia opinión. Una verdadera virgen de
+                la nieve; los ojos azules, el pelo color de oro, formando bucles sobre las espaldas, pálida y
+                grácil, siempre se comportaba como una señorita cuidadosa de sus maneras.</p>
+        </div>
+    </div>
+    <!-- *******************************************************-->
+    <div id="divGeneral">
+        <h2>Posición respecto del eje z</h2>
+        <div id="divZindex">
+            <div id="uno"></div>
+            <div id="dos"></div>
+            <div id="tres"></div>
+        </div>
+    </div>
+</body>
+
+</html>
