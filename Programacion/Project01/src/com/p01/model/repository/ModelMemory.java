@@ -13,7 +13,7 @@ public class ModelMemory implements IModel {
 	
 	public ModelMemory() {
 		idCounter = 1;
-		bookList = new ArrayList<Book>();
+		bookList = new ArrayList<Book>(); 
 	}
 
 	@Override
