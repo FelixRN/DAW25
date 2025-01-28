@@ -41,6 +41,8 @@ body {
 
 /* Main content */
 .main-content {
+    justify-content: center;
+    align-items: center;
     margin: 0 220px;
     padding: 20px;
 }

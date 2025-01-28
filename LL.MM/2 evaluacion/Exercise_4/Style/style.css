@@ -1,30 +1,47 @@
 h1 {
-    text-align: center;
     font-size: 80px;
+    margin: 10px 0;
 }
+.header{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
 #contenedorGeneral {
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
 }
 
-#barraLateral {
-    float: left;
-    width: 20%;
-    height: 80em;
-    background-color: #F09A9D;
-    overflow: scroll;
+.sidebar-right, .sidebar-left {
+    position: fixed;
+    top: 405px;
+    width: 200px;
+    padding: 20px;
+    background: #f5f5f5;
 }
+
+.sidebar-left {
+    left: 20px;
+    height: 25%;
+    overflow: auto;
+}
+
+.sidebar-right {
+    right: 20px;
+}
+
+#Cuerpo{
+    margin: 0 px 300px;
+    padding: 20px;
+}
+
 
 #contenidoPrin, #contenidoPrin02, #contenidoPrin03 {
-    float: left;
-    width: 65%;
-    height: auto;
+    width: 70%;
     background-color: #F5CF8E;
-    margin: 10px;
+    margin-left: 15%;
+    margin-right:15% 
 }
 
-#piePagina {
-    height: 80em;
-    background-color: #D6E9FE;
-    overflow: scroll;
-}
+
+

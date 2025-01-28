@@ -1,0 +1,45 @@
+body{}
+
+.parent{
+    display: flex;
+    flex-flow: row wrap; /*<-- Eje principal*/
+    border: 4px solid;
+    width: 250px;
+    box-sizing: border-box;
+    height: 500px;
+    justify-content: center;/*Distribuición del espacio en el eje principal*/
+    align-items: center; /*Centrando a nivel del eje cruzado */
+    align-content: center; /*A nivel del contenido*/
+    /*justify-content:space-around deja el mismo espació al rededor*/
+    /*justify-content:space-bettween espacio entre los elementos*/
+    /*justify-content:space-evenly espacio entre los elementos*/
+
+gap:16px; /*Solo afecta entre los elementos*/
+}
+
+.item{
+    border: 1px solid;
+    box-sizing: border-box;
+    opacity: .9;
+    height: 50px;
+    width: 50px;
+
+}
+
+.item:first-child{
+    background-color: yellow;
+    height: 25px;
+}
+
+.item:nth-child(2),
+.item:nth-child(5)
+{
+    background-color: blue;
+    height: 30px;
+    align-self: flex-end;
+}
+
+.item:last-child{
+    background-color: red;
+    height: 40px;
+}

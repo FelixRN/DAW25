@@ -1,0 +1,10 @@
+button {
+    display: block; /* Asegura que el botón sea un elemento de bloque */
+    margin: 1% auto; /* Centra horizontalmente con espacio arriba y abajo */
+    
+}
+/**div{
+margin: 0 auto;
+margin-top: 1%;
+width: 3%;
+}

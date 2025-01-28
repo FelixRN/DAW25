@@ -1,0 +1,26 @@
+.parent{
+    border: 5px solid black;
+    width: 250px;
+    height: 500px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.container{
+    background: #09f;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*position:fixed se quedara en el viewport fijo en la posición asignada
+    top:0;
+    right:0;*/
+
+    /*position:sticky se quedara pegado a la posición relativa*/
+    /*inset:0 indica que por todos los lados sea 0 y margin:auto para centrarlo*/
+}
+
+body{
+    background: rgb(154, 185, 207);
+margin: auto;}

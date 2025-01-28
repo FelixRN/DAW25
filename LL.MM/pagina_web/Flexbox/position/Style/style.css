@@ -1,0 +1,14 @@
+.container{
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box; /* Coge las medidas que le hemos asignado*/
+    font-size:48px; /* Usando overflow:visible - overflow:hidden - overflow:scroll(mejor opción auto)*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body{
+    background: #09f;
+margin: auto;}

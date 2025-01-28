@@ -1,0 +1,64 @@
+/*Centrar dentro del contenedor*/
+.container{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin: auto;
+    position: relative;
+}
+
+.child-elemnt{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius:25px ;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    margin: auto; /**Le decimos que los margenes en el eje y seran de 0 (top y bot)*/
+}
+
+
+/**Centrar con display:flex
+.container{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: center; /*Alinear los elementos en el eje x en flex
+    align-items: center; /*Alinear los elementos en el eje y
+}
+
+.child-elemnt{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius:25px ;
+}*/
+
+/**Centrar con display:grid
+
+.container{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 25px;
+    margin: auto;
+    display: grid;
+}
+
+.child-elemnt{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius:25px ;
+    justify-self: center;
+    align-self: center; /* O place-self:center; para tener el mismo resultado
+}*/
