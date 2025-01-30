@@ -1,10 +1,8 @@
 -- Lista el nombre de todos los productos que hay en la tabla producto.
-
 select nombre from producto;
 
 -- Lista los nombres y los precios de todos los productos de la tabla producto.
 select nombre AND precio from producto;
-
 
 -- Lista todas las columnas de la tabla producto.
 select * from producto;
@@ -52,7 +50,7 @@ select nombre from fabricante where nombre like 'S%';
 -- Lista los nombres de los fabricantes cuyo nombre termine por la vocal e.
 select nombre from fabricante where nombre like '%e'; 
 
--- Lista los nombres de los fabricantes cuo nombre sea de 4 caracteres
+-- Lista los nombres de los fabricantes cuyo nombre sea de 4 caracteres
 select * from fabricante where nombre like "____";
 
 -- Devuelve una lista con el nombre de todos los productos que contienen la caena Portátil en el nombre.
