@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="registroForm" onsubmit="return validarFormulario()">
+        <div class="group">
+            <label for="nombre" class="required">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="group">
+            <label for="apellidos" class="required">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+
+        <div class="group">
+            <label for="dni" class="required">DNI</label>
+            <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Z]" required>
+            <div class="suggestion">Formato: 8 dígitos y una letra mayúscula (ej. 12345678A)</div>
+        </div>
+
+        <div class="group">
+            <label for="direccion" class="required">Dirección</label>
+            <input type="text" id="direccion" name="direccion" pattern="C/[A-Za-z\s]+ Nº\d+ P[A-Z]" required>
+            <div class="suggestion">Formato: C/NombreCalle Nº1 PA</div>
+        </div>
+
+        <div class="group">
+            <label for="ciudad" class="required">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        </div>
+
+        <div class="group">
+            <label for="cp" class="required">Código Postal</label>
+            <input type="text" id="cp" name="cp" pattern="[0-9]{5}" required list="suggestion-cp">
+            <datalist id="suggestion-cp">
+                <option value="28001">
+                <option value="28002">
+                <option value="28003">
+                <option value="28004">
+                <option value="28005">
+            </datalist>
+        </div>
+
+        <div class="group">
+            <label for="pais" class="required">País</label>
+            <input type="text" id="pais" name="pais" required>
+        </div>
+
+        <div class="group">
+            <label for="birthday">Fecha de Nacimiento (Opcional)</label>
+            <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <div class="group">
+            <label for="email">Email (Opcional)</label>
+            <input type="email" id="email" name="email" placeholder="correo@correo.es">
+        </div>
+
+        <div class="group">
+            <label for="password" class="required">Contraseña</label>
+            <input type="password" pattern="[A-Za-z]{1,7}[A-Za-z]{5}[0-9]{2}[0-9]{2}" required>
+            <div class="suggestion">Máximo 7 letras, 5 letras o 2 números, y 2 números</div>
+        </div>
+
+        <div class="group">
+            <label for="sexo" class="required">Sexo</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+                <option value="O">Otro</option>
+            </select>
+        </div>
+
+        <div class="group">
+            <label for="aficiones" class="required">Aficiones</label>
+            <input type="text" id="aficiones" name="aficiones" required list="suggestions-hobbies">
+            <datalist id="suggestions-hobbies">
+                <option value="Correr">
+                <option value="Leer">
+                <option value="Dibujar">
+                <option value="Esquiar">
+            </datalist>
+        </div>
+
+        <div class="group">
+            <label for="foto">Foto de Perfil (Opcional)</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+            <button type="button" onclick="cancelar()">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>
+
+

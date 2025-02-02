@@ -1,0 +1,75 @@
+body{}
+
+/*.container-top{
+    display: flex;
+    flex-flow: row nowrap;
+    border: 4px solid;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    justify-content: space-between;/*Distribuición del espacio en el eje principal
+    align-content: center; */
+    /*justify-content:space-around deja el mismo espació al rededor*/
+    /*justify-content:space-bettween espacio entre los elementos*/
+    /*justify-content:space-evenly espacio entre los elementos
+    position: relative;
+}*/
+
+.container-top {
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    position: relative; /* Importante para el posicionamiento absoluto del logo */
+    align-items: center;
+}
+
+.navigation{
+    border: 1px solid;
+    box-sizing: border-box;
+    opacity: .9;
+    height: 50px;
+    width: 40%;
+    z-index: 2;
+    
+}
+
+.navigation ul{
+    list-style:none;
+    
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.navigation a{
+    padding: 10px;
+}
+
+.navigation p{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 10px 20px ;
+    font-size: 20px;
+}
+
+.logo {
+    filter: invert(100%);
+    position: absolute; /* Posicionamiento absoluto */
+    left: 50%; /* Centro horizontal */
+    top: 50%; /* Centro vertical */
+    transform: translate(-50%, -50%); /* Centrado perfecto */
+    z-index: 1; /* Menor z-index para estar detrás */
+    width: 20%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 38%;
+}
