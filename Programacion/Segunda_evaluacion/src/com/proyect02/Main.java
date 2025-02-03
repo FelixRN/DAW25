@@ -1,9 +1,10 @@
 package com.proyect02;
 
-import com.proyect02.utils.TerminalUtils;
+import com.proyect02.controller.MainController;
 
 public class Main {
 	public static void main(String[] args) {
-		TerminalUtils.output("Hola mundo!");
+		MainController mainController = new MainController();
+		mainController.run();
 	}
 }
