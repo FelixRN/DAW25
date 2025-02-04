@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 100px 200px 300px;
+    grid-template-rows: 400px 200px;
+}
+
+.grid-item{
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+}

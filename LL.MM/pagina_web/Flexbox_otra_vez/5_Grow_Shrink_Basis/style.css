@@ -1,0 +1,42 @@
+body{
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    
+    margin: 20px;
+    /*height: 100px;*/
+    align-items: center;
+    border:2px solid black ;
+    gap: 10px;
+
+}
+
+
+.flex-item:nth-child(2n){
+    background-color: #f77;
+    /*flex-shrink: 3;*/
+    /*flex-grow: 2;*/
+}
+
+.flex-item{
+    background-color: #800;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    flex:1 1 100px;
+
+/*flex-grow: 1;*/
+
+/*   width: 200px;
+    flex-shrink: 1;*/
+    
+}
+
+.flex-item:last-child{
+    background-color:black;
+    /*flex-grow: 4;*/
+}
