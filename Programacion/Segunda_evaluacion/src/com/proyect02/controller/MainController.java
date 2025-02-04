@@ -15,6 +15,7 @@ public class MainController {
 	}
 	
 	public void run() {
-		mainView.hello();
+		int option = mainView.mainMenu();
+		
 	}
 }

@@ -62,6 +62,7 @@ margin: 0 -10%;
 .header_logo {
     width: 100vw;
     /*background-color: blue;*/
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -133,22 +134,22 @@ main {
     display: flex;/**********/
     flex-direction: row;
     justify-content: space-around;
-    
+    background-color: aqua;
 }
 
 .container_photo {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-    /*background-color: rgb(60, 0, 255);*/
-
+    background-color: rgb(60, 0, 255);
+    width: 80vw /******/;
     max-height: 80vh;
     overflow-y: auto;
 }
 
 .photos {
     height: 70vh;
-    width:15vw;/*****/
+    width: 20vw;
     box-sizing: border-box;
     margin: 0;
 	border-radius: 10px;
