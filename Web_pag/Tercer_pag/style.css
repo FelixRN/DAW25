@@ -1,6 +1,34 @@
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+h3{
+    
+    color: #ffffff;
+    border-bottom-right-radius: 25px;
+}
 
-h3, p{
-    color: #fff;
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejorar la visibilidad */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 * {
@@ -86,6 +114,11 @@ body{
     width: 70px;
     height: auto;
     order: 2;
+    transition: all 0.1s ease;
+}
+
+.Child img:hover {
+    animation: logoSpin 1s ease-in-out;
 }
 
 .header_item p{
@@ -156,14 +189,15 @@ img{
     background: #4a4a4a;
     }
 
-.contenedor {
-    height: 100vh;
+.article {
+    height: 90vh;
 	max-width: 1200px;
 	margin: auto;
-	padding: 40px 0;
+	padding: 100px 0;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	gap: 20px;
+    position: relative;
 }
 
 .titulo {
@@ -171,13 +205,13 @@ img{
 	padding: 20px 0;
 }
 
-.contenedor-conciertos {
+.article-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
 
-.card {
+.news {
 	border-radius: 10px;
 	min-height: 200px;
 	font-weight: bold;
@@ -186,9 +220,12 @@ img{
 	overflow: hidden;
 	background-size: cover;
 	background-position: center center;
+
+    transition:all 0.3s ease;
 }
 
-.card .textos {
+
+.news .text {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -206,6 +243,7 @@ img{
 	justify-content: space-between;
 
 }
+
 
 .banner ul {
 	list-style: none;
@@ -230,8 +268,6 @@ img{
 	cursor: pointer;
 }
 
-
-
 .footer {
     background-color: #181818;
     color: white;
@@ -246,21 +282,20 @@ img{
     
 }
 
-.footer-section {
-    flex: 1;
-    padding: 0 20px;
+/* Efectos para el texto */
+.text h3 {
+    transition: all 0.3s ease;
 }
 
-.footer-section h3 {
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 18px;
+.floating .text h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.footer-section p {
-    line-height: 1.6;
-    color: #ccc;
+.floating .text p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .nav-menu {
     list-style: none;
