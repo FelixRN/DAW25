@@ -1,0 +1,70 @@
+package com.project02.utils;
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+// Clase que contiene la configuración del programa.
+// Usa el patrón singleton
+public class Config {
+	private String modelType;
+		
+	public Config() {
+		super();
+	}
+
+	public String getModelType() {
+		return modelType;
+	}
+
+	public void setModelType(String modelType) {
+		this.modelType = modelType;
+	}
+
+	// Singleton pattern
+	private static String configPath="C:\\Users\\USUARIO\\Desktop\\book.config";
+	private static Config config;
+	
+	public static Config instance() {
+		if(config == null) {
+			config = Config.loadConfig();
+		}
+		return config;
+	}
+	
+	private static Map<String, String> fileToMap(String configPath) throws FileNotFoundException {
+		Map<String, String> configs = new HashMap<String, String>();
+
+		Scanner scanner = new Scanner(new File(configPath));
+        
+        while(scanner.hasNextLine()){
+            String line = scanner.nextLine();
+            String[] args = line.split("=");
+            configs.put(args[0], args[1]);
+        }
+        
+		scanner.close();
+		
+		return configs;
+	}
+	
+	private static Config loadConfig() {
+		Config config = new Config();
+		
+		try {
+			Map<String, String> map = fileToMap(configPath);
+			
+			// esto para los que sabemos que son obligatorios, si no existen se laza excepcion de no existir
+			config.setModelType(map.get("model_type"));
+		} catch (Exception e) {
+			// Configuraciones por defecto
+			config.setModelType("memory");
+		}
+		
+		return config;
+	}
+}
+

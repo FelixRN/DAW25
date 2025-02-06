@@ -71,6 +71,7 @@ INSERT INTO Empleados VALUES (28,'John','Walton','','3322','jwalton@gardening.co
 INSERT INTO Empleados VALUES (29,'Kevin','Fallmer','','3210','kfalmer@gardening.com','SYD-AU',3,'Director Oficina');
 INSERT INTO Empleados VALUES (30,'Julian','Bellinelli','','3211','jbellinelli@gardening.com','SYD-AU',29,'Representante Ventas');
 INSERT INTO Empleados VALUES (31,'Mariko','Kishi','','3211','mkishi@gardening.com','SYD-AU',29,'Representante Ventas');
+
 CREATE TABLE GamasProductos (
   Gama varchar(50) NOT NULL,
   DescripcionTexto text,

@@ -1,0 +1,51 @@
+package com.project02.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.project02.entites.Car;
+import com.project02.model.IModel;
+import com.project02.view.IMainView;
+import com.project02.view.MainTerminalView;
+
+public class MainController {
+	private IMainView mainView;
+	private IModel model;
+	
+	
+	public MainController() {
+		
+		this.model = new ModelIMemory();//Crear clase en modelo repositorio
+		this.mainView = new MainTerminalView();
+	}
+	
+	public void run() {
+		int option = mainView.mainMenu();
+		
+		switch(option) {
+			case 0: // Salir
+				mainView.exit();
+				break;
+				
+			case 1: // Listar coches
+				List<Car> list = new ArrayList<>();
+				list.add(new Car ("44455","marca"));
+				mainView.list(list);
+				break;
+				
+			case 2: // Añadir coche
+				mainView.add();
+				break;
+				
+			case 3: // Editar coche
+				mainView.edit();
+				break;
+				
+			case 4: // Eliminar coche
+				mainView.delete();
+				break;
+				
+			default:
+		}
+	}
+}

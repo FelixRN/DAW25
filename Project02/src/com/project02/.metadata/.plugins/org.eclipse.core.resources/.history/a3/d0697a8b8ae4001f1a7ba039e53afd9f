@@ -1,0 +1,8 @@
+package com.project02.model.repository;
+
+public class ModelMemory {
+private List<Car> carList;
+
+public ModelMemory();
+	carList = new ArrayList<Car>();
+}

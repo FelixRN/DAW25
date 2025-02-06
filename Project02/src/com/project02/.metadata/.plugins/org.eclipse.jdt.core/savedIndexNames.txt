@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+C:\Users\alumnofp.DESKTOP-SV1H8HS\Desktop\Project02\src\com\project02\.metadata\.plugins\org.eclipse.jdt.core
+2735952820.index
+876400180.index
+1288848795.index
+94333073.index
+2062954911.index
+1865797976.index
+2905972622.index

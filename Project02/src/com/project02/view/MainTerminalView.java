@@ -1,0 +1,61 @@
+package com.project02.view;
+
+import com.project02.utils.TerminalUtils;
+
+public class MainTerminalView
+	implements IMainView {
+
+	@Override
+	public int mainMenu() {
+		int option;
+		
+		TerminalUtils.output("Menú de concesionario");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("1.- Listar coche");
+		TerminalUtils.output("2.- Añadir coche");
+		TerminalUtils.output("3.- Editar coche");
+		TerminalUtils.output("4.- Eliminar coche");
+		TerminalUtils.output("0.- Salir");
+		
+		try {
+			option = TerminalUtils.inputInt();
+		} catch (Exception e) {
+			option = -1;
+		}
+		
+		return option;
+	}
+
+	public void exit() {
+		TerminalUtils.output("Bye");
+	}
+
+	
+	@Override
+	public void list(List<Car> list) {
+		TerminalUtils.output("List of cars");
+		TerminalUtils.output("Plate - Model");
+		for (Car car : list) {
+			TerminalUtils.output(car.toString());
+		}
+		
+	}
+
+	@Override
+	public void add() {
+		
+		
+	}
+
+	@Override
+	public void edit() {
+		
+		
+	}
+
+	@Override
+	public void delete() {
+		
+	}
+}

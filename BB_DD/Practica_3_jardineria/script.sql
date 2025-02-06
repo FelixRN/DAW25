@@ -5,23 +5,29 @@ select Ciudad, Telefono from Oficinas where Pais LIKE "EEUU";
 
 -- El nombre, los apellidos y el email de los empleados a cargo de Alberto Soria.
 select * from Empleados;
-
+select Nombre, Apellido1, Email from Empleados where (CodigoJefe = 3);
 -- Mal ejecutado --> select Nombre, Apellido1, Apellido2, Email from Empleados where CodigoJefe like "3";
 
 select Nombre, Apellido1, Apellido2, Email from Empleados where CodigoJefe = (select CodigoEmpleado from Empleados where Nombre like "Alberto" AND Apellido1 like "Soria");
 
 -- El cargo, nombre, apellidos y email del jefe de la empresa.
+select Puesto, Nombre, Apellido1, Apellido2, Email from Empleados where CodigoJefe is null;
 
-select Puesto, Nombre, Apellido1, Apellido2, Email from empleados where CodigoJefe is null;
 -- El nombre, apellidos y cargo de aquellos que no sean representantes de ventas.
 select * from empleados;
 select Nombre, Apellido1, Apellido2, Puesto from empleados where Puesto not like "Repesentate ventas";
+
 -- El nombre de los clientes españoles.
 select NombreCliente from clientes where (Pais like "Spain%") or (Pais like "España%");
 
 -- El código de empleado y el número de clientes al que atiende cada representante de ventas.
 select CodigoEmpleadoRepVentras, count(*) as num_clientes from clientes group by CodigoEmpleaddoRevVentas;
+
 -- Cuál fue el primer y último pago que hizo algún cliente.
+select * from Pagos;
+
+select 
+
 
 -- El código de cliente de aquellos clientes que hicieron pagos en 2008.
 
