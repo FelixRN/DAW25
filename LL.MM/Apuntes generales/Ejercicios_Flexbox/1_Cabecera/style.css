@@ -1,0 +1,17 @@
+.padre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hijo{
+    width: 19%;
+    height: 25px;
+    padding: 8px;
+    background-color: rgb(86, 187, 201);
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+

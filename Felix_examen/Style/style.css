@@ -27,6 +27,7 @@ body{
 }
 
 .header_2{
+    background-color: #008b8b;
     height: 50px;
     width: 100vw;
     display: flex;
