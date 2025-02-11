@@ -1,24 +1,23 @@
 Consultoria:
-	-SPC Innovation (P.º de Canalejas, 47, BAJO LOCAL 2, 37001 Salamanca)
-	-AlfaIOT - Desarrollo de Soluciones IoT (Av. Campoamor, 30, bajo, 37003 Salamanca)
-	- CAB Soluciones (Av. de los Comuneros, 89, 37003 Salamanca)
-	- Gerionte Technology (C. Hoyamoros, 5, 37008 Salamanca)
-	-MOBENTE (Calle Tercera 36, Edificio Interclima. 2º Piso, 37188 Carbajosa de la Sagrada, Salamanca)
+	-SPC Innovation (P.º de Canalejas, 47, BAJO LOCAL 2, 37001 Salamanca) 9 - 17
+	-AlfaIOT - Desarrollo de Soluciones IoT (Av. Campoamor, 30, bajo, 37003 Salamanca) 9 - 16
+	- CAB Soluciones (Av. de los Comuneros, 89, 37003 Salamanca) 9:30 - 14
+	- Gerionte Technology (C. Hoyamoros, 5, 37008 Salamanca) 8:00 - 15 / 16:30 - 19
+	-MOBENTE (Calle Tercera 36, Edificio Interclima. 2º Piso, 37188 Carbajosa de la Sagrada, Salamanca) 9:30 - 18:30
 
 
 
 	
-	-Websoft(Av. de París, 4, 37004 Salamanca)
+	-Websoft(Av. de París, 4, 37004 Salamanca) 923282220
 
-	-Verial soft(P.º del Gran Capitán, 62, 37006 Salamanca)
+	-Verial soft(P.º del Gran Capitán, 62, 37006 Salamanca) 9 - 14 / 16:30 - 19
+maps
+	-Xoborg Technologies SL(C. Teso de San Nicolás, 17, Semisótano local 1, 37008 Salamanca) 9 - 15 / 16 - 18:30
 
-	-Xoborg Technologies SL(C. Teso de San Nicolás, 17, Semisótano local 1, 37008 Salamanca)
 
+	-Aplifisa Soluciones Informáticas(Ctra. Madrid, 13, 37900 Santa Marta de Tormes, Salamanca) 8 - 15
 
-	-Aplifisa Soluciones Informáticas(Ctra. Madrid, 13, 37900 Santa Marta de Tormes, Salamanca)
+	-Compusoft Iberia (Cyncly) (Polígono Industrial el Montalvo, C. Vertical I, 3, 37188 Carbajosa de la Sagrada, Salamanca) 9 - 14 / 15 - 18
 
-	-Compusoft Iberia (Cyncly) (Polígono Industrial el Montalvo, C. Vertical I, 3, 37188 Carbajosa de la Sagrada, Salamanca)
-	
-	-SOFTDESIGN SOLUCIONES INFORMATICAS PARA DISEÑO DE INTERIORES S.L(C. Río Cea, 12, 37003 Salamanca)
 
 	

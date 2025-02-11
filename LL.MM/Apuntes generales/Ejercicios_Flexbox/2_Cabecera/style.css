@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+
+.padre{
+    display: flex;
+    flex-direction: column;
+    width: 510px;
+    justify-content: left;
+    align-items: start;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 0;
+    list-style: none;
+    */
+
+}
+
+li{
+    background-color: rgba(123,198,199,0.8);
+    list-style: none;
+    width: 12%;
+    height: 25px;
+    margin:1px 0;
+    
+    /*
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    */
+}

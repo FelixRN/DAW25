@@ -3,7 +3,21 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    /*
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 0;
+    list-style: none;
+    */
 }
+
+/*
+ul li {
+    background: rgba(123, 198, 199, 0.8);
+    flex-grow: 1;
+}*/
 
 .hijo{
     width: 19%;
@@ -12,6 +26,11 @@
     background-color: rgb(86, 187, 201);
     margin: 10px 0;
     font-size: 19px;
+
+    /*
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;*/
 }
 
 
