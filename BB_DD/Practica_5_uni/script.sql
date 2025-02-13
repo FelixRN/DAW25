@@ -28,18 +28,22 @@ where p.sexo like "%M%" and g.id = 4;
 
 -- 7.Devuelve un listado con todas las asignaturas ofertadas en el Grado en Ingeniería Informática (Plan 2015).
 select * from asignatura;
-select * from asignatura a INNER JOIN grado g on g.id = a.id_grado
+select * from asignatura a INNER JOIN grado g 
+on g.id = a.id_grado
 where g.id = 4;
 
--- 8.Devuelve un listado de los profesores junto con el nombre del departamento al que están vinculados. El listado debe devolver cuatro columnas, 
--- primer apellido, segundo apellido, nombre y nombre del departamento. El resultado estará ordenado alfabéticamente de menor a mayor por los apellidos y el nombre.
-select * from profesor;
-select * from departamento;
-select * from persona;
+-- 8.Devuelve un listado de los profesores junto con el nombre del departamento al que están vinculados. 
+-- El listado debe devolver cuatro columnas, primer apellido, segundo apellido, nombre y nombre del departamento. 
+-- El resultado estará ordenado alfabéticamente de menor a mayor por los apellidos y el nombre.
 
-select * from profesor pro INNER JOIN departamento d on d.id =  pro.id_departamento 
-inner join persona p on  p.tipo = pro.id;
-where 
+SELECT p.apellido1, p.apellido2, p.nombre, d.nombre AS departamento
+FROM profesor pro
+INNER JOIN departamento d ON d.id = pro.id_departamento
+INNER JOIN persona p ON p.id = pro.id_profesor
+ORDER BY 1, 2, 3;
+-- ORDER BY p.apellido1 ASC, p.apellido2 ASC, p.nombre ASC;
+
+
 
 -- 9. Devuelve un listado con el nombre de las asignaturas, año de inicio y año de fin del curso escolar del alumno con nif 26902806M.
 
