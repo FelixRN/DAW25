@@ -1,6 +1,26 @@
 alert("¡Hola Mundo 1!");
 
-function gestionarUsuario() {
+let nombre = prompt("Introduce tu nombre:");
+//Verificamos si el campo está vacio !
+if (!nombre) {
+    console.error("No se ha introducido un nombre");
+    alert("No has escrito ningun nombre");
+
+} else {
+    let confirmacion = confirm("¿Realmente te llamas " + nombre + "?");
+
+    if (confirmacion) {
+        console.log("El nombre es correcto");
+        alert("Bienvenido sea");
+    
+    } else {
+        console.warn("No es su nombre");
+        alert("Adiós");
+    }
+}
+
+
+/*function gestionarUsuario() {
     let nombre = prompt("Introduzca su nombre, por favor");
 
     switch (nombre = null) {
@@ -17,7 +37,7 @@ function gestionarUsuario() {
             break;
     }
 
-}
-function confirmacion() {
- confirm("Confirmar");
-}
+//}
+//function confirmacion() {
+// confirm("Confirmar");
+//}*/

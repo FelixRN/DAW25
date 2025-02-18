@@ -28,9 +28,24 @@ where p.sexo like "%M%" and g.id = 4;
 
 -- 7.Devuelve un listado con todas las asignaturas ofertadas en el Grado en Ingeniería Informática (Plan 2015).
 select * from asignatura;
-select * from asignatura a INNER JOIN grado g on g.id = a.id_grado
+select * from asignatura a INNER JOIN grado g 
+on g.id = a.id_grado
 where g.id = 4;
 
+<<<<<<< HEAD
+-- 8.Devuelve un listado de los profesores junto con el nombre del departamento al que están vinculados. 
+-- El listado debe devolver cuatro columnas, primer apellido, segundo apellido, nombre y nombre del departamento. 
+-- El resultado estará ordenado alfabéticamente de menor a mayor por los apellidos y el nombre.
+
+SELECT p.apellido1, p.apellido2, p.nombre, d.nombre AS departamento
+FROM profesor pro
+INNER JOIN departamento d ON d.id = pro.id_departamento
+INNER JOIN persona p ON p.id = pro.id_profesor
+ORDER BY 1, 2, 3;
+-- ORDER BY p.apellido1 ASC, p.apellido2 ASC, p.nombre ASC;
+
+
+=======
 -- 8.Devuelve un listado de los profesores junto con el nombre del departamento al que están vinculados. El listado debe devolver cuatro columnas, 
 -- primer apellido, segundo apellido, nombre y nombre del departamento. 
 -- El resultado estará ordenado alfabéticamente de menor a mayor por los apellidos y el nombre.
@@ -99,10 +114,17 @@ LEFT OUTER JOIN profesor pro ON pro.id_departamento = d.id
 WHERE pro.id_profesor IS NULL;
 
 -- 15.  Devuelve un listado con los profesores que no imparten ninguna asignatura.
+<<<<<<< HEAD
 select p.*, pro.id_departamento from profesor pro
 LEFT JOIN asignatura asig ON asig.id_profesor = pro.id_profesor
 inner join persona p on p.id = pro.id_profesor
 where asig is null;
+=======
+select * from profesor pro
+LEFT OUTER JOIN asignatura asig ON asig.id = pro.id_profesor
+where 
+>>>>>>> a2b7f89a3bcf2bdf93a81011bb67e991743c2a3d
+>>>>>>> dba5733f0d4408ca3d604d619d8128c3b092f187
 
 -- 16.  Devuelve un listado con las asignaturas que no tienen un profesor asignado.
 select a.* from profesor pr left join profesor p on a.id_profesor = pr.id_profesor where pr.id_profesor is null;
