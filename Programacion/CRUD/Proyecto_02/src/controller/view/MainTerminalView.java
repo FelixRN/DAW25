@@ -79,7 +79,8 @@ public class MainTerminalView
 	}
 
 	@Override
-	public void delete() {	
+	public void delete() {
+	
 	}
 	
 	

@@ -48,7 +48,6 @@ public class ModelMemory implements IModel {
 	    }
 	}
 	
-	
 
 	@Override
 	public void editCar(String plateForEdit, Car modifiedCar) {

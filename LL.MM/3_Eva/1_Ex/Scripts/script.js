@@ -1,13 +1,14 @@
 alert("¡Hola Mundo 1!");
 
 let nombre = prompt("Introduce tu nombre:");
+
 //Verificamos si el campo está vacio !
 if (!nombre) {
     console.error("No se ha introducido un nombre");
     alert("No has escrito ningun nombre");
 
 } else {
-    let confirmacion = confirm("¿Realmente te llamas " + nombre + "?");
+    let confirmacion = confirm(`¿Realmente te llamas ${nombre}? `);
 
     if (confirmacion) {
         console.log("El nombre es correcto");
@@ -19,6 +20,8 @@ if (!nombre) {
     }
 }
 
+//Las variables no se definen con tipo pero si tienen tipo
+//Obejto = Propiedads y métodos
 
 /*function gestionarUsuario() {
     let nombre = prompt("Introduzca su nombre, por favor");

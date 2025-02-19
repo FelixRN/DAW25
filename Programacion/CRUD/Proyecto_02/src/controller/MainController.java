@@ -40,7 +40,7 @@ public class MainController {
 					break;
 					
 				case 3: // Editar coche
-				    List<Car> listForEdit = model.list();
+				    List<Car> listForEdit = model.list(); //1.- Declaramos la variable, guardamos el resultado
 				    mainView.list(listForEdit);
 
 				    String plateForEdit = mainView.selectPlateCar();
@@ -53,8 +53,6 @@ public class MainController {
 				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
 				    }
 				    break;
-					//Y le mostramos al usuario para que pueda modificarla que se guardan en (carForEdit)
-					//model.editCar(plateForEdit, modifiedCar);
 					
 					
 				case 4: // Eliminar coche
