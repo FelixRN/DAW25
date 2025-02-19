@@ -1,5 +1,7 @@
 package com.project02.view;
 
+import java.util.List;
+
 import com.project02.utils.TerminalUtils;
 
 public class MainTerminalView
@@ -43,9 +45,16 @@ public class MainTerminalView
 	}
 
 	@Override
-	public void add() {
-		
-		
+	public Car add() {
+	    TerminalUtils.output("Introduzca la matrícula del coche:");
+	    String plate = TerminalUtils.inputText();
+
+	    TerminalUtils.output("Introduzca el modelo del coche:");
+	    String model = TerminalUtils.inputText();
+
+	    Car newCar = new Car(plate, model);
+	    TerminalUtils.output("Coche añadido correctamente."); // Mensaje de confirmación
+	    return newCar;
 	}
 
 	@Override
@@ -56,6 +65,12 @@ public class MainTerminalView
 
 	@Override
 	public void delete() {
+		
+	}
+
+	@Override
+	public void list() {
+		// TODO Auto-generated method stub
 		
 	}
 }

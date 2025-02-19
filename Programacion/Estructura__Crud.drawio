@@ -1,0 +1,158 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Página-1" id="J52nFPnWBMVTKc2iIZzc">
+    <mxGraphModel dx="1985" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Main&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-2" value="Inicia la app" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="175" />
+              <mxPoint x="220" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="175" />
+              <mxPoint x="550" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-8" value="Controller" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="130" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-9" value="MainController" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="360" y="140" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=-0.016;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-1" target="BetZ-hO8ARiO38lpzIvz-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-11" value="model" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#60a917;fillStyle=auto;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="170" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.419;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-15" target="BetZ-hO8ARiO38lpzIvz-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-15" value="IModel" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="280" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-16" value="IModelMemory" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="380" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-20" value="view" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="620" y="234" width="130" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.531;entryY=0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-8" target="BetZ-hO8ARiO38lpzIvz-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-22" value="IMainView" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="600" y="290" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-23" target="BetZ-hO8ARiO38lpzIvz-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-23" target="BetZ-hO8ARiO38lpzIvz-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="685" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-23" value="MainTerminalView" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="600" y="410" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-25" value="entities" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-26" value="Car" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="85" y="545" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-28" value="utils" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#a0522d;strokeColor=#6D1F00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="570" y="560" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-29" target="BetZ-hO8ARiO38lpzIvz-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="487" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-29" value="TerminalUtils" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="560" y="605" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.424;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-16" target="BetZ-hO8ARiO38lpzIvz-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-34" target="BetZ-hO8ARiO38lpzIvz-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-34" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Edit&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-37" value="findByPlate" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="290" y="320" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-38" value="editCar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="362" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-39" target="BetZ-hO8ARiO38lpzIvz-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="418" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-39" value="Delete" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="270" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-47" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Clase de utilidad con métodos estáticos para leer entrada del usuario(inputText, inputInt) y la salida del usuario(output)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="414" y="680" width="146" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-49" value="&lt;div style=&quot;&quot;&gt;Define las interfaces&lt;/div&gt;&lt;div style=&quot;&quot;&gt;Las interfaces establecen un contrato que las clases que implementan el modelo deben cumplir.&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="250" width="146" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-52" value="&lt;div style=&quot;&quot;&gt;Especifica los métodos que deben implementar las clases que interactúan con el usuario (mostrar menú, pedir datos del coche, etc.).&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="827" y="282" width="146" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.007;entryY=0.303;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-22" target="BetZ-hO8ARiO38lpzIvz-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-54" value="&lt;div style=&quot;&quot;&gt;Muestra la interfaz del usuario en la consola&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="827" y="405" width="146" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-57" value="&lt;div style=&quot;&quot;&gt;Utiliza a TerminalUtils para la entra y salida&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="535" width="146" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-62" value="Crea" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" vertex="1" parent="1">
+          <mxGeometry x="500" y="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-63" value="Crea" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" vertex="1" parent="1">
+          <mxGeometry x="220" y="190" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-64" value="Almacenamiento en memoria" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-230" y="390" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BetZ-hO8ARiO38lpzIvz-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.002;entryY=0.498;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BetZ-hO8ARiO38lpzIvz-16" target="BetZ-hO8ARiO38lpzIvz-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

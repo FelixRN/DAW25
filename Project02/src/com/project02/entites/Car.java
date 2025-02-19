@@ -6,7 +6,7 @@ public class Car {
 	public String Model;
 	
 	
-	public Car (String plate, String model)
+	public Car (String plate, String model);
 	super();
 	
 	this.plate=plate;

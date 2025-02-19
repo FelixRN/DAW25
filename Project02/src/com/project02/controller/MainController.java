@@ -1,5 +1,9 @@
 package com.project02.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.project02.entites.Car;
 import com.project02.model.IModel;
 import com.project02.view.IMainView;
 import com.project02.view.MainTerminalView;
@@ -23,13 +27,14 @@ public class MainController {
 				
 			case 1: // Listar coches
 				List<car> list = new ArrayList<>();
-				lixt.add(new Car ("44455","marca"));
+				list.add(new Car ("44455","marca"));
 				mainView.list(list);
 				break;
 				
 			case 2: // Añadir coche
-				mainView.add();
-				break;
+			    Car car = mainView.add(); // Obtenemos el coche desde la vista
+			    model.add(car); // Añadimos el coche al modelo
+			    break;
 				
 			case 3: // Editar coche
 				mainView.edit();
