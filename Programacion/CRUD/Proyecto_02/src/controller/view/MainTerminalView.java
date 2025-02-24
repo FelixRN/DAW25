@@ -19,6 +19,7 @@ public class MainTerminalView
 		TerminalUtils.output("2.- Añadir coche");
 		TerminalUtils.output("3.- Editar coche");
 		TerminalUtils.output("4.- Eliminar coche");
+		TerminalUtils.output("5.- Guardar datos");
 		TerminalUtils.output("0.- Salir");
 		
 		try {

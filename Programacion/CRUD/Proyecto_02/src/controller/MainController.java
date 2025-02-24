@@ -1,5 +1,6 @@
 package controller;
 
+import java.nio.file.Path;
 import java.util.List;
 
 import controller.model.IModel;
@@ -73,6 +74,14 @@ public class MainController {
 				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
 				    }
 				    break;
+				    
+				case 5: //Guardar los datos
+					
+					List<Car> listFor = model.list();
+					File file = new File("");
+					
+					break;
+					
 					
 				default:
 			}

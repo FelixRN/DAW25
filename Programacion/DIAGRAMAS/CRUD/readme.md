@@ -47,9 +47,3 @@ El usuario puede eliminar un coche del sistema.
 *   Se llama al método `selectCarToDelete()` de `IMainView` para que el usuario seleccione el coche a eliminar.
 *   Se llama al método `confirmDelete()` de `IMainView` para confirmar la eliminación.
 *   Se llama al método `delete(plate)` de `IModel` para eliminar el coche del sistema.
-
-## Próximos pasos
-
-*   Implementar la persistencia de datos en una base de datos.
-*   Mejorar la interfaz de usuario con una librería como JLine.
-*   Añadir validaciones para los datos introducidos por el usuario.
