@@ -12,3 +12,9 @@ if (!num) {
     fact--;
     } while (fact > 0);
 console.log(fact);
+
+function contarCaracteres(cadenaDeTexto) {
+    if (typeof cadenaDeTexto !== "string") {
+        cadenaDeTexto.toString();
+    }
+}
