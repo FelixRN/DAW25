@@ -4,8 +4,6 @@ import java.util.List;
 
 import controller.model.entities.Car;
 
-
-
 public interface IMainView {
 
 	int mainMenu();
