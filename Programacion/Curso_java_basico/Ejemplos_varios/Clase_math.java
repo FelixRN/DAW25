@@ -10,7 +10,7 @@ public class Clase_math {
         System.out.println(Math.round(55.4)); //Nos redondea al número más cercano
 
         double random = Math.random();
-        System.out.println((int)(random * 50) ); //Nos da un número entre 0 y 1 (agregarle el número máximo que quieres 
+        System.out.println((int)(random * 10) ); //Nos da un número entre 0 y 1 (agregarle el número máximo que quieres 
         //multiplicando, en este caso 100
     }
 }
