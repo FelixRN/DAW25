@@ -25,7 +25,7 @@ if (!nombre) {
 
 /*function gestionarUsuario() {
     let nombre = prompt("Introduzca su nombre, por favor");
-
+    
     switch (nombre = null) {
         case 1:
             console.warn("Que introduzcas tu nombre" )
