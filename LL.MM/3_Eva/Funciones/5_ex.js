@@ -1,15 +1,25 @@
-function arrayNumero () {
-    let numeros = [];
+function arrayNumber() {
+    const numbers = [];
 
-    for (let i = 0; i < 3 ; i++) {
-        const numerosNew = prompt("Introduce 3 números: ");
+    while (true) { //Bucle hasta que el usuario introduzca una letra
+        let newNumber = prompt("Introduce un número (y una letra para terminar): ") ;
 
-        let usuario={
-            numeros: numerosNew
+        //Para verificar que el newNumber sea un número
+        if (!isNaN(newNumber) && newNumber !== "") {
+            numbers.push(Number(newNumber));
+        } else {
+            break;
         }
-        numeros.push(usuario);
     }
-    alert(numeros.length);
+    
+    //Recorrer el array
+    numbers.forEach(num => {
+        if (num % 2 == 0 ){
+            console.warn(num);
+        }
+    });
+    console.log("Array completo", numbers);
 }
 
-arrayNumero();
+arrayNumber();
+
