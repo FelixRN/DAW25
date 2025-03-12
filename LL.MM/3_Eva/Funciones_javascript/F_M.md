@@ -121,10 +121,108 @@ var deportes2 = deportes.slice(1,3);
 var deportes3 = deportes.slice(-2);
 ```
 
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var masculinos = nombres.slice(1, 3);
+
+console.log(masculinos); // ['Pedro', 'Miguel']
+console.log(nombres);    // ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa'] (no se modifica)
+```
+Ejemplo 2: Extraer desde un índice hasta el final:
+
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var resto = nombres.slice(2);
+
+console.log(resto); // ['Miguel', 'Ana', 'Vanesa']
+```
+Ejemplo 3: Extraer los últimos elementos:
+
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var ultimos = nombres.slice(-2);
+
+console.log(ultimos); // ['Ana', 'Vanesa']
+```
+Ejemplo 4: Copiar un array completo
+
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var copia = nombres.slice();
+
+console.log(copia); // ['Rita', 'Pedro', 'Miguel', 'Ana', 'Vanesa']
+```
+
+
 Ejemplo de `splice()`:
+
+El método splice se utiliza para modificar un array eliminando, reemplazando o agregando elementos. Su sintaxis es:
+
+```javascript
+array.splice(inicio, cantidad, elemento1, elemento2, ...);
+```
+inicio: Índice donde comienza la modificación.
+
+cantidad: Número de elementos a eliminar (si es 0, no se elimina ningún elemento).
+
+elemento1, elemento2, ...: Elementos que se agregarán al array en la posición indicada.
+
 ```javascript
 deportes.splice(1, 2); // Elimina 2 elementos desde la posición 1
 deportes.splice(3, 0, "frontón", "bailes de salón"); // Inserta elementos en la posición 3
 deportes.splice(2, 1, "natación", "waterpolo"); // Reemplaza elementos en la posición 2
 ```
 
+Ejemplo 1: Eliminar elementos:
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var eliminados = nombres.splice(1, 2);
+
+console.log(eliminados); // ['Pedro', 'Miguel']
+console.log(nombres);    // ['Rita', 'Ana', 'Vanesa']
+```
+
+Ejemplo 2: Agregar elementos sin eliminar
+
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+nombres.splice(2, 0, "Juan", "Lucía");
+
+console.log(nombres); // ['Rita', 'Pedro', 'Juan', 'Lucía', 'Miguel', 'Ana', 'Vanesa']
+```
+Ejemplo 3: Reemplazar elementos
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+nombres.splice(1, 2, "Carlos", "María");
+
+console.log(nombres); // ['Rita', 'Carlos', 'María', 'Ana', 'Vanesa']
+```
+Ejemplo 4: Eliminar los últimos elementos
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+var eliminados = nombres.splice(-2);
+
+console.log(eliminados); // ['Ana', 'Vanesa']
+console.log(nombres);    // ['Rita', 'Pedro', 'Miguel']
+```
+Ejemplo 5: Eliminar y agregar elementos al mismo tiempo
+```javascript
+var nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+nombres.splice(1, 2, "Juan", "Lucía", "Pablo");
+
+console.log(nombres); // ['Rita', 'Juan', 'Lucía', 'Pablo', 'Ana', 'Vanesa']
+```
+
+Ejercicio Práctico Combinado
+
+```javascript
+var frutas = ["Manzana", "Banana", "Cereza", "Dátil", "Fresa"];
+
+// Usamos slice para extraer las frutas del 2 al 4
+var extraidas = frutas.slice(1, 4);
+console.log("Extraídas:", extraidas); // ['Banana', 'Cereza', 'Dátil']
+
+// Usamos splice para reemplazar "Cereza" y "Dátil" con "Kiwi" y "Mango"
+frutas.splice(2, 2, "Kiwi", "Mango");
+console.log("Modificadas:", frutas); // ['Manzana', 'Banana', 'Kiwi', 'Mango', 'Fresa']
+```

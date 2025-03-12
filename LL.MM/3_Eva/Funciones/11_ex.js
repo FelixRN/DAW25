@@ -16,7 +16,7 @@ function juegoAdivinanzas() {
             alert("La letra no está en la palabra.");
         }
 
-        if (palabraAdivinada.join("") === palabra) {
+        if (palabraAdivinada === palabra) {
             alert("¡Felicidades! Adivinaste la palabra: " + palabra);
             return;
         }
