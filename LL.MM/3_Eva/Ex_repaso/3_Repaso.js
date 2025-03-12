@@ -1,11 +1,11 @@
 function esPrimo(numero){
 numero = Number(numero); //Lo convertimos a números
 
-//Verificamos la entrada
+//Verificar la entrada
 if(isNaN(numero) || numero <=1){
     return false;
 }
-    for(let i =2; i<=Math.sqrt(numero); i++){
+    for(let i =2; i<=Math.sqrt(numero); i++){ //ejemplo: Math.sqrt(9) = 3 *no es primo
         if (numero % i === 0 ){
             return false;
         }
@@ -27,7 +27,7 @@ function encontrarPrimos(inicio) {
     }
 
 //Busqueda de los primos
-    for (let num = Math.max(2, inicio); num <= 100; num++) {
+    for (let num = Math.max(2, inicio); num <= 100; num++) { //Math.max devuelve el valor más alto 
         if (esPrimo(num)) {
             console.log(num);
         }
