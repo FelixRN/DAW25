@@ -1,9 +1,10 @@
-package controller.model;
+package com.p02.model.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import controller.model.entities.Car;
+import com.p02.model.IModel;
+import com.p02.model.entities.Car;
 
 
 public class ModelMemory implements IModel {
@@ -20,8 +21,9 @@ public class ModelMemory implements IModel {
 	}
 
 	@Override
-	public void add(Car car) {
+	public Car add(Car car) {
 		list.add(car);
+		return car;
 	}
 
 	@Override
@@ -47,15 +49,15 @@ public class ModelMemory implements IModel {
 	        }
 	    }
 	}
-	
-
-	@Override
-	public void editCar(String plateForEdit, Car modifiedCar) {
-		
-	}
 
 	@Override
 	public void delete(String plate) {
 	    list.removeIf(car -> car.getPlate().equals(plate));
+	}
+
+	@Override
+	public void deleteList() {
+		// TODO Auto-generated method stub
+		
 	}
 }

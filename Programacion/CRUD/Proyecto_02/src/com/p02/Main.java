@@ -1,6 +1,6 @@
-package Main;
+package com.p02;
 
-import controller.MainController;
+import com.p02.controller.MainController;
 
 public class Main {
 	public static void main(String[] args) {

@@ -23,3 +23,10 @@ function arrayNumber() {
 
 arrayNumber();
 
+
+
+/** Tenemos una funcion que compara la cantidad de letras de 2 palabras almacenadas en
+ * la variable "palabra1" y "palabra2".
+ *Primero se le pide al usuario que introduzca una plabra que sera almacenada en -const palabra 1- y
+ * seguidamente se le pedira una segunda palabra que se almacenara en -const palabra2-
+*/

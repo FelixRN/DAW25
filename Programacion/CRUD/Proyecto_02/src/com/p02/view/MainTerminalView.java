@@ -1,9 +1,9 @@
-package controller.view;
+package com.p02.view;
 
 import java.util.List;
 
-import controller.model.entities.Car;
-import controller.utils.TerminalUtils;
+import com.p02.model.entities.Car;
+import com.p02.utils.TerminalUtils;
 
 public class MainTerminalView
 	implements IMainView {
@@ -20,6 +20,7 @@ public class MainTerminalView
 		TerminalUtils.output("3.- Editar coche");
 		TerminalUtils.output("4.- Eliminar coche");
 		TerminalUtils.output("5.- Guardar datos");
+		TerminalUtils.output("6.- Cargar datos");
 		TerminalUtils.output("0.- Salir");
 		
 		try {
@@ -66,11 +67,6 @@ public class MainTerminalView
 	    TerminalUtils.output(message);
 	}
 
-	@Override
-	public void edit() {
-	
-		
-	}
 	
 	@Override
 	public String selectPlateCar() {
@@ -125,5 +121,11 @@ public class MainTerminalView
 	@Override
 	public String getText() {
 		return null;
+	}
+
+	@Override
+	public void infoSaveData() {
+		// TODO Auto-generated method stub
+		
 	}
 }

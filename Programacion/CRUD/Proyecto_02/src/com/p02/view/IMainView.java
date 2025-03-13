@@ -1,8 +1,8 @@
-package controller.view;
+package com.p02.view;
 
 import java.util.List;
 
-import controller.model.entities.Car;
+import com.p02.model.entities.Car;
 
 public interface IMainView {
 
@@ -13,8 +13,6 @@ public interface IMainView {
 	void list(List<Car> list);
 
 	Car add();
-
-	void edit();
 
 	void delete();
 
@@ -28,4 +26,6 @@ public interface IMainView {
 
 	String selectCarToDelete();
 	boolean confirmDelete();
+
+	void infoSaveData();
 }

@@ -1,4 +1,4 @@
-package controller.model.entities;
+package com.p02.model.entities;
 
 public class Car {
 	private String plate;
@@ -10,9 +10,14 @@ public class Car {
 		this.model = model;
 	}
 
+	//@Override
+	//public String toString() {
+	//	return this.plate + " - " + this.model;
+	//}
+	
 	@Override
 	public String toString() {
-		return this.plate + " - " + this.model;
+	    return "Car|" + plate + "|" + model;
 	}
 	
 	@Override
@@ -28,6 +33,11 @@ public class Car {
 		this.plate = plate;
 	}
 
+	
+	public String getModel() {
+		return this.model;
+	}
+	
 	public void setModel(String model) {
 		this.model = model;
 	}
