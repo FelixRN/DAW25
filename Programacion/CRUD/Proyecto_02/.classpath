@@ -6,15 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-<<<<<<< HEAD
-	<classpathentry exported="true" kind="lib" path="src/connect/mysql-connector-j-9.2.0.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/alumnofp.DESKTOP-SV1H8HS/Desktop/DAW/Programacion/CRUD/Proyecto_02/libs/mysql-connector-j-9.2.0.jar"/>
-=======
 	<classpathentry kind="lib" path="C:/Users/Yo y tu/Desktop/DAW25/Programacion/CRUD/Proyecto_02/libs/mysql-connector-j-9.2.0.jar"/>
->>>>>>> 2836438bd43d58bbb9d707be6170e20f75f7c37d
 	<classpathentry kind="output" path="bin"/>
 </classpath>

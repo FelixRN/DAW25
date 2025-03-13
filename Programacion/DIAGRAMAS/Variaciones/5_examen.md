@@ -1,70 +1,11 @@
 // Comenzando con la estructura para importar/exportar ficheros (Parte 2)
 
-Parte 2: Importar/Exportar en formato tabulado
-En el MainController he implementado:
+## Parte 2: Importar/Exportar en formato tabulado
+En el `MainController` he implementado:
 
 exportData(): Guarda todos los componentes en un archivo TSV (valores separados por tabulaciones) con encabezados, lo que facilita su lectura tanto por humanos como por programas.
 importData(): Lee un archivo TSV, salta la primera línea (encabezados) y crea objetos Component con los datos importados. Antes de importar, limpia la base de datos actual.
 
-Parte 3: Selección de componentes para un cliente
-Para el identificador único de cliente:
-
-He utilizado UUID para generar identificadores únicos tanto para componentes como para clientes
-El método getUserId() en la vista permite al usuario elegir entre:
-
-Usar un ID existente (para clientes que vuelven)
-Generar un nuevo ID (acortado a 6 caracteres para mejor usabilidad)
-
-
-El método addToCart() del controlador maneja toda la lógica para:
-
-Verificar si el cliente ya tiene un carrito
-Validar el componente y la cantidad seleccionada
-Actualizar el carrito
-
-
-
-Parte 4: Ver carrito y finalizar compra
-La funcionalidad completa incluye:
-
-viewCart(): Muestra el contenido del carrito para un cliente específico
-generateTicket(): Crea un ticket detallado con:
-
-ID del cliente
-Fecha y hora
-Lista de componentes con cantidad y subtotal
-Total final
-
-
-updateStock(): Actualiza el inventario después de la compra
-Confirmación de compra antes de finalizarla
-
-Estructura MVC
-
-Modelo: Interfaces y clases para manejar los datos
-
-Component y ShoppingCart como entidades principales
-IModel define las operaciones sobre componentes
-
-
-Vista: Interfaz para la interacción con el usuario
-
-IMainView y su implementación MainTerminalView
-Métodos para mostrar menús, recoger datos y confirmar acciones
-
-
-Controlador: Coordina el modelo y la vista
-
-MainController como punto central de la aplicación
-Maneja el flujo de trabajo y las operaciones principales
-
-
-
-Para implementar completamente esta aplicación, necesitarías:
-
-Una implementación concreta del modelo (podría ser en memoria o con base de datos)
-Una clase Main para iniciar la aplicación
-Completar los métodos de persistencia si deseas guardar los datos a largo plazo
 ```java
 package com.store.controller;
 
@@ -188,7 +129,25 @@ public class MainController {
             }
         } while (option != 0);
     }
-    
+```
+
+## Parte 3: Selección de componentes para un cliente
+Para el identificador único de cliente:
+
+He utilizado UUID para generar identificadores únicos tanto para componentes como para clientes
+El método getUserId() en la vista permite al usuario elegir entre:
+
+Usar un ID existente (para clientes que vuelven)
+Generar un nuevo ID (acortado a 6 caracteres para mejor usabilidad)
+
+
+El método addToCart() del controlador maneja toda la lógica para:
+
+Verificar si el cliente ya tiene un carrito
+Validar el componente y la cantidad seleccionada
+Actualizar el carrito
+
+```java
     // PARTE 2: Importar/Exportar datos en formato tabulado
     public void exportData(List<Component> components) throws IOException {
         File file = new File("components.tsv");
@@ -248,7 +207,9 @@ public class MainController {
             }
         }
     }
-    
+```
+
+```java
     // PARTE 3: Seleccionar componentes para un cliente
     private void addToCart() {
         // Mostrar componentes disponibles
@@ -288,8 +249,55 @@ public class MainController {
         mainView.showMessage("Añadido al carrito: " + selectedComponent.getName() 
                              + " x" + quantity);
     }
+   ```
+
+
+## Parte 4: Ver carrito y finalizar compra
+La funcionalidad completa incluye:
+
+viewCart(): Muestra el contenido del carrito para un cliente específico
+generateTicket(): Crea un ticket detallado con:
+
+ID del cliente
+Fecha y hora
+Lista de componentes con cantidad y subtotal
+Total final
+
+
+updateStock(): Actualiza el inventario después de la compra
+Confirmación de compra antes de finalizarla
+
+Estructura MVC
+
+Modelo: Interfaces y clases para manejar los datos
+
+Component y ShoppingCart como entidades principales
+IModel define las operaciones sobre componentes
+
+
+Vista: Interfaz para la interacción con el usuario
+
+IMainView y su implementación MainTerminalView
+Métodos para mostrar menús, recoger datos y confirmar acciones
+
+
+Controlador: Coordina el modelo y la vista
+
+MainController como punto central de la aplicación
+Maneja el flujo de trabajo y las operaciones principales
+
+
+
+Para implementar completamente esta aplicación, necesitarías:
+
+Una implementación concreta del modelo (podría ser en memoria o con base de datos)
+Una clase Main para iniciar la aplicación
+Completar los métodos de persistencia si deseas guardar los datos a largo plazo
+
     
-    // PARTE 4: Ver carrito y finalizar compra
+    
+```java
+// PARTE 4: Ver carrito y finalizar compra
     private void viewCart() {
         // Pedir ID de usuario
         String userId = mainView.getUserId();
@@ -363,7 +371,10 @@ public class MainController {
         }
     }
 }
+ ```
+## Entities
 
+```java
 // Entidades del modelo
 package com.store.model.entities;
 
@@ -441,7 +452,10 @@ public class Component {
         return "ID: " + id + " | Nombre: " + name + " | Precio: " + price + "€ | Stock: " + stock;
     }
 }
+```
+## Model-entities
 
+```java
 package com.store.model.entities;
 
 import java.util.HashMap;
@@ -485,7 +499,10 @@ public class ShoppingCart {
         return total;
     }
 }
+```
 
+## Modelo
+```java
 // Interfaces del modelo
 package com.store.model;
 
@@ -501,7 +518,9 @@ public interface IModel {
     void deleteComponent(String id);
     void clearComponents();
 }
-
+```
+## View
+```java
 // Vista principal
 package com.store.view;
 
@@ -526,7 +545,10 @@ public interface IMainView {
     boolean confirmPurchase();
     void showTicket(String ticket);
 }
+```
+## View
 
+```java
 // Implementación de la vista
 package com.store.view;
 
@@ -797,7 +819,10 @@ public class MainTerminalView implements IMainView {
         TerminalUtils.output(ticket);
     }
 }
+```
 
+## Utils
+```java
 // Utilidades para entrada/salida en terminal
 package com.store.utils;
 

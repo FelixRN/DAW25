@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class Main {
 	
 	private static String url ="jdbc:mysql://localhost:3306/vehiculos";
@@ -13,14 +14,26 @@ public class Main {
     private static String password = "PracticaRoot";
 	
 	public static void main(String[] args) {
-	System.out.println("h");
+	System.out.println("hola");
+	
+	
 	
 	try {
+		
+		TerminalUtils.output("Introduce la marca de un coche");
+		String marcaFilter = TerminalUtils.inputText();
+		
+		//Pedir marca por teclado
+		
 		Class.forName("com.mysql.cj.jdbc.Driver"); //Cargar el driver de MySQL
+		
 		Connection connection = DriverManager.getConnection(url, user, password);
 		
-		String query = "SELECT * FROM coches";
+		//Añadir marca como filtro
+		String query = "SELECT * FROM coches WHERE marca LIKE ?";
 		PreparedStatement ps = connection.prepareStatement(query);
+		
+		ps.setString(1,  marcaFilter  + "%");
 		
 		//Para select
 		ResultSet rs = ps.executeQuery();
@@ -37,8 +50,9 @@ public class Main {
 		}
 		
 		
-		//Para insert, updae, delete
+		//Para insert, update, delete
 		//ps.executeUpdate();
+		
 		connection.close();
 		
 		System.out.println("Adios!");
