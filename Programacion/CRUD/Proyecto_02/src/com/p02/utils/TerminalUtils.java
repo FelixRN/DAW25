@@ -1,4 +1,4 @@
-package controller.utils;
+package com.p02.utils;
 
 import java.util.Scanner;
 

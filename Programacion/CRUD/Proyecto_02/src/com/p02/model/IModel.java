@@ -1,8 +1,8 @@
-package controller.model;
+package com.p02.model;
 
 import java.util.List;
 
-import controller.model.entities.Car;
+import com.p02.model.entities.Car;
 
 public interface IModel {
 	
@@ -12,11 +12,11 @@ public interface IModel {
 
 	List<Car> list();
 
-	void add(Car car);
+	Car add(Car car);
 
 	Car findByPlate(String plateForEdit);
 
-	void editCar(String plateForEdit, Car modifiedCar);
-
 	void delete(String plate);
+
+	void deleteList();
 }

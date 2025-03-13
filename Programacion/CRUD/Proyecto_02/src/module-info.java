@@ -1,8 +1,4 @@
-/**
- * 
- */
-/**
- * 
- */
+
 module Proyecto_02 {
+	requires java.sql;
 }
