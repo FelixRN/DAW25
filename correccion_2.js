@@ -23,3 +23,29 @@ while (arrayPersonas.length > 0) {
 }
 
 }
+
+
+function ejercicio2() {
+    let numeros =[];
+    for (let i = 0; i < 3; i++) {
+        numeros[i] = Number(prompt("Introduzca un número: "));
+    }
+
+    if (numeros[0] == numeros[1] && numeros[1] == numeros[2]) {
+        alert("Los tres números son iguales");
+    
+        //else if (numeros[0] == numeros[1] || numeros [1] == numeros[2] || numeros[0] == numeros[2])
+
+    }else if (numeros[0] == numeros[1] && numeros[1] != numeros[2]){
+    alert("Dos números son iguales");
+
+    }else if (numeros[0] != numeros[1] && numeros[1] == numeros[2]){
+        alert("Dos números son iguales");
+
+    }else if (numeros[0]  == numeros[2]){
+    alert("Dos números son iguales");
+
+    }else {
+    alert("Los tres números son diferentes");
+}
+}
