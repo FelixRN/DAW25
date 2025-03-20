@@ -1,0 +1,129 @@
+package controller.view;
+
+import java.util.List;
+
+import controller.model.entities.Components;
+import controller.utils.TerminalUtils;
+
+public class MainTerminalView
+	implements IMainView {
+
+	@Override
+	public int mainMenu() {
+		int option;
+		
+		TerminalUtils.output("Menú de componentes");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("1.- Listar componentes");
+		TerminalUtils.output("2.- Añadir componentes");
+		TerminalUtils.output("3.- Editar componentes");
+		TerminalUtils.output("4.- Eliminar componentes");
+		TerminalUtils.output("5.- Guardar datos");
+		TerminalUtils.output("0.- Salir");
+		
+		try {
+			option = TerminalUtils.inputInt();
+		} catch (Exception e) {
+			option = -1;
+		}
+		
+		return option;
+	}
+
+	public void exit() {
+		TerminalUtils.output("Que tenga buen día!");
+	}
+
+	@Override
+	public void list(List<Components> list) {
+		TerminalUtils.output("Lista de componentess");
+		TerminalUtils.output("Componente - Cantidad");
+		
+		for(Components components : list) {
+			TerminalUtils.output(components.toString());
+		}
+	}
+	
+	@Override
+	public Components add() {
+		TerminalUtils.output("Menú de componentes");
+		TerminalUtils.output("Nuevo componente");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("Introduzca el componente");
+		String element = TerminalUtils.inputText();
+
+		TerminalUtils.output("Introduzca la Cantidad");
+		String quantity = TerminalUtils.inputText();
+		
+		Components components = new Components(element, quantity);
+		return components;
+	}
+	
+	@Override
+	public void showMessage(String message) {
+	    TerminalUtils.output(message);
+	}
+
+	@Override
+	public void edit() {
+	
+		
+	}
+	
+	@Override
+	public String selectElementComponents() {
+		TerminalUtils.output("Introduzca el componente");
+		String element = TerminalUtils.inputText();
+		return element;
+	}
+
+	@Override
+	public void delete() {
+	
+	}
+	
+	
+	@Override
+	public Components editComponents(Components componentsForEdit) {
+		TerminalUtils.output("Editar componentes");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("Introduzca el nuevo componente (si lo deja vacío no se modificomponentsá)");
+		String element = TerminalUtils.inputText();
+		if(isValidString(element)) {
+			componentsForEdit.setElement(element);
+		}
+
+		TerminalUtils.output("Introduzca la quantity (si lo deja vacío no se modificomponentsá)");
+		String quantity = TerminalUtils.inputText();
+		if(isValidString(quantity)) {
+			componentsForEdit.setQuantity(quantity);
+		}
+		
+		return componentsForEdit;
+	}
+	
+	public boolean isValidString(String value) {
+		return value != null && !value.isEmpty() && !value.isBlank();
+	}
+	
+	@Override
+	public String selectComponentsToDelete() {
+	    TerminalUtils.output("Introduzca el componente que desea eliminar:");
+	    return TerminalUtils.inputText();
+	}
+	
+	
+	@Override
+	public boolean confirmDelete() {
+	    TerminalUtils.output("¿Está seguro de que desea eliminar este componentes? (s/n):");
+	    String respuesta = TerminalUtils.inputText();
+	    return respuesta.equalsIgnoreCase("s");
+	}
+	@Override
+	public String getText() {
+		return null;
+	}
+}

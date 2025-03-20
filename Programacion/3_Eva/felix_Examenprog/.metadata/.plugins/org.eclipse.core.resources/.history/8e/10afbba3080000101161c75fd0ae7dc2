@@ -1,0 +1,8 @@
+package Main;
+
+import controller.MainController;
+
+public class Main {
+	MainController mainController = new MainController(null, null);
+	mainController.run();
+}

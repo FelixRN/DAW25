@@ -1,0 +1,129 @@
+package controller.view;
+
+import java.util.List;
+
+import controller.model.entities.Components;
+import controller.utils.TerminalUtils;
+
+public class MainTerminalView
+	implements IMainView {
+
+	@Override
+	public int mainMenu() {
+		int option;
+		
+		TerminalUtils.output("Menú de concesionario");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("1.- Listar coche");
+		TerminalUtils.output("2.- Añadir coche");
+		TerminalUtils.output("3.- Editar coche");
+		TerminalUtils.output("4.- Eliminar coche");
+		TerminalUtils.output("5.- Guardar datos");
+		TerminalUtils.output("0.- Salir");
+		
+		try {
+			option = TerminalUtils.inputInt();
+		} catch (Exception e) {
+			option = -1;
+		}
+		
+		return option;
+	}
+
+	public void exit() {
+		TerminalUtils.output("Adios");
+	}
+
+	@Override
+	public void list(List<Components> list) {
+		TerminalUtils.output("Lista de coches");
+		TerminalUtils.output("Matricula - Modelo");
+		
+		for(Components components : list) {
+			TerminalUtils.output(components.toString());
+		}
+	}
+	
+	@Override
+	public Components add() {
+		TerminalUtils.output("Menú de concesionario");
+		TerminalUtils.output("Nuevo coche");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("Introduzca la matrícula");
+		String element = TerminalUtils.inputText();
+
+		TerminalUtils.output("Introduzca el modelo");
+		String model = TerminalUtils.inputText();
+		
+		Components components = new Components(element, model);
+		return components;
+	}
+	
+	@Override
+	public void showMessage(String message) {
+	    TerminalUtils.output(message);
+	}
+
+	@Override
+	public void edit() {
+	
+		
+	}
+	
+	@Override
+	public String selectElementComponents() {
+		TerminalUtils.output("Introduzca la matrícula");
+		String element = TerminalUtils.inputText();
+		return element;
+	}
+
+	@Override
+	public void delete() {
+	
+	}
+	
+	
+	@Override
+	public Components editComponents(Components componentsForEdit) {
+		TerminalUtils.output("Editar coche");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("Introduzca la nueva matrícula (si lo deja vacío no se modificomponentsá)");
+		String element = TerminalUtils.inputText();
+		if(isValidString(element)) {
+			componentsForEdit.setElement(element);
+		}
+
+		TerminalUtils.output("Introduzca el nuevo modelo (si lo deja vacío no se modificomponentsá)");
+		String model = TerminalUtils.inputText();
+		if(isValidString(model)) {
+			componentsForEdit.setModel(model);
+		}
+		
+		return componentsForEdit;
+	}
+	
+	public boolean isValidString(String value) {
+		return value != null && !value.isEmpty() && !value.isBlank();
+	}
+	
+	@Override
+	public String selectComponentsToDelete() {
+	    TerminalUtils.output("Introduzca la matrícula del coche que desea eliminar:");
+	    return TerminalUtils.inputText();
+	}
+	
+	
+	@Override
+	public boolean confirmDelete() {
+	    TerminalUtils.output("¿Está seguro de que desea eliminar este coche? (s/n):");
+	    String respuesta = TerminalUtils.inputText();
+	    return respuesta.equalsIgnoreCase("s");
+	}
+	@Override
+	public String getText() {
+		return null;
+	}
+}

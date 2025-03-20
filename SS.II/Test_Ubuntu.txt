@@ -1,0 +1,121 @@
+Instrucciones:
+1.- Descarga de Moodle el fichero que se llama examen y almacénalo en tu home.
+2.- Ejecuta el comando 
+bash examen
+3.- Se ha creado una carpeta llamada "hoteles" en tu home. Dentro tiene un fichero llamado "info hoteles" con información de los campos de los ficheros y un fichero "hoteles" con los datos de los hoteles con los que hay que trabajar.
+4.- Puedes escribir la respuesta a la pregunta en este mismo fichero y luego adjuntarlo en la tarea de Moodle.
+5.- Cada respuesta correcta vale 0.5 puntos. Las respuestas en blanco o incorrectas tienen una puntuación de 0. Las respuestas que tengan bien el planteamiento pero fallen en alguna opción o detalle mínimo, puntúan 0.2.
+6.- Los nombres que aparecen "entrecomillados" representan el nombre exacto que hay que utilizar sin poner las comillas.
+7.- Todas las preguntas se pueden probar en vuestros equipos.
+
+
+Si no se especifica lo contrario, hay que tener en cuenta lo siguiente:
+- Estamos ejecutando los comandos con nuestro usuario normal, sin permisos de administrador por defecto. Si fuera necesario tener permisos, escribe en el propio comando cómo habría que hacerlo.
+- Los comandos se ejecutarán desde el home de usuario. Ten cuidado con las rutas. Los comandos tienen que funcionar teniendo en cuenta estas premisas.
+- Si no se indica otra cosa, la orden se ejecutará en única línea. Si no se indica expresamente, el uso de concatenación de comandos con && o con ; no será válido.
+
+Ejercicios:
+1.- Muestra el contenido del fichero "hoteles" ordenado por el id del hotel.
+
+sort -t: +0 hoteles -n
+
+2.- Muestra todos los datos de los hoteles de Salamanca.
+
+cat hoteles | grep "Salamanca"
+
+3.- Muestra cuántos hoteles hay en Zamora.
+
+cat hoteles | grep "Zamora" | wc -l
+
+4.- Genera un fichero llamado "resumen" que contenga un listado donde aparezca el nombre de los hoteles, la ciudad a la que pertenecen y su puntuación.
+
+
+
+5.- Muestra el nombre del hotel, la ciudad y el precio del hotel más barato. En el caso de que haya varios hoteles con el precio más bajo, se mostrará cualquiera de ellos.
+
+sort -t: +4 hoteles -n
+
+6.- Crea un fichero llamado "ávila" que contenga el nombre y la puntuación de todos los hoteles de Ávila.
+
+
+
+7.- Crea un fichero llamado "HOTELES" donde aparezcan los establecimientos que tengan la denominación de "Hotel" con todos los datos en mayúsculas.
+
+
+
+8.- Crea un fichero llamado "rutas" que contenga el nombre de los directorios que almacenan
+ficheros ejecutables de utilidad para el sistema. Se hace en una única línea.
+
+
+
+9.- Crea un fichero llamado "texto" con el siguiente contenido:
+"Este es un fichero de texto"
+"realizado en el examen de Sistemas Informáticos"
+"el día 11 de marzo de 2025"
+Hay que ejecutarlo en 3 comandos. Las comillas de las líneas pueden ser necesarias para que el contenido se guarde correctamente.
+
+touch texto
+echo "Este es un fichero de texto"
+echo "realizado en el examen de Sistemas Informáticos"
+echo "el día 11 de marzo de 2025"
+
+10.- Muestra un listado de las ciudades en las que hay hoteles. Solo el nombre de las ciudades y el nombre de cada ciudad solo debe de aparecer una vez. Ejemplo de salida:
+Ávila
+Salamanca
+Zamora
+
+cat hoteles | cut -d: -f3 | sort -n |uniq
+
+
+11.- Crea un fichero llamado "za" con el contenido de los hoteles de Zamora donde se haya cambiado la cadena "Zamora" por "za".
+
+
+
+12.- Muestra los archivos o directorios de tu carpeta home que empiecen por la letra d o la letra D.
+
+find name "d" o name "D"
+
+13.- Muestra los archivos o directorios de tu carpeta home que tengan exactamente 4 letras en su nombre.
+
+
+
+14.- Genera un fichero en tu home llamado "sata" que contenga el nombre de todos los dispositivos de este tipo de tu sistema.
+
+
+
+15.- Ejecuta un comando que muestre dónde se encuentra el comando llamado "cut".
+
+history
+
+16.- Muestra por pantalla el contenido de un fichero llamado fonts.conf, que contiene información relacionada con las fuentes del sistema.
+
+find -name "fonts.conf"
+
+
+17.- Busca los archivos que tengan extensión .png o .jpg en el directorio /usr y guárdalo en un fichero que se llame "imágenes". No se mostrarán mensajes de error.
+
+cd /usr
+find -name "*.png" -o -name "*.jpg" > imágenes
+
+18.- Parte 1: Crea un conjunto de directorios a partir de tu home que sea dir1/dir2/dir3.
+Parte 2: Después, crea un fichero vacío con el nombre "vacío".
+Parte 3: Por último, copia el fichero "vacío" dentro del directorio dir3 que creaste antes.
+Cada parte de este ejercicio debe de ser una línea comando diferente (una por parte). Si la Parte 1 se hace en varios comandos, el máximo de esta pregunta será 0.4 en lugar de 0.5.
+
+udo mkdir -p dir1 dir2 dir3
+sudo touch vacío
+sudo cp vacío dir3
+
+
+
+19.- Crea una carpeta en /home que se llame "tomas". Quedará "/home/tomas". Después, crea en una línea un usuario llamado "tomas" que tenga como directorio home /home/tomas.
+
+
+
+20.- Haz que el usuario "tomas" sea el propietario del directorio /home/tomas y todo su contenido.
+
+
+
+
+
+

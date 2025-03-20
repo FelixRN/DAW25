@@ -1,0 +1,217 @@
+package controller;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import entities.Component;
+import entities.ShoppingCart;
+import model.IModel;
+import view.IMainView;
+
+public class MainController {
+    private IModel model;
+    private IMainView mainView;
+    private Map<String, ShoppingCart> userCarts;
+    
+    public MainController(IModel model, IMainView mainView) {
+        this.model = model;
+        this.mainView = mainView;
+        this.userCarts = new HashMap<>();
+    }
+    
+    public void run() {
+        int option;
+        
+        do {
+            option = mainView.mainMenu();
+            switch(option) {
+                case 0: // Salir
+                    mainView.exit();
+                    break;
+                    
+                case 1: // Listar componentes
+                    List<Component> list = model.listComponents();
+                    mainView.listComponents(list);
+                    break;
+                    
+                case 2: // Añadir componente
+                    Component component = mainView.addComponent();
+                    model.addComponent(component);
+                    break;
+                    
+                case 3: // Editar componente
+                    List<Component> listForEdit = model.listComponents();
+                    mainView.listComponents(listForEdit);
+
+                    String idForEdit = mainView.selectComponentId();
+                    Component componentForEdit = model.findComponentById(idForEdit);
+
+                    if (componentForEdit != null) {
+                        Component modifiedComponent = mainView.editComponent(componentForEdit);
+                        model.updateComponent(idForEdit, modifiedComponent);
+                        mainView.showMessage("Componente actualizado correctamente.");
+                    } else {
+                        mainView.showMessage("No se encontró ningún componente con ese ID.");
+                    }
+                    break;
+                    
+                case 4: // Eliminar componente
+                    List<Component> listForDelete = model.listComponents();
+                    mainView.listComponents(listForDelete);
+
+                    String idToDelete = mainView.selectComponentToDelete();
+                    Component componentToDelete = model.findComponentById(idToDelete);
+
+                    if (componentToDelete != null) {
+                        if (mainView.confirmDelete()) {
+                            model.deleteComponent(idToDelete);
+                            mainView.showMessage("Componente eliminado correctamente.");
+                        } else {
+                            mainView.showMessage("Eliminación cancelada.");
+                        }
+                    } else {
+                        mainView.showMessage("No se encontró ningún componente con ese ID.");
+                    }
+                    break;
+                    
+                case 5: // Exportar datos
+                    mainView.showMessage("Exportando datos...");
+                    List<Component> listForExport = model.listComponents();
+                    try {
+                        exportData(listForExport);
+                        mainView.showMessage("Datos exportados correctamente.");
+                    } catch (IOException e) {
+                        mainView.showMessage("Error al exportar datos: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+                    
+                case 6: // Importar datos
+                    mainView.showMessage("Importando datos...");
+                    try {
+                        importData();
+                        mainView.showMessage("Datos importados correctamente.");
+                    } catch (IOException e) {
+                        mainView.showMessage("Error al importar datos: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+                    
+                case 7: // Añadir al carrito
+                    addToCart();
+                    break;
+                    
+                case 8: // Ver carrito
+                    viewCart();
+                    break;
+                    
+                default:
+                    mainView.showMessage("Opción no válida.");
+            }
+        } while (option != 0);
+    }
+    
+    public void exportData(List<Component> components) throws IOException {
+        File file = new File("components.tsv");
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            // Escribir encabezado
+            writer.write("ID\tNombre\tDescripción\tPrecio\tStock\n");
+            
+            // Escribir cada componente
+            for (Component component : components) {
+                writer.write(component.getId() + "\t" +
+                             component.getName() + "\t" +
+                             component.getDescription() + "\t" +
+                             component.getPrice() + "\t" +
+                             component.getStock() + "\n");
+            }
+        }
+        
+        mainView.showMessage("Datos exportados a: " + file.getAbsolutePath());
+    }
+    
+    //Importar y mostrar en pantalla
+    public void importData() throws IOException {
+        File file = new File("components.tsv");
+        
+        if (!file.exists()) {
+            mainView.showMessage("El archivo no existe: " + file.getAbsolutePath());
+            return;
+        }
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            boolean isFirstLine = true;
+            
+            // Limpiar los componentes existentes
+            model.clearComponents();
+            
+            while ((line = reader.readLine()) != null) {
+                // Saltar la primera línea (encabezado)
+                if (isFirstLine) {
+                    isFirstLine = false;
+                    continue;
+                }
+                
+                String[] parts = line.split("\t");
+                if (parts.length >= 5) {
+                    Component component = new Component(
+                        parts[0].trim(),                    // ID
+                        parts[1].trim(),                    // Nombre
+                        parts[2].trim(),                    // Descripción
+                        Double.parseDouble(parts[3].trim()), // Precio
+                        Integer.parseInt(parts[4].trim())   // Stock
+                    );
+                    model.addComponent(component);
+                } else {
+                    mainView.showMessage("Línea con formato incorrecto: " + line);
+                }
+            }
+        }
+    }
+    
+    private void addToCart() {
+        // Mostrar componentes disponibles
+        List<Component> availableComponents = model.listComponents();
+        mainView.listComponents(availableComponents);
+        
+        // Pedir ID de cliente o crear uno nuevo
+        String userId = mainView.getUserId();
+        
+        // Si no existe este usuario, crear un carrito nuevo
+        if (!userCarts.containsKey(userId)) {
+            userCarts.put(userId, new ShoppingCart(userId));
+            mainView.showMessage("Nuevo cliente registrado con ID: " + userId);
+        }
+        
+        // Seleccionar componente
+        String componentId = mainView.selectComponentId();
+        Component selectedComponent = model.findComponentById(componentId);
+        
+        if (selectedComponent == null) {
+            mainView.showMessage("No se encontró ningún componente con ese ID.");
+            return;
+        }
+        
+        // Pedir cantidad
+        int quantity = mainView.getQuantity(selectedComponent.getStock());
+        
+        if (quantity <= 0 || quantity > selectedComponent.getStock()) {
+            mainView.showMessage("Cantidad inválida o insuficiente stock.");
+            return;
+        }
+        
+        // Añadir al carrito
+        ShoppingCart cart = userCarts.get(userId);
+        cart.addItem(selectedComponent, quantity);
+        
+        mainView.showMessage("Añadido al carrito: " + selectedComponent.getName() 
+                             + " x" + quantity);
+    }
+}

@@ -1,0 +1,270 @@
+package view;
+
+import java.util.List;
+import java.util.Map;
+
+import entities.Component;
+import entities.ShoppingCart;
+
+import utils.TerminalUtils;
+
+public class MainTerminalView
+	implements IMainView {
+
+	@Override
+    public int mainMenu() {
+        int option;
+        
+        TerminalUtils.output("===== TIENDA DE COMPONENTES =====");
+        TerminalUtils.output("1. Listar componentes");
+        TerminalUtils.output("2. Añadir componente");
+        TerminalUtils.output("3. Editar componente");
+        TerminalUtils.output("4. Eliminar componente");
+        TerminalUtils.output("5. Exportar datos");
+        TerminalUtils.output("6. Importar datos");
+        TerminalUtils.output("7. Añadir al carrito");
+        TerminalUtils.output("8. Ver carrito");
+        TerminalUtils.output("0. Salir");
+        TerminalUtils.output("Seleccione una opción: ");
+        
+        try {
+            option = Integer.parseInt(TerminalUtils.input());
+        } catch (NumberFormatException e) {
+            option = -1;
+        }
+        
+        return option;
+    }
+
+    @Override
+    public void exit() {
+        TerminalUtils.output("¡Hasta pronto!");
+    }
+
+    @Override
+    public void listComponents(List<Component> components) {
+        TerminalUtils.output("===== LISTADO DE COMPONENTES =====");
+        
+        if (components.isEmpty()) {
+            TerminalUtils.output("No hay componentes disponibles.");
+            return;
+        }
+        
+        for (Component component : components) {
+            TerminalUtils.output(component.toString());
+        }
+    }
+
+    @Override
+    public Component addComponent() {
+        TerminalUtils.output("===== AÑADIR COMPONENTE =====");
+        
+        TerminalUtils.output("Nombre: ");
+        String name = TerminalUtils.input();
+        
+        TerminalUtils.output("Descripción: ");
+        String description = TerminalUtils.input();
+        
+        double price = 0;
+        do {
+            TerminalUtils.output("Precio (€): ");
+            try {
+                price = Double.parseDouble(TerminalUtils.input());
+                if (price <= 0) {
+                    TerminalUtils.output("El precio debe ser mayor que 0.");
+                }
+            } catch (NumberFormatException e) {
+                TerminalUtils.output("Por favor, introduzca un número válido.");
+                price = 0;
+            }
+        } while (price <= 0);
+        
+        int stock = 0;
+        do {
+            TerminalUtils.output("Stock: ");
+            try {
+                stock = Integer.parseInt(TerminalUtils.input());
+                if (stock < 0) {
+                    TerminalUtils.output("El stock no puede ser negativo.");
+                }
+            } catch (NumberFormatException e) {
+                TerminalUtils.output("Por favor, introduzca un número válido.");
+                stock = -1;
+            }
+        } while (stock < 0);
+        
+        // Crear componente con ID generado automáticamente
+        return new Component(name, description, price, stock);
+    }
+
+    @Override
+    public Component editComponent(Component component) {
+        TerminalUtils.output("===== EDITAR COMPONENTE =====");
+        TerminalUtils.output("(Deje en blanco para mantener el valor actual)");
+        
+        TerminalUtils.output("Nombre actual: " + component.getName());
+        TerminalUtils.output("Nuevo nombre: ");
+        String name = TerminalUtils.input();
+        if (!name.trim().isEmpty()) {
+            component.setName(name);
+        }
+        
+        TerminalUtils.output("Descripción actual: " + component.getDescription());
+        TerminalUtils.output("Nueva descripción: ");
+        String description = TerminalUtils.input();
+        if (!description.trim().isEmpty()) {
+            component.setDescription(description);
+        }
+        
+        TerminalUtils.output("Precio actual: " + component.getPrice() + "€");
+        TerminalUtils.output("Nuevo precio: ");
+        String priceStr = TerminalUtils.input();
+        if (!priceStr.trim().isEmpty()) {
+            try {
+                double price = Double.parseDouble(priceStr);
+                if (price > 0) {
+                    component.setPrice(price);
+                } else {
+                    TerminalUtils.output("El precio debe ser mayor que 0. Se mantiene el valor actual.");
+                }
+            } catch (NumberFormatException e) {
+                TerminalUtils.output("Formato de precio inválido. Se mantiene el valor actual.");
+            }
+        }
+        
+        TerminalUtils.output("Stock actual: " + component.getStock());
+        TerminalUtils.output("Nuevo stock: ");
+        String stockStr = TerminalUtils.input();
+        if (!stockStr.trim().isEmpty()) {
+            try {
+                int stock = Integer.parseInt(stockStr);
+                if (stock >= 0) {
+                    component.setStock(stock);
+                } else {
+                    TerminalUtils.output("El stock no puede ser negativo. Se mantiene el valor actual.");
+                }
+            } catch (NumberFormatException e) {
+                TerminalUtils.output("Formato de stock inválido. Se mantiene el valor actual.");
+            }
+        }
+        
+        return component;
+    }
+
+    @Override
+    public String selectComponentId() {
+        TerminalUtils.output("Introduzca el ID del componente: ");
+        return TerminalUtils.input();
+    }
+
+    @Override
+    public String selectComponentToDelete() {
+        TerminalUtils.output("Introduzca el ID del componente a eliminar: ");
+        return TerminalUtils.input();
+    }
+
+    @Override
+    public boolean confirmDelete() {
+        TerminalUtils.output("¿Está seguro de que desea eliminar este componente? (s/n): ");
+        String response = TerminalUtils.input();
+        return response.equalsIgnoreCase("s");
+    }
+
+    @Override
+    public void showMessage(String message) {
+        TerminalUtils.output(message);
+    }
+
+    @Override
+    public String getUserId() {
+        TerminalUtils.output("===== IDENTIFICACIÓN DE CLIENTE =====");
+        TerminalUtils.output("1. Usar un ID existente");
+        TerminalUtils.output("2. Crear un ID nuevo");
+        TerminalUtils.output("Seleccione una opción: ");
+        
+        int option;
+        try {
+            option = Integer.parseInt(TerminalUtils.input());
+        } catch (NumberFormatException e) {
+            option = 0;
+        }
+        
+        if (option == 1) {
+            TerminalUtils.output("Introduzca su ID de cliente: ");
+            return TerminalUtils.input();
+        } else if (option == 2) {
+            // Generar un ID único para el cliente
+            String newId = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+            TerminalUtils.output("Su nuevo ID de cliente es: " + newId);
+            return newId;
+        } else {
+            TerminalUtils.output("Opción no válida. Generando ID nuevo.");
+            String newId = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+            TerminalUtils.output("Su nuevo ID de cliente es: " + newId);
+            return newId;
+        }
+    }
+
+    @Override
+    public int getQuantity(int maxStock) {
+        int quantity = 0;
+        do {
+            TerminalUtils.output("Introduzca la cantidad (máximo disponible: " + maxStock + "): ");
+            try {
+                quantity = Integer.parseInt(TerminalUtils.input());
+                if (quantity <= 0) {
+                    TerminalUtils.output("La cantidad debe ser mayor que 0.");
+                } else if (quantity > maxStock) {
+                    TerminalUtils.output("No hay suficiente stock disponible.");
+                }
+            } catch (NumberFormatException e) {
+                TerminalUtils.output("Por favor, introduzca un número válido.");
+                quantity = 0;
+            }
+        } while (quantity <= 0 || quantity > maxStock);
+        
+        return quantity;
+    }
+
+    @Override
+    public void showCart(ShoppingCart cart) {
+        TerminalUtils.output("===== CARRITO DE COMPRA =====");
+        TerminalUtils.output("Cliente ID: " + cart.getUserId());
+        
+        Map<Component, Integer> items = cart.getItems();
+        
+        if (items.isEmpty()) {
+            TerminalUtils.output("El carrito está vacío.");
+            return;
+        }
+        
+        double total = 0;
+        
+        for (Map.Entry<Component, Integer> entry : items.entrySet()) {
+            Component component = entry.getKey();
+            int quantity = entry.getValue();
+            double subtotal = component.getPrice() * quantity;
+            
+            TerminalUtils.output(component.getName() + 
+                              " x" + quantity + 
+                              " = " + String.format("%.2f€", subtotal));
+            
+            total += subtotal;
+        }
+        
+        TerminalUtils.output("---------------------------");
+        TerminalUtils.output("TOTAL: " + String.format("%.2f€", total));
+    }
+
+    @Override
+    public boolean confirmPurchase() {
+        TerminalUtils.output("¿Desea finalizar la compra? (s/n): ");
+        String response = TerminalUtils.input();
+        return response.equalsIgnoreCase("s");
+    }
+
+    @Override
+    public void showTicket(String ticket) {
+        TerminalUtils.output(ticket);
+    }
+}

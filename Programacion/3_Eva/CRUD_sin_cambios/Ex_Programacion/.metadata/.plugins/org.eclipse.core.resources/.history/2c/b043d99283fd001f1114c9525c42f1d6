@@ -1,0 +1,5 @@
+package controller.model.entities;
+
+public class Components {
+
+}

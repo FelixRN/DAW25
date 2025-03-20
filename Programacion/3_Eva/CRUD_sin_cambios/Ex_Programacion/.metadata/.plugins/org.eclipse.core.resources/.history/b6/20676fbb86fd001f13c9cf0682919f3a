@@ -1,0 +1,37 @@
+package controller.model.entities;
+
+public class Components {
+	private String element;
+	private String model;
+	
+	public Components(String element, String model) {
+		super();
+		this.element = element;
+		this.model = model;
+	}
+
+	@Override
+	public String toString() {
+		return this.element + " - " + this.model;
+	}
+	
+	@Override
+	public Components clone() {
+		return new Components(this.element, this.model);
+	}
+
+	public String getElement() {
+		return this.element;
+	}
+
+	public void setelement(String element) {
+		this.element = element;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+		return null;
+	}
+}

@@ -10,7 +10,7 @@ public class MainView {
 	private BookController bookController;
 	
 	public MainView() {
-		bookController = new BookController();
+		bookController = new BookController(null);
 	}
 	
 	// Example

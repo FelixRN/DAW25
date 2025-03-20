@@ -11,7 +11,7 @@ import com.p01.model.repository.ModelMemory;
 public class BookController {
 	private IModel model;
 
-	public BookController(Map<String, String> config {
+	public BookController(Map<String, String> config) {
 		String modelType = config.get("model__type");
 		switch(modelType) {
 		case "memory":

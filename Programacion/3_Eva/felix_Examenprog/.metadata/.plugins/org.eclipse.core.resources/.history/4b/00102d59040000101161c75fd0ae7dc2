@@ -1,0 +1,107 @@
+package Controller;
+
+import java.util.List;
+
+public class MainController {
+    private IModel model;
+    private IMainView mainView;
+    private Map<String, ShoppingCart> userCarts;
+    
+    public MainController(IModel model, IMainView mainView) {
+        this.model = model;
+        this.mainView = mainView;
+        this.userCarts = new HashMap<>();
+    }
+    
+    public void run() {
+        int option;
+        
+        do {
+            option = mainView.mainMenu();
+            switch(option) {
+                case 0: // Salir
+                    mainView.exit();
+                    break;
+                    
+                case 1: // Listar componentes
+                    List<Component> list = model.listComponents();
+                    mainView.listComponents(list);
+                    break;
+                    
+                case 2: // Añadir componente
+                    Component component = mainView.addComponent();
+                    model.addComponent(component);
+                    break;
+                    
+                case 3: // Editar componente
+                    List<Component> listForEdit = model.listComponents();
+                    mainView.listComponents(listForEdit);
+
+                    String idForEdit = mainView.selectComponentId();
+                    Component componentForEdit = model.findComponentById(idForEdit);
+
+                    if (componentForEdit != null) {
+                        Component modifiedComponent = mainView.editComponent(componentForEdit);
+                        model.updateComponent(idForEdit, modifiedComponent);
+                        mainView.showMessage("Componente actualizado correctamente.");
+                    } else {
+                        mainView.showMessage("No se encontró ningún componente con ese ID.");
+                    }
+                    break;
+                    
+                case 4: // Eliminar componente
+                    List<Component> listForDelete = model.listComponents();
+                    mainView.listComponents(listForDelete);
+
+                    String idToDelete = mainView.selectComponentToDelete();
+                    Component componentToDelete = model.findComponentById(idToDelete);
+
+                    if (componentToDelete != null) {
+                        if (mainView.confirmDelete()) {
+                            model.deleteComponent(idToDelete);
+                            mainView.showMessage("Componente eliminado correctamente.");
+                        } else {
+                            mainView.showMessage("Eliminación cancelada.");
+                        }
+                    } else {
+                        mainView.showMessage("No se encontró ningún componente con ese ID.");
+                    }
+                    break;
+                    
+                case 5: // Exportar datos
+                    mainView.showMessage("Exportando datos...");
+                    List<Component> listForExport = model.listComponents();
+                    try {
+                        exportData(listForExport);
+                        mainView.showMessage("Datos exportados correctamente.");
+                    } catch (IOException e) {
+                        mainView.showMessage("Error al exportar datos: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+                    
+                case 6: // Importar datos
+                    mainView.showMessage("Importando datos...");
+                    try {
+                        importData();
+                        mainView.showMessage("Datos importados correctamente.");
+                    } catch (IOException e) {
+                        mainView.showMessage("Error al importar datos: " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                    break;
+                    
+                case 7: // Añadir al carrito
+                    addToCart();
+                    break;
+                    
+                case 8: // Ver carrito
+                    viewCart();
+                    break;
+                    
+                default:
+                    mainView.showMessage("Opción no válida.");
+            }
+        } while (option != 0);
+    }
+}

@@ -1,0 +1,23 @@
+package view;
+
+import java.util.List;
+
+import entities.Component;
+import entities.ShoppingCart;
+
+public interface IMainView {
+    int mainMenu();
+    void exit();
+    void listComponents(List<Component> components);
+    Component addComponent();
+    Component editComponent(Component component);
+    String selectComponentId();
+    String selectComponentToDelete();
+    boolean confirmDelete();
+    void showMessage(String message);
+    String getUserId();
+    int getQuantity(int maxStock);
+    void showCart(ShoppingCart cart);
+    boolean confirmPurchase();
+    void showTicket(String ticket);
+}

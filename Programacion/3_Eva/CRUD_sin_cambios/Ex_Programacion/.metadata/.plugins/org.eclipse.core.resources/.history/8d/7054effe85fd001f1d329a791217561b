@@ -1,0 +1,87 @@
+package controller;
+
+import java.util.List;
+
+import controller.model.ModelMemory;
+import controller.model.entities.Components;
+import controller.view.MainTerminalView;
+
+
+
+public class MainController {
+	private ModelMemory model;
+	private MainTerminalView mainView;
+	
+	public MainController() {
+		this.model = new ModelMemory();
+		this.mainView = new MainTerminalView();
+	}
+	
+	public void run() {
+		int option;
+		
+		do {
+			option = mainView.mainMenu();
+			switch(option) {
+				case 0: // Salir
+					mainView.exit();
+					break;
+					
+				case 1: // Listar coches
+					List<Components> list = model.list();
+					mainView.list(list);
+					break;
+					
+				case 2: // Añadir coche
+					Components Components = mainView.add();
+					model.add(Components);
+					break;
+					
+				case 3: // Editar coche
+				    List<Components> listForEdit = model.list(); //1.- Declaramos la variable, guardamos el resultado
+				    mainView.list(listForEdit);
+
+				    String ElementForEdit = mainView.selectElementComponents();
+				    Components ComponentsForEdit = model.findByElement(ElementForEdit);
+
+				    if (ComponentsForEdit != null) { // Verifica si se encontró el coche
+				        Components modifiedComponents = mainView.editComponents(ComponentsForEdit);
+				        model.updateComponents(ElementForEdit, modifiedComponents); // Llama al nuevo método para actualizar
+				    } else {
+				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
+				    }
+				    break;
+					
+					
+				case 4: // Eliminar coche
+					List<Components> listForDelete = model.list();
+				    mainView.list(listForDelete); 
+
+				    String ElementToDelete = mainView.selectComponentsToDelete(); // Obtener la matrícula a eliminar
+				    Components ComponentsToDelete = model.findByElement(ElementToDelete); // BusComponents el coche
+
+				    if (ComponentsToDelete != null) { 
+				        if (mainView.confirmDelete()) { 
+				            model.delete(ElementToDelete); // Eliminar el coche
+				            mainView.showMessage("Coche eliminado correctamente.");
+				        } else {
+				            mainView.showMessage("Eliminación cancelada.");
+				        }
+				    } else {
+				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
+				    }
+				    break;
+				    
+				//case 5: //Guardar los datos
+					
+					//List<Components> listFor = model.list();
+					//File file = new File("");
+					
+					//break;
+					
+					
+				default:
+			}
+		} while (option != 0);
+	}
+}
