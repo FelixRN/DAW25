@@ -2,24 +2,22 @@ package com.project02.view;
 
 import java.util.List;
 
-import com.project02.entites.Car;
+import com.project02.model.entities.Car;
 
 public interface IMainView {
 
-	int mainMenu();
+    int mainMenu();
 
-	void exit();
+    void exit();
 
-	void list();
+    void list(List<Car> list);
 
-	void add();
+    Car add();
 
-	void edit();
+    int selectIdCar();
 
-	void delete();
+    Car editCar(Car carForEdit);
 
-	void list(List<Car> list);
-
-	void list(List<com.project02.view.Car> list);
+    void showError(Exception e);
 
 }

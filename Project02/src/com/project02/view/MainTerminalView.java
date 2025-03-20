@@ -2,10 +2,10 @@ package com.project02.view;
 
 import java.util.List;
 
+import com.project02.model.entities.Car;
 import com.project02.utils.TerminalUtils;
 
-public class MainTerminalView
-	implements IMainView {
+public class MainTerminalView implements IMainView {
 
 	@Override
 	public int mainMenu() {
@@ -30,47 +30,79 @@ public class MainTerminalView
 	}
 
 	public void exit() {
-		TerminalUtils.output("Bye");
+		TerminalUtils.output("Adios");
 	}
 
-	
 	@Override
 	public void list(List<Car> list) {
-		TerminalUtils.output("List of cars");
-		TerminalUtils.output("Plate - Model");
-		for (Car car : list) {
+		TerminalUtils.output("Lista de coches");
+		TerminalUtils.output("Id - Marca - Modelo - Consumo - Emisiones - Imagen");
+		
+		for(Car car : list) {
 			TerminalUtils.output(car.toString());
 		}
-		
 	}
-
+	
 	@Override
 	public Car add() {
-	    TerminalUtils.output("Introduzca la matrícula del coche:");
-	    String plate = TerminalUtils.inputText();
+		TerminalUtils.output("Nuevo coche");
+		TerminalUtils.output("================");
 
-	    TerminalUtils.output("Introduzca el modelo del coche:");
-	    String model = TerminalUtils.inputText();
-
-	    Car newCar = new Car(plate, model);
-	    TerminalUtils.output("Coche añadido correctamente."); // Mensaje de confirmación
-	    return newCar;
+		TerminalUtils.output("Introduzca la marca");
+		String brand = TerminalUtils.inputText();
+		
+		TerminalUtils.output("Introduzca la modelo");
+		String model = TerminalUtils.inputText();
+		
+		TerminalUtils.output("Introduzca la consumo");
+		float consume = TerminalUtils.inputFloat();
+		
+		TerminalUtils.output("Introduzca la emisiones");
+		int emissions = TerminalUtils.inputInt();
+		
+		Car car = new Car(0, brand, model, consume, emissions, "");
+		return car;
+	}
+	
+	@Override
+	public int selectIdCar() {
+		TerminalUtils.output("Introduzca el id:");
+		int id = TerminalUtils.inputInt();
+		return id;
 	}
 
 	@Override
-	public void edit() {
+	public Car editCar(Car carForEdit) {
+		TerminalUtils.output("Editar coche");
+		TerminalUtils.output("================");
+
+		TerminalUtils.output("Introduzca la nueva marca (si lo deja vacío no se modificará)");
+		String brand = TerminalUtils.inputText();
+		if(isValidString(brand)) {
+			carForEdit.setBrand(brand);
+		}
+
+		TerminalUtils.output("Introduzca el nuevo modelo (si lo deja vacío no se modificará)");
+		String model = TerminalUtils.inputText();
+			carForEdit.setModel(model);
+			
+		TerminalUtils.output("Introduzca el nuevo consumo (si lo deja vacío no se modificará)");
+		float consume = TerminalUtils.inputFloat();
+			carForEdit.setConsume(consume);
 		
+		TerminalUtils.output("Introduzca el nuevo emisiones (si lo deja vacío no se modificará)");
+		int emissions = TerminalUtils.inputInt();
+			carForEdit.setEmissions(emissions);
 		
+		return carForEdit;
+	}
+	
+	public boolean isValidString(String value) {
+		return value != null && !value.isEmpty() && !value.isBlank();
 	}
 
 	@Override
-	public void delete() {
-		
-	}
-
-	@Override
-	public void list() {
-		// TODO Auto-generated method stub
-		
+	public void showError(Exception e) {
+		TerminalUtils.output(e.getMessage());
 	}
 }
