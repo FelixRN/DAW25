@@ -1,0 +1,126 @@
+package com.p02.model.repository;
+
+
+	import java.sql.Connection;
+	import java.sql.PreparedStatement;
+	import java.sql.ResultSet;
+	import java.sql.SQLException;
+	import java.util.ArrayList;
+	import java.util.List;
+
+import com.p02.model.IModel;
+import com.p02.model.entities.Car;
+
+	public class ModelDatabase implements IModel {
+
+	    @Override
+	    public List<Car> list() {
+	        List<Car> cars = new ArrayList<>();
+	        String sql = "SELECT * FROM Prueba1";
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql);
+	             ResultSet rs = pstmt.executeQuery()) {
+
+	            while (rs.next()) {
+	                Car car = new Car(
+	                    rs.getString("plate"),
+	                    rs.getString("model")
+	                );
+	                cars.add(car);
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return cars;
+	    }
+
+	    @Override
+	    public Car add(Car car) {
+	        String sql = "INSERT INTO Prueba1 (plate, model) VALUES (?, ?)";
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+
+	            pstmt.setString(1, car.getPlate());
+	            pstmt.setString(2, car.getModel());
+	            
+	            pstmt.executeUpdate();
+
+	            try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+	                if (generatedKeys.next()) {
+	                    car.setPlate(generatedKeys.getString(1));
+	                }
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return car;
+	    }
+
+	    @Override
+	    public Car findByPlate(String plate) {
+	        String sql = "SELECT * FROM Prueba1 WHERE plate = ?";
+	        Car car = null;
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.setString(1, plate);
+	            try (ResultSet rs = pstmt.executeQuery()) {
+	                if (rs.next()) {
+	                    car = new Car(
+	                        rs.getString("plate"),
+	                        rs.getString("model")
+	                    );
+	                }
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return car;
+	    }
+
+	    @Override
+	    public void delete(String plate) {
+	        String sql = "DELETE FROM Prueba1 WHERE plate = ?";
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.setString(1, plate);
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    @Override
+	    public void updateCar(String plate, Car modifiedCar) {
+	        String sql = "UPDATE Prueba1 SET plate = ?, model = ? WHERE plate = ?";
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+	            pstmt.setString(1, modifiedCar.getPlate());
+	            pstmt.setString(2, modifiedCar.getModel());
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    @Override
+	    public void deleteList() {
+	        String sql = "DELETE FROM Prueba1";
+
+	        try (Connection conn = DataConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	}
+

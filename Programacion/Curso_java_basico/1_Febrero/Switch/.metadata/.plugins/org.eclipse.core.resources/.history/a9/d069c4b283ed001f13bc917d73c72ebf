@@ -1,0 +1,37 @@
+package ejemplo1;
+
+import java.util.Scanner;
+
+public class switch1 {
+
+		public static void main(String[] args) {
+			
+		//Declaración de variales	
+		int dia;
+		String nombreD;
+		Scanner teclado = new Scanner(System.in);
+				
+		System.out.println("Ingrese un número del 1 al 7");
+		dia = teclado.nextInt(); //Lee por teclado el día de la semana
+		
+		switch (dia) {
+		case 1: nombreD = "Lunes";
+				break;
+		case 2: nombreD = "Martes";
+				break;
+		case 3: nombreD = "Miércoles";
+				break;
+		case 4: nombreD = "Jueves";
+				break;
+		case 5: nombreD = "Viernes";
+				break;
+		case 6: nombreD = "Sábado";
+				break;	
+		case 7: nombreD = "Domingo";
+				break;
+		default:nombreD = "Día incorrecto";		
+		}
+				
+		System.out.println("El dia de la semana es: " + nombreD);
+		}						
+	}

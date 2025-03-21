@@ -1,0 +1,38 @@
+package operaciones;
+
+import java.util.Scanner;
+
+
+public static void main(String[] args) {
+	
+	Operaciones solucion = new Operaciones();
+	
+	public class Operaciones {
+	
+	Scanner lector = new Scanner(System.in);
+
+		public Operaciones() {
+		
+			float n1;
+			float n2;
+			float suma;
+			float resta;
+			float multi;
+			
+			System.out.println("Ingrese el primer número");
+			n1 = lector.nextFloat();
+
+			System.out.println("Ingrese el segundo número");
+			n2 = lector.nextFloat();
+			
+			suma = n1 + n2;
+			resta = n1 - n2;
+			multi = n1 * n2;
+			
+			System.out.println("La suma es" + suma);
+			System.out.println("La resta es" + suma);
+			System.out.println("La multi es" + suma);
+			
+	}
+}
+}

@@ -1,0 +1,14 @@
+package operaciones;
+
+public class Operaciones {
+	
+	Scanner lector = new Scanner(System.in);
+
+		public Operaciones() {
+		
+	}
+}
+
+public static void main(String[] args) {
+	Operaciones solucion = new Operaciones();
+}

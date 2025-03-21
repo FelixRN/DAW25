@@ -1,0 +1,5 @@
+package com.p02.model.repository;
+
+public class ModelDataBase {
+
+}

@@ -1,0 +1,15 @@
+package com.p02.model.repository;
+
+import java.sql.SQLException;
+
+public class DataConnection {
+
+	private static final String url ="jdbc:mysql://localhost:3306/books";
+	private static final String user = "root";
+	private static final String password = "PracticaRoot";
+	
+	public static Conection getConnection() throws SQLException{
+		return DriverManager.get.Connection(url, user, password);
+	}
+	
+}

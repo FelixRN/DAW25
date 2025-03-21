@@ -1,0 +1,69 @@
+package com.p02.model.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.p02.model.IModel;
+import com.p02.model.entities.Car;
+
+
+public class ModelMemory implements IModel {
+
+	private List<Car> list;
+	
+	public ModelMemory() {
+		list = new ArrayList<>();
+	}
+	
+	@Override
+	public List<Car> list() {
+		return list;
+	}
+
+	@Override
+	public Car add(Car car) {
+		list.add(car);
+		return car;
+	}
+
+	@Override
+	public Car findByPlate(String plateForEdit) {
+		Car car = null;
+		
+		for(Car i : list) {
+			if(i.getPlate().equals(plateForEdit)) {
+				car = i.clone();
+			}
+		}
+		
+		return car;
+	}
+	
+	@Override
+	public void updateCar(String plate, Car modifiedCar) {
+	    for (int i = 0; i < list.size(); i++) {//Recorremos la lista
+	        Car car = list.get(i);//Se obtiene el coche actual de la lista y se guarda en la varibale car
+	        if (car.getPlate().equals(plate)) {
+	            list.set(i, modifiedCar); // Reemplaza el coche original con el modificado
+	            break; // Importante: salir del bucle una vez que se encuentra y actualiza el coche
+	        }
+	    }
+	}
+	
+
+	@Override
+	public void editCar(String plateForEdit, Car modifiedCar) {
+		
+	}
+
+	@Override
+	public void delete(String plate) {
+	    list.removeIf(car -> car.getPlate().equals(plate));
+	}
+
+	@Override
+	public void deleteList() {
+		// TODO Auto-generated method stub
+		
+	}
+}

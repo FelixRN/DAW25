@@ -1,0 +1,30 @@
+package ejemplo1;
+
+import java.util.Scanner;
+
+public class switch1 {
+
+		public static void main(String[] args) {
+			
+		//Declaración de variales	
+		int dia;
+		String nombreD;
+		Scanner teclado = new Scanner(System.in);
+				
+		System.out.println("Ingrese un número del 1 al 7");
+		dia = teclado.nextlnt() //Lee por teclado el día de la semana
+		
+		switch (dia) {
+		case value: {
+			
+			yield type;
+		}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + key);
+		}
+		
+		
+			
+			
+		}
+}

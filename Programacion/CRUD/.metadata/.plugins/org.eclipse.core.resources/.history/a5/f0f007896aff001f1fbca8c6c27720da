@@ -1,0 +1,24 @@
+package com.p02.model;
+
+import java.util.List;
+
+import com.p02.entities.Car;
+
+public interface IModel {
+	
+	Car modifiedCar = null;
+
+	void updateCar(String plate, Car modifiedCar);//
+
+	List<Car> list();
+
+	void add(Car car);
+
+	Car findByPlate(String plateForEdit);
+
+	void editCar(String plateForEdit, Car modifiedCar);
+
+	void delete(String plate);
+
+	void deleteList();
+}

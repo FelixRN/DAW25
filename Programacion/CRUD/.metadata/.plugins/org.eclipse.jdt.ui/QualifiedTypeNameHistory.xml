@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="controller.utils.TerminalUtils"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.p02.model.entities.Car"/>
+    <fullyQualifiedTypeName name="com.p02.model.repository.DataConnection"/>
+    <fullyQualifiedTypeName name="com.p02.model.IModel"/>
+    <fullyQualifiedTypeName name="com.p02.model.repository.ModelDatabase"/>
+</qualifiedTypeNameHistroy>

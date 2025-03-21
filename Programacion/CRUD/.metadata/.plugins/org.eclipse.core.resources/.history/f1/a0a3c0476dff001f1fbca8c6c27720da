@@ -1,0 +1,125 @@
+package com.p02.model.repository;
+
+
+	import java.sql.Connection;
+	import java.sql.PreparedStatement;
+	import java.sql.ResultSet;
+	import java.sql.SQLException;
+	import java.util.ArrayList;
+	import java.util.List;
+
+	public class ModelDatabase implements IModel {
+
+	    @Override
+	    public List<Book> list() {
+	        List<Book> books = new ArrayList<>();
+	        String sql = "SELECT * FROM books";
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql);
+	             ResultSet rs = pstmt.executeQuery()) {
+
+	            while (rs.next()) {
+	                Book book = new Book(
+	                    rs.getInt("id"),
+	                    rs.getString("isbn"),
+	                    rs.getString("title")
+	                );
+	                books.add(book);
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return books;
+	    }
+
+	    @Override
+	    public Book addBook(Book newBook) {
+	        String sql = "INSERT INTO books (isbn, title) VALUES (?, ?)";
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+
+	            pstmt.setString(1, newBook.getIsbn());
+	            pstmt.setString(2, newBook.getTitle());
+	            pstmt.executeUpdate();
+
+	            try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+	                if (generatedKeys.next()) {
+	                    newBook.setId(generatedKeys.getInt(1));
+	                }
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return newBook;
+	    }
+
+	    @Override
+	    public Book search(int id) {
+	        String sql = "SELECT * FROM books WHERE id = ?";
+	        Book book = null;
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.setInt(1, id);
+	            try (ResultSet rs = pstmt.executeQuery()) {
+	                if (rs.next()) {
+	                    book = new Book(
+	                        rs.getInt("id"),
+	                        rs.getString("isbn"),
+	                        rs.getString("title")
+	                    );
+	                }
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return book;
+	    }
+
+	    @Override
+	    public void deleteBook(int idForDelete, Book bookForDelete) {
+	        String sql = "DELETE FROM books WHERE id = ?";
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.setInt(1, idForDelete);
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    @Override
+	    public void saveBook(int id, Book editedBook) {
+	        String sql = "UPDATE books SET isbn = ?, title = ? WHERE id = ?";
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.setString(1, editedBook.getIsbn());
+	            pstmt.setString(2, editedBook.getTitle());
+	            pstmt.setInt(3, id);
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    @Override
+	    public void deleteList() {
+	        String sql = "DELETE FROM books";
+
+	        try (Connection conn = DatabaseConnection.getConnection();
+	             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+	            pstmt.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	}
+

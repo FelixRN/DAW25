@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="modifiedCar"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="edi"/>
+			<item value="modi"/>
+			<item value="newCar"/>
+			<item value="deleteCar"/>
+			<item value="DatabaseConnection"/>
+			<item value="addCar"/>
+			<item value="Isbn"/>
+			<item value="book"/>
+		</list>
+		<list key="replacehistory">
+			<item value="car"/>
+			<item value="delete"/>
+			<item value="DataConnection"/>
+			<item value="Plate"/>
+		</list>
+	</section>
+</section>

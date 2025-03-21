@@ -1,0 +1,34 @@
+package com.p02.model.entities;
+
+public class Car {
+	private String plate;
+	private String model;
+	
+	public Car(String plate, String model) {
+		super();
+		this.plate = plate;
+		this.model = model;
+	}
+
+	@Override
+	public String toString() {
+		return this.plate + " - " + this.model;
+	}
+	
+	@Override
+	public Car clone() {
+		return new Car(this.plate, this.model);
+	}
+
+	public String getPlate() {
+		return this.plate;
+	}
+
+	public void setPlate(String plate) {
+		this.plate = plate;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+}

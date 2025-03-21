@@ -1,0 +1,17 @@
+package com.project02.model.repository;
+
+import java.util.List;
+
+import com.project02.entites.Car;
+
+public class ModelMemory implements IModel {
+private List<Car> carList;
+
+public ModelMemory();
+	carList = new ArrayList<Car>();
+}
+
+@Override
+	public List<Car>list(){
+	return carList;
+}

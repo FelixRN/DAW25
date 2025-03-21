@@ -1,0 +1,143 @@
+package controller;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+import java.util.Scanner;
+
+import controller.utils.TerminalUtils;
+import controller.view.IMainView;
+import controller.view.MainTerminalView;
+import model.IModel;
+import model.entities.Car;
+import model.repository.ModelMemory;
+
+
+
+public class MainController {
+	private IModel model;
+	private IMainView mainView;
+	
+	public MainController() {
+		this.model = new ModelMemory();
+		this.mainView = new MainTerminalView();
+	}
+	
+	public void run() {
+		int option;
+		
+		do {
+			option = mainView.mainMenu();
+			switch(option) {
+				case 0: // Salir
+					mainView.exit();
+					break;
+					
+				case 1: // Listar coches
+					List<Car> list = model.list();
+					mainView.list(list);
+					break;
+					
+				case 2: // Añadir coche
+					Car car = mainView.add();
+					model.add(car);
+					break;
+					
+				case 3: // Editar coche
+				    List<Car> listForEdit = model.list(); //1.- Declaramos la variable, guardamos el resultado
+				    mainView.list(listForEdit);
+
+				    String plateForEdit = mainView.selectPlateCar();
+				    Car carForEdit = model.findByPlate(plateForEdit);
+
+				    if (carForEdit != null) { // Verifica si se encontró el coche
+				        Car modifiedCar = mainView.editCar(carForEdit);
+				        model.updateCar(plateForEdit, modifiedCar); // Llama al nuevo método para actualizar
+				    } else {
+				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
+				    }
+				    break;
+					
+					
+				case 4: // Eliminar coche
+					List<Car> listForDelete = model.list();
+				    mainView.list(listForDelete); 
+
+				    String plateToDelete = mainView.selectCarToDelete(); // Obtener la matrícula a eliminar
+				    Car carToDelete = model.findByPlate(plateToDelete); // Buscar el coche
+
+				    if (carToDelete != null) { 
+				        if (mainView.confirmDelete()) { 
+				            model.delete(plateToDelete); // Eliminar el coche
+				            mainView.showMessage("Coche eliminado correctamente.");
+				        } else {
+				            mainView.showMessage("Eliminación cancelada.");
+				        }
+				    } else {
+				        mainView.showMessage("No se encontró ningún coche con esa matrícula.");
+				    }
+				    break;
+				    
+				case 5: //Guardar los coches
+					mainView.infoSaveData();
+					List<Car> listForSave = model.list();
+					try {
+						saveData(listForSave);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					break;
+					
+				case 6: //Cargar datos
+					mainView.infoSaveData();
+					try {
+						loadData();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					break;
+				default: 
+					TerminalUtils.output("No se ha introducido una opción correcta");
+			}
+		} while (option != 0);
+	}
+	
+
+	public void saveData(List<Car> listForSave) throws IOException {
+
+				File file = new File("C:\\Users\\alumnofp.FPA04\\Desktop\\data.model"); 
+				BufferedWriter writer = new BufferedWriter(new FileWriter(file)); 
+				for (Car car: listForSave) {
+					writer.write(car.toString());
+				}
+				writer.close();
+	}
+
+
+	public void loadData() throws IOException {
+		File fileLoad = new File("C:\\Users\\alumnofp.FPA04\\Desktop\\data.model"); 
+		try (Scanner sc = new Scanner(fileLoad)) {	
+			model.deleteList();
+			while (sc.hasNextLine()) {			
+				String line = sc.nextLine();
+				String[] parts = line.split(" ");
+				Car newCar = new Car (parts[1].trim(), parts[2].trim()); 
+				model.add (newCar);
+			}
+			}catch (Exception e){
+				TerminalUtils.output("Error al cargar los archivos");
+			}
+		
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+package ejemplo1;
+
+import java.util.Scanner;
+
+public class switch1 {
+
+		public static void main(String[] args) {
+			
+		int edad:
+		Scanner teclado = new Scanner(System.in);
+		
+		}						
+	}

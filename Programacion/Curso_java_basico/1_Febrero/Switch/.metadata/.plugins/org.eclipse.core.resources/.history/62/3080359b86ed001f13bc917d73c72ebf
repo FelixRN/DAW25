@@ -1,0 +1,23 @@
+package ejemplo1;
+
+import java.util.Scanner;
+
+public class switch1 {
+
+		public static void main(String[] args) {
+			
+		int edad;
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.println("Welcome");
+		System.out.println("Ingrese la edad del alumno");
+		edad = teclado.nextInt();
+		
+		if (edad >=4 && edad <=6 ) {
+			System.out.println("El horario G.KINDER es Lunes y Miércoles de 16 a 17hs");
+		}else if (edad =7 && edad <=8 ) {
+			System.out.println("El horario G.Firts year es Martes y Jueves de 16:30 a 17:30hs");
+
+		}						
+	}
+}

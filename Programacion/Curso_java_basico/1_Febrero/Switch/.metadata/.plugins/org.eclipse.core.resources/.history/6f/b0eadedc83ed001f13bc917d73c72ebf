@@ -1,0 +1,31 @@
+package ejemplo1;
+
+import java.util.Scanner;
+
+public class switch1 {
+
+		public static void main(String[] args) {
+			
+		//Declaración de variales	
+		int alumno;
+		String edad;
+		Scanner teclado = new Scanner(System.in);
+				
+		System.out.println("Ingrese la edad del alumno");
+		alumno = teclado.nextInt(); //Lee por teclado el día de la semana
+		
+		switch (alumno) {
+		case 1: edad = "Lunes y Miércoles de 16 a 17";
+				break;
+		case 2: edad = "Martes y Jueves de 16:30 a 17:30";
+				break;
+		case 3: edad = "Martes y Jueves de 17:30 a 19";
+				break;
+		case 4: edad = "Lunes y Miércoles de 17 a 18:30";
+				break;
+		default:edad = "Edad incorrecta";		
+		}
+				
+		System.out.println("El alumno tiene este horario: " + edad);
+		}						
+	}

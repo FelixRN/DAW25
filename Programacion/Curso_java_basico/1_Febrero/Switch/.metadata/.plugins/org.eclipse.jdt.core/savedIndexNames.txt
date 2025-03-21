@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\Yo y tu\Desktop\DAW25\Programacion\Curso_java_basico\1_Febrero\Switch\.metadata\.plugins\org.eclipse.jdt.core
+2602931046.index
+1865797976.index
+1753650620.index
