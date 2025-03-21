@@ -33,7 +33,7 @@ public class MainController {
 					mainView.list(list);
 					break;
 					
-				case 2: // AÃ±adir coche
+				case 2: // Añadir coche
 					Car car = mainView.add();
 					model.add(car);
 					break;
