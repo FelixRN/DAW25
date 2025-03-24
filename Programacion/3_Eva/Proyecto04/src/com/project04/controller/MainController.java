@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.project04.model.IModel;
 import com.project04.model.entities.Personal;
+import com.project04.model.repository.ModelDatabase;
+import com.project04.view.IMainView;
+import com.project04.view.MainTerminalView;
 
 
 

@@ -6,7 +6,6 @@ import com.project04.model.entities.Personal;
 import com.project04.utils.TerminalUtils;
 
 
-
 public class MainTerminalView implements IMainView {
 
 	@Override
@@ -75,26 +74,23 @@ public class MainTerminalView implements IMainView {
 
 	@Override
 	public Personal editPersonal(Personal personalForEdit) {
-		TerminalUtils.output("Editar coche");
+		TerminalUtils.output("Editar Personal");
 		TerminalUtils.output("================");
 
-		TerminalUtils.output("Introduzca la nueva marca (si lo deja vacío no se modificará)");
-		String id_personal = TerminalUtils.inputText();
-		if(isValidString(id_personal)) {
-			carForEdit.setName(id_personal);
+		TerminalUtils.output("Introduzca un nuevo nombre (si lo deja vacío no se modificará)");
+		String name = TerminalUtils.inputText();
+		if(isValidString(name)) {
+			personalForEdit.setName(name);
 		}
 
-		TerminalUtils.output("Introduzca el nuevo modelo (si lo deja vacío no se modificará)");
-		String name = TerminalUtils.inputText();
-			personalForEdit.setOccupation(name);
+		TerminalUtils.output("Introduzca una nueva ocupación (si lo deja vacío no se modificará)");
+		String occupation = TerminalUtils.inputText();
+			personalForEdit.setOccupation(occupation);
 			
-		TerminalUtils.output("Introduzca el nuevo consumo (si lo deja vacío no se modificará)");
-		float occupation = TerminalUtils.inputFloat();
-			personalForEdit.setId_room(occupation);
-		
-		TerminalUtils.output("Introduzca el nuevo emisiones (si lo deja vacío no se modificará)");
+		TerminalUtils.output("Introduzca el nuevo id_room (si lo deja vacío no se modificará)");
 		int id_room = TerminalUtils.inputInt();
-			personalForEdit.setEmissions(id_room);
+			personalForEdit.setId_room(id_room);
+		
 		
 		return personalForEdit;
 	}

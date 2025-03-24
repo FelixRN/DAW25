@@ -18,7 +18,7 @@ function crearLista() {
 }
 
 function modificar() {
-    var elemento_4 = document.getElementById("li").innerHTML;
+    var elemento_4 = document.getElementByTagName("li").innerHTML;
 
     
 }

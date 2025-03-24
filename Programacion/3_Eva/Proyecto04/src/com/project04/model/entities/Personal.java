@@ -51,7 +51,7 @@ public void setOccupation(String occupation) {
     this.occupation = occupation;
 }
 
-public float getId_room() {
+public int getId_room() {
     return id_room;
 }
 
