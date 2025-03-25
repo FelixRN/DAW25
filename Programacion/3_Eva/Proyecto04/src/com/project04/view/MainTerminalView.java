@@ -29,6 +29,28 @@ public class MainTerminalView implements IMainView {
 		
 		return option;
 	}
+	
+	@Override
+    public int customerMenu() {
+        int option;
+        
+        TerminalUtils.output("\n===== Gestion room =====");
+        TerminalUtils.output("1.- Ver todos los rooms disponibles");
+        TerminalUtils.output("2.- Seleccionar un room");
+        TerminalUtils.output("0.- Salir");
+        TerminalUtils.output("Seleccione una opción: ");
+        
+        try {
+            option = TerminalUtils.inputInt();
+        } catch (Exception e) {
+            option = -1;
+        }
+        
+        return option;
+    }
+	
+	
+	
 
 	public void exit() {
 		TerminalUtils.output("Adios");

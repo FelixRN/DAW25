@@ -3,6 +3,7 @@ package com.project04.model;
 import java.util.List;
 
 import com.project04.model.entities.Personal;
+import com.project04.model.entities.Room;
 
 
 
@@ -18,4 +19,16 @@ public interface IModel {
 
     void removePersonal(Personal personalForRemove) throws Exception;
 
+    
+    List<Room> listR();
+
+    Room add(Room room);
+
+    Room findByIdRoom(int idForEdit);
+
+    void editRoom(int idForEdit, Room modifiedRoom) throws Exception;
+
+    void removeRoom(Room roomForRemove) throws Exception;
+    
+    
 }
