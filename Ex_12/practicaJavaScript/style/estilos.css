@@ -1,0 +1,69 @@
+html {
+    text-align: center;
+    background: url(../img/coronavirus.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1 {
+    border: 2px red solid;
+    border-radius: 25px;
+    background-color: rgba(245, 239, 239, 0.6);
+}
+#info {
+    overflow: hidden;
+}
+#info1, #info2 {
+    width: 45%;
+    height: 70px;
+    box-sizing: border-box;
+    border: 1px salmon solid;
+    background-color: rgba(245, 239, 239, 0.6);
+    padding: 4px;
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: auto;
+    
+}
+#info1 {
+    float: left;
+}
+#info2 {
+    float: right;
+}
+#principal {
+    clear: both;
+    margin-top: 15px;
+    border: 1px black solid;
+    background-color: rgba(245, 239, 239, 0.6);
+}
+
+#pregunta {
+    padding: 3px;
+    font-style: italic;
+    font-size: large;
+    font-weight: bolder;
+    background-color: rgba(245, 239, 239, 0.6);
+}
+
+#divComoActuar, #paraTodos {
+    padding: 3px;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 3px;
+    border: 2px salmon solid;
+    background-color: rgba(245, 239, 239, 0.6);
+    overflow: auto;
+}
+
+#divComoActuar {
+    height: 60px;
+}
+#paraTodos {
+    text-align: center;
+    height: 180px;
+}
