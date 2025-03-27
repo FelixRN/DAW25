@@ -3,10 +3,26 @@ package com.project04.view;
 import java.util.List;
 
 import com.project04.model.entities.Personal;
+import com.project04.model.entities.Room;
 import com.project04.utils.TerminalUtils;
 
 
 public class MainTerminalView implements IMainView {
+	public void listRooms(List<Room> rooms) {
+		for (Room room : rooms) {
+			System.out.println(room);
+		}
+	}
+	
+	public int selectRoomById() {
+		System.out.print("Ingrese el ID del room: ");
+		return TerminalUtils.inputInt();
+	}
+	
+	public void showRoom(Room room) {
+		System.out.println("Detalles del Room");
+		System.out.println(room);
+	}
 
 	@Override
 	public int mainMenu() {
@@ -124,5 +140,95 @@ public class MainTerminalView implements IMainView {
 	@Override
 	public void showError(Exception e) {
 		TerminalUtils.output(e.getMessage());
+	}
+
+	@Override
+	public int inventoryMenu() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Room addR() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Room editRoom(Room roomForEdit) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void showMessage(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void editR() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteR() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int selectIdRoom() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String selectElementRoom() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String selectRoomToDelete() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean confirmDelete() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean confirmInventory() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void showRoomDetails(Room selectedRoom) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean confirmPurchase() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void completePurchase(Room selectedRoom) {
+		// TODO Auto-generated method stub
+		
 	}
 }

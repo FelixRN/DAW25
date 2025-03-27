@@ -13,30 +13,31 @@ public interface IMainView {
     int customerMenu();
     
     void exit();
+    
 
     void list(List<Personal> list);
+    void listRooms(List<Room> rooms);
+    void showRoom(Room room);
 
     Personal add();
+    Room addR();
+
 
     int selectIdPersonal();
 
     Personal editPersonal(Personal personalForEdit);
+    Room editRoom(Room roomForEdit);
 
     void showError(Exception e);
     
     void showMessage(String message);
-
     
-
-    Room addR();
-
     void editR();
 
 	void deleteR();
 	
     int selectIdRoom();
-
-    Room editRoom(Room roomForEdit);
+    int selectRoomById();
 	
 	String selectElementRoom();
 
@@ -47,7 +48,7 @@ public interface IMainView {
 	
 	
     boolean confirmInventory();  
-    void showRoomDetails(Room room);  
+    void showRoomDetails(Room selectedRoom);  
     boolean confirmPurchase();   
-    void completePurchase(Room room);
+    void completePurchase(Room selectedRoom);
 }

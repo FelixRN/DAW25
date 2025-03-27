@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.project04.model.IModel;
 import com.project04.model.entities.Personal;
+import com.project04.model.entities.Room;
 
 
 public class ModelDatabase implements IModel {
@@ -133,5 +134,35 @@ public class ModelDatabase implements IModel {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+	}
+
+	@Override
+	public List<Room> listR() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Room add(Room room) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Room findByIdRoom(int idForEdit) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void editRoom(int idForEdit, Room modifiedRoom) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeRoom(Room roomForRemove) throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 }

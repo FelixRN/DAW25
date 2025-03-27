@@ -7,12 +7,9 @@ import com.project04.model.entities.Personal;
 import com.project04.model.repository.ModelDatabase;
 import com.project04.view.IMainView;
 import com.project04.view.MainTerminalView;
+import com.project04.model.entities.Room; 
 
-import controller.model.entities.Room;
-
-
-
-public class MainController {
+public class MainController<Room> {
 	private IModel model;
 	private IMainView mainView;
 	
@@ -79,7 +76,7 @@ public class MainController {
 	private void showRoomToCustomer() {
         int option;
         
-        mainView.showMessage("MODO CLIENTE: Selección de compra");
+        mainView.showMessage("MODO CLIENTE: Selección de room");
         
         do {
             option = mainView.customerMenu();
@@ -89,28 +86,26 @@ public class MainController {
                     break;
                     
                 case 1: 
-                    List<Room> listR = model.list();
-                    mainView.list(listR);
+                    List<Room> listR = model.listR();
+                    mainView.listRooms(listR); //New method for listing rooms
                     break;
                     
                 case 2: 
-                    List<Room> availableRoom = model.list();
-                    mainView.list(availableRoom);
+                    List<Room> availableRoom = model.listR();
+                    mainView.listRooms(availableRoom);
                     
                     if (!availableRoom.isEmpty()) {
-                        String selectedElement = mainView.selectElementRoom();
-                        Room selectedRoom = model.findByElement(selectedElement);
+                        int selectedRoomId = mainView.selectRoomById();  // Change to select by ID
+                        Room selectedRoom = model.findByIdRoom(selectedRoomId);  // Use existing method
                         
                         if (selectedRoom != null) {
-                            mainView.showRoomDetails(selectedRoom);
-                            if (mainView.confirmPurchase()) {
-                                mainView.completePurchase(selectedRoom);
-                            }
+                            mainView.showRoom(selectedRoom);  // Simplified method name
+                            // Remove purchase-related methods if not applicable
                         } else {
-                            mainView.showMessage("No se encontró ningún componente con esa matrícula.");
+                            mainView.showMessage("No se encontró ningún room con ese ID.");
                         }
                     } else {
-                        mainView.showMessage("No hay componente disponibles.");
+                        mainView.showMessage("No hay rooms disponibles.");
                     }
                     break;
                     
