@@ -16,7 +16,7 @@ public interface IMainView {
     
 
     void list(List<Personal> list);
-    void listRooms(List<Room> rooms);
+    void listRooms(List<Room> listR);
     void showRoom(Room room);
 
     Personal add();

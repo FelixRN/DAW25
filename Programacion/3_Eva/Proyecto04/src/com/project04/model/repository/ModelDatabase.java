@@ -40,6 +40,7 @@ public class ModelDatabase implements IModel {
     public Personal add(Personal personal) {
         String sql = "INSERT INTO personal (id_personal, name, occupation, id_room) VALUES (?, ?, ?, ?)";
         String sqlId = "ALTER TABLE personal CHANGE id_personal id_personal int AUTO_INCREMENT";
+        String sqlCheckRoom = "SELECT COUNT(*) FROM room WHERE id_room = ?";
         
         try (Connection conn = DatabaseConnection.getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sqlId, PreparedStatement.NO_GENERATED_KEYS)) {
@@ -63,6 +64,7 @@ public class ModelDatabase implements IModel {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            //throw new Exception("Error al verificar el room: " + e.getMessage());
         }
         return personal;
     }

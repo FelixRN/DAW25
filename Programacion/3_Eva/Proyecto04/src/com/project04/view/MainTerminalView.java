@@ -82,8 +82,14 @@ public class MainTerminalView implements IMainView {
 		}
 	}
 	
+	
+	
+	
+	
+	
 	@Override
 	public Personal add() {
+		   
 		TerminalUtils.output("Nuevo personal");
 		TerminalUtils.output("================");
 

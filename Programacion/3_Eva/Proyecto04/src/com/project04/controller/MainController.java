@@ -9,7 +9,7 @@ import com.project04.view.IMainView;
 import com.project04.view.MainTerminalView;
 import com.project04.model.entities.Room; 
 
-public class MainController<Room> {
+public class MainController {
 	private IModel model;
 	private IMainView mainView;
 	
