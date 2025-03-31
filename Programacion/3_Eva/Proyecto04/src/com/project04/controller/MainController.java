@@ -5,21 +5,24 @@ import java.util.List;
 import com.project04.model.IModel;
 import com.project04.model.entities.Personal;
 import com.project04.model.repository.ModelDatabase;
+import com.project04.model.repository.RoomRepository;
 import com.project04.service.RoomService;
 import com.project04.service.RoomService.IRoomService;
 import com.project04.view.IMainView;
 import com.project04.view.MainTerminalView;
 import com.project04.model.entities.Room; 
 
+
 public class MainController <Room>{
 	private IRoomService roomService;
 	 
+	
 	private IModel model;
 	private IMainView mainView;
 	
 	public MainController() {
-		 this.roomService = (IRoomService) new RoomService(new RoomRepository());
-		 
+		this.roomService = (IRoomService) new RoomService(new RoomRepository());
+		this.roomService = new RoomService(); 
 		this.model = new ModelDatabase();
 		this.mainView = new MainTerminalView();
 	}
@@ -93,7 +96,7 @@ public class MainController <Room>{
                     
                 case 1: 
                     List<Room> listR = (List<Room>) model.listR();
-                    mainView.listRooms(listR); //New method for listing rooms
+                    mainView.listRooms(listR); 
                     break;
                     
                 case 2: 
@@ -101,11 +104,11 @@ public class MainController <Room>{
                     mainView.listRooms(availableRoom);
                     
                     if (!availableRoom.isEmpty()) {
-                        int selectedRoomId = mainView.selectRoomById();  // Change to select by ID
-                        Room selectedRoom = model.findByIdRoom(selectedRoomId);  // Use existing method
+                        int selectedRoomId = mainView.selectRoomById();  
+                        Room selectedRoom = model.findByIdRoom(selectedRoomId); 
                         
                         if (selectedRoom != null) {
-                            mainView.showRoom(selectedRoom);  // Simplified method name
+                            mainView.showRoom(selectedRoom);  
                             // Remove purchase-related methods if not applicable
                         } else {
                             mainView.showMessage("No se encontró ningún room con ese ID.");
