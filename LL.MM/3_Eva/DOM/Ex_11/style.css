@@ -6,6 +6,15 @@
     color: black;
 }
 
+.cambiarAmarillo{
+    background-color: yellow;
+}
+
+.cambiarAzul{
+    color: blue;
+}
+
+
 button{
     margin-bottom: 10px;;
 }
