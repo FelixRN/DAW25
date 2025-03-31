@@ -47,8 +47,11 @@ public interface IMainView {
 	boolean confirmDelete();
 	
 	
+	
     boolean confirmInventory();  
     void showRoomDetails(Room selectedRoom);  
     boolean confirmPurchase();   
     void completePurchase(Room selectedRoom);
+    
+	boolean confirmCreateRoom(int roomId);
 }

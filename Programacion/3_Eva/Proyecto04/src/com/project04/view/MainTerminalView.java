@@ -82,31 +82,26 @@ public class MainTerminalView implements IMainView {
 		}
 	}
 	
-	
-	
-	
-	
-	
+
 	@Override
 	public Personal add() {
 		   
 		TerminalUtils.output("Nuevo personal");
-		TerminalUtils.output("================");
+	    TerminalUtils.output("================");
 
-		TerminalUtils.output("Introduzca el id");
-		int id_personal = TerminalUtils.inputInt();
-		
-		TerminalUtils.output("Introduzca la nombre");
-		String name = TerminalUtils.inputText();
-		
-		TerminalUtils.output("Introduzca la ocupacion");
-		String occupation = TerminalUtils.inputText();
-		
-		TerminalUtils.output("Introduzca la id_room");
-		int id_room = TerminalUtils.inputInt();
-		
-		Personal personal = new Personal (0, name, occupation, id_room);
-		return personal;
+	    TerminalUtils.output("Introduzca el id");
+	    int id_personal = TerminalUtils.inputInt();
+	    
+	    TerminalUtils.output("Introduzca el nombre");
+	    String name = TerminalUtils.inputText();
+	    
+	    TerminalUtils.output("Introduzca la ocupacion");
+	    String occupation = TerminalUtils.inputText();
+	    
+	    TerminalUtils.output("Introduzca la id_room");
+	    int id_room = TerminalUtils.inputInt();
+	    
+	    return new Personal(id_personal, name, occupation, id_room);
 	}
 	
 	@Override
@@ -143,6 +138,13 @@ public class MainTerminalView implements IMainView {
 		return value != null && !value.isEmpty() && !value.isBlank();
 	}
 
+	@Override
+	public boolean confirmCreateRoom(int roomId) {
+	    TerminalUtils.output("El room con id " + roomId + " no existe. ¿Desea crearlo? (s/n)");
+	    String response = TerminalUtils.inputText().toLowerCase();
+	    return response.equals("s") || response.equals("si");
+	}
+	
 	@Override
 	public void showError(Exception e) {
 		TerminalUtils.output(e.getMessage());

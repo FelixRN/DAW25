@@ -37,36 +37,68 @@ public class ModelDatabase implements IModel {
         return personal;
     }
 
-    public Personal add(Personal personal) {
-        String sql = "INSERT INTO personal (id_personal, name, occupation, id_room) VALUES (?, ?, ?, ?)";
+    public Personal add(Personal personal) throws Exception {
+        //String sql = "INSERT INTO personal (id_personal, name, occupation, id_room) VALUES (?, ?, ?, ?)";
+    	String sql = "INSERT INTO personal (name, occupation, id_room) VALUES (?, ?, ?)"; // Quitamos id_personal
         String sqlId = "ALTER TABLE personal CHANGE id_personal id_personal int AUTO_INCREMENT";
         String sqlCheckRoom = "SELECT COUNT(*) FROM room WHERE id_room = ?";
         
-        try (Connection conn = DatabaseConnection.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement(sqlId, PreparedStatement.NO_GENERATED_KEYS)) {
-           } catch (SQLException e) {
-               e.printStackTrace();
-           }
+        
+        //try (Connection conn = DatabaseConnection.getConnection();
+        //        PreparedStatement pstmt = conn.prepareStatement(sqlId, PreparedStatement.NO_GENERATED_KEYS)) {
+        //   } catch (SQLException e) {
+        //       e.printStackTrace();
+        //   }
         
         try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+                PreparedStatement pstmtCheck = conn.prepareStatement(sqlCheckRoom)) {
 
-            pstmt.setInt(1, personal.getId_personal());
-            pstmt.setString(2, personal.getName());
-            pstmt.setString(3, personal.getOccupation());
-            pstmt.setInt(4, personal.getId_room());
-            pstmt.executeUpdate();
+               // 1. Verificar si el id_room existe en `room`
+               pstmtCheck.setInt(1, personal.getId_room());
+               try (ResultSet rs = pstmtCheck.executeQuery()) {
+                   if (rs.next() && rs.getInt(1) == 0) {
+                       throw new Exception("Error: El id_room " + personal.getId_room() + " no existe en la tabla 'room'.");
+                   }
+               }
+        
+               // 2. Si existe, proceder con la inserción en `personal`
+               try (PreparedStatement pstmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+                   //pstmt.setInt(1, personal.getId_personal());
+                   pstmt.setString(2, personal.getName());
+                   pstmt.setString(3, personal.getOccupation());
+                   pstmt.setInt(4, personal.getId_room());
+                   pstmt.executeUpdate();
 
-            try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                	personal.setId_personal(generatedKeys.getInt(1));
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            //throw new Exception("Error al verificar el room: " + e.getMessage());
-        }
-        return personal;
+                   // Obtener el ID generado (si es AUTO_INCREMENT)
+                   try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+                       if (generatedKeys.next()) {
+                           personal.setId_personal(generatedKeys.getInt(1));
+                       }
+                   }
+               }
+           } catch (SQLException e) {
+               throw new Exception("Error al añadir personal: " + e.getMessage());
+           }
+           return personal;
+        //try (Connection conn = DatabaseConnection.getConnection();
+        //     PreparedStatement pstmt = conn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
+
+        //    pstmt.setInt(1, personal.getId_personal());
+        //    pstmt.setString(2, personal.getName());
+        //    pstmt.setString(3, personal.getOccupation());
+        //    pstmt.setInt(4, personal.getId_room());
+         //   pstmt.executeUpdate();
+
+        //    try (ResultSet generatedKeys = pstmt.getGeneratedKeys()) {
+        //        if (generatedKeys.next()) {
+        //        	personal.setId_personal(generatedKeys.getInt(1));
+        //        }
+        //    }
+       // } catch (SQLException e) {
+       //     e.printStackTrace();
+       //     //throw new Exception("Error al verificar el room: " + e.getMessage());
+       // }
+       // return personal;
     }
 
     public Personal findById(int idForEdit) {

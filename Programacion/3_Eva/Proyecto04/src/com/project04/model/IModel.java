@@ -10,7 +10,9 @@ public interface IModel {
     List<Personal> list();
     List<Room> listR();
 
-    Personal add(Personal personal);
+    
+    
+    Personal add(Personal personal) throws Exception;
     Room add(Room room);
 
     Personal findById(int idForEdit); 

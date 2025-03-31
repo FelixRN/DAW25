@@ -2,12 +2,23 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <script src="../script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="script.js" defer></script> <!--asegurar que el DOM esté cargado antes de ejecutar el JS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 11</title>
 </head>
+
 <body>
-    <h1 onclick="crearLista()">Titulo 1</h1>
-    <h2 onclick="modificar()">Segundo</h2>
+    <h1 id="titulo">Título 1</h1>
+    <button onclick="agregarLista()">Crear lista</button> <br>
+    <button onclick="sustituir()">Modificar lista</button> <br>
+    <button onclick="addParrafo()">Agregar parrafo</button> <br>
+
+    <button onclick="cambiarColor()">Cambiar color</button> <br>
+    <button onclick="()">Boton 2</button> <br>
+    <button onclick="()">Boton 3</button> <br>
+
+    
 </body>
+
 </html>

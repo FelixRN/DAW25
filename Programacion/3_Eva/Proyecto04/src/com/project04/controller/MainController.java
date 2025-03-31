@@ -5,20 +5,26 @@ import java.util.List;
 import com.project04.model.IModel;
 import com.project04.model.entities.Personal;
 import com.project04.model.repository.ModelDatabase;
+import com.project04.service.RoomService;
+import com.project04.service.RoomService.IRoomService;
 import com.project04.view.IMainView;
 import com.project04.view.MainTerminalView;
 import com.project04.model.entities.Room; 
 
-public class MainController {
+public class MainController <Room>{
+	private IRoomService roomService;
+	 
 	private IModel model;
 	private IMainView mainView;
 	
 	public MainController() {
+		 this.roomService = (IRoomService) new RoomService(new RoomRepository());
+		 
 		this.model = new ModelDatabase();
 		this.mainView = new MainTerminalView();
 	}
 	
-	public void run() {
+	public void run() throws Exception {
 		int option;
 		
 		mainView.showMessage("MODO GESTION: Personal");
@@ -86,7 +92,7 @@ public class MainController {
                     break;
                     
                 case 1: 
-                    List<Room> listR = model.listR();
+                    List<Room> listR = (List<Room>) model.listR();
                     mainView.listRooms(listR); //New method for listing rooms
                     break;
                     

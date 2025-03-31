@@ -20,6 +20,8 @@ public String toString() {
     return "Room =" + id_room + ", Nombre=" + name + ", Ocupación=" + capacity + ", consumo=" + type;
 }
 
+
+
 @Override
 public Room clone() {
     return new Room(this.id_room, this.name, this.capacity, this.type);

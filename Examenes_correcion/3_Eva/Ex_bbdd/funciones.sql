@@ -49,27 +49,37 @@ CONVERT(input_value, data_type):  convertir valores de un tipo de datos otro tip
 
 -- 1- Saca el tiempo de duración media de todas las películas
 select * from film;
-select title, AVG(rental_duration) as duracion from film group by title;
+select title, ROUND(AVG(rental_duration)) as duracion from film group by title;
 
 -- 2- Haz un listado de las veces que se repite el nombre de los actores en la tabla actor, junto con su longitud y ordénalo de manera ascendente 
 select * from actor;
 
-select first_name as name, COUNT(first_name) as veces_repetidas from actor group by first_name;
+-- select first_name as name, COUNT(first_name) as veces_repetidas from actor group by first_name;
+	select first_name as name, COUNT(first_name) as veces_repetidas from actor group by first_name order by veces_repetidas ;
 
 -- 3- Sacar un listado con el nombre completo y la antigüedad de cada cliente. 
 select * from customer;
 
 select first_name, last_name, datediff(create_date, last_update) from customer;
 
+-- SELECT CONCAT(first_name, ' ', last_name) AS nombre_completo,
+-- DATEDIFF(CURRENT_DATE(), create_date) AS antiguedad_dias
+-- FROM customer;
+
 -- 4- En la tabla payment, se muestran los pagos realizados por cada cliente y qué empleado lo ha cobrado. 
 -- Sacar un listado de lo que ha facturado cada empleado: mostrar el staff_id y el total facturado (amount).
 
 select * from payment;
-select staff_id, amount from payment group by staff_id;
+-- select staff_id, amount from payment group by staff_id;
+
+select staff_id, COUNT(amount) as monto_total from payment group by staff_id;
 
 -- 5- Sacar la misma información que antes pero añadiendo nombre y apellidos del empleado.
+select * from staff;
 
-
+select s.first_name name, s.last_name, p.staff_id, COUNT(p.amount) as monto_total from payment p
+INNER JOIN staff s ON p.staff_id = s.staff_id
+group by staff_id;
 
 -- 6 - ¿Cuántos distritos hay? Se mostrará el distrito y la cuenta de ese distrito ordenado de más a menos distritos. 
 -- Solo se mostrarán aquellos que tengan más de un distrito.  
@@ -80,7 +90,8 @@ select staff_id, amount from payment group by staff_id;
 select * from city;
 select * from address;
 
-select district, COUNT(address) as count from address group by district;
+-- select district, COUNT(address) as count from address group by district;
+select district, COUNT(address) as count from address group by district having count > 1 order by count;
 
 -- 7 - Sacar el número de clientes que tiene cada tienda de esta forma: store_id, número clientes
 select * from store;
@@ -93,17 +104,20 @@ select store_id, COUNT(customer_id) as número_clientes from customer group by s
 select * from film;
 select * from film_actor;
 
-select f.title, fa.actor_id AS numero_actores from film fa
-left join film_id f on fa.film_id = f.film_id
-group by f.title;
+-- select f.title, fa.actor_id AS numero_actores from film fa left join film_id f on fa.film_id = f.film_id group by f.title;
 
+select LOWER(f.title), COUNT(fa.actor_id) AS numero_actores from film f
+inner join film_actor fa on f.film_id = fa.film_id
+group by f.title ORDER BY numero_actores desc;
 
 -- 9 - Sacar una lista con la cantidad de películas que ha hecho cada actor(nombres y apellidos) y ordenar por el nombre y apellidos del actor.
 
-select * from  actor;
-select a.first_name as name, a.last_name, COUNT(f.film_id) from actor a
-left join film_actor f on a.actor_id = f.actor_id
-group by a.first_name;
+-- select a.first_name as name, a.last_name, COUNT(f.film_id) from actor a left join film_actor f on a.actor_id = f.actor_id group by a.first_name;
+select * from actor;
+select a.first_name nombre, a.last_name apellido, COUNT(fa.film_id) cantidad_peliculas from actor a
+INNER JOIN film_actor fa on a.actor_id = fa.actor_id
+group by nombre, apellido 
+order by nombre, apellido;
 
 
 -- 10 - Usar JOIN para mostrar la cantidad recaudada (payment) de cada miembro de la empresa en agosto de 2005
@@ -112,9 +126,11 @@ group by a.first_name;
 select * from payment;
 select * from staff;
 
-select s.firts_name as name, s.last_name, count(p.amount) from payment p
-left join staff_id s on p.staff_id = s.staff_id
-group by p.amount;
+select s.first_name nombre, s.last_name apellido , SUM(p.amount) cantidad_recaudada from staff s
+INNER JOIN payment p on s.staff_id = p.staff_id
+WHERE p.payment_date BETWEEN '2005-08-01' and '2005-08-31'
+group by nombre, apellido
+ORDER BY cantidad_recaudada desc;
 
 
 
