@@ -103,7 +103,7 @@ o	Desarrollo en entorno servidor
 */
 
 insert into asignaturas (nombre, tipo) values ('Gestión de bases de datos',1), ('Programación',1), ('Redes 1',1), ('Redes 2',1), ('Desarrollo en entorno servidor',1);
-select * from asignaturas;
+select * from tipo_asignatura;
 -- insert into asignaturas values (7,'prueba',2, 1);
 
 -- Inserta en la tabla alumnos los datos de la tabla per1. Solo los datos que puedas.

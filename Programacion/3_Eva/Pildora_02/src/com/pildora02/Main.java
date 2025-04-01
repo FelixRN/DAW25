@@ -1,39 +1,41 @@
 package com.pildora02;
 
+import java.util.Scanner;
+
+import org.jasypt.util.password.StrongPasswordEncryptor;
+
 public class Main {
-	public static void main(String[] args) {
-		System.out.println("Pildora para la gestión de paquetes");
-		System.out.println("-----------------------");
-		
-		
-		Argon2 argon2 = Argon2Factory.create();
-		
-		char[] password = readPasswordFromUser();
-
-		try {
-		   
-		    String hash = argon2.hash(10, 65536, 1, password);
-
-		    // Verify password
-		    if (argon2.verify(hash, password)) {
-		        // Hash matches password
-		    } else {
-		        // Hash doesn't match password
-		    }
-		} finally {
-		    // Wipe confidential data
-		    argon2.wipeArray(password);
-		}
-		
-		System.out.println("Paquete de cifrado");
-		System.out.println("- Dada una contraseña, cifrarla");
-		System.out.println("- Verificar que la contraseña es correcta");
-		System.out.println("- Crear una contraseña parecida, y verificar que es incorrecta");
-		
-	}
-
-	private static char[] readPasswordFromUser() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StrongPasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
+       
+        System.out.println("Ingrese una contraseña para cifrar:");
+        String password = scanner.nextLine();
+       
+        //Cifrar la contraseña
+        String encryptedPassword = passwordEncryptor.encryptPassword(password);
+        System.out.println("Contraseña cifrada: " + encryptedPassword);
+       
+        //Verificar la contraseña correcta
+        System.out.println("Ingrese la contraseña nuevamente para verificar:");
+        String passwordToVerify = scanner.nextLine();
+       
+        if (passwordEncryptor.checkPassword(passwordToVerify, encryptedPassword)) {
+            System.out.println("La contraseña es correcta.");
+        } else {
+            System.out.println("La contraseña es incorrecta.");
+        }
+       
+        //Crear una contraseña parecida y verificar que es incorrecta
+        System.out.println("Ingrese una contraseña parecida para verificar que sea incorrecta:");
+        String similarPassword = scanner.nextLine();
+       
+        if (passwordEncryptor.checkPassword(similarPassword, encryptedPassword)) {
+            System.out.println("ERROR: La contraseña parecida fue aceptada (esto no debería suceder).");
+        } else {
+            System.out.println("Correcto: La contraseña parecida fue rechazada.");
+        }
+       
+        scanner.close();
+    }
 }
