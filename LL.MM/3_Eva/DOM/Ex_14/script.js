@@ -9,7 +9,15 @@ function comprobarEdad() {
         let inputEdad = document.getElementById("edad");
         let formulario = documentty.getElementsByName("form")[0];
         formulario.insertBefore(inputNumCuenta, inputEdad.nextSibling);
-    } else {
+    } 
+
+    function confirmar(){
+            let confirmar = confirm ("¿Desea envuar los datos");
+            if (!confirmar){
+
+
+            }
+    
         
     }
 }
