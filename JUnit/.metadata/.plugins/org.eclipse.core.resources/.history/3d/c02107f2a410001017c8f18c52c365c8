@@ -1,0 +1,10 @@
+package test.calculos;
+
+class CalculadoraTest {
+
+	@Test
+	public void suma() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+}

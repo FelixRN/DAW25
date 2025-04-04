@@ -1,0 +1,32 @@
+package test.calculos;
+
+import org.junit.jupiter.api.Test;
+
+class CalculadoraTest {
+
+	@Test
+	public void Calculadora() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+	@Test
+	public void suma() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+	@Test
+	public void resta() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+	@Test
+	public void multiplica() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+	@Test
+	public void divide() {
+		throw new RuntimeException("not yet implemented");
+	}
+
+}

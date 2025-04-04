@@ -1,0 +1,23 @@
+INDEX VERSION 1.134+C:\Users\Yo y tu\Desktop\JUnit\.metadata\.plugins\org.eclipse.jdt.core
+641323381.index
+2849141300.index
+3920494909.index
+1367333022.index
+2410777886.index
+4265016335.index
+3460884375.index
+2602931046.index
+1202079822.index
+1865797976.index
+3968614800.index
+1689471386.index
+2679247376.index
+3380679165.index
+183323898.index
+1766055895.index
+4181834939.index
+562825397.index
+562073300.index
+697661749.index
+1553910327.index
+2433127980.index
