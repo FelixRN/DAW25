@@ -44,5 +44,8 @@ public class User {
 		Password = password;
 	}
 	
-	
+	@Override
+	public String toString() {
+	    return id + " - " + name + " - " + Password;
+	}
 }

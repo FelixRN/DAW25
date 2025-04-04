@@ -4,7 +4,7 @@ USE `neptuno`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: neptuno
--- ------------------------------------------------------
+-- ------------------------------------------------------ 
 -- Server version	5.7.22-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;

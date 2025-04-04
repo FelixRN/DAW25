@@ -3,109 +3,93 @@ package com.project05.view;
 import java.util.List;
 
 import com.project05.model.entities.User;
-import com.project05.controller.MainController;
-import com.project05.model.Model;
-import com.project05.view.MainTerminalView;
+import com.project05.utils.TerminalUtils;
 
 public class MainView {
-
-	private Model model;
 	
-	
-	public void run() throws Exception {
-	    int option;
-	    
-	    showMessage("MODO GESTION: User");
-	    
-	    do {
-	        option = mainMenu();
-	        switch(option) {
-	            case 0: // Salir
-	                exit();
-	                break;
-	                
-	            case 1: // Listar user
-	                List<User> list = model.listU();
-	                list(list);
-	                break;
-	                
-	            case 2: // Añadir user
-	                User user = add();
-	                model.add(user);
-	                break;
-	                
-	            case 3: // Editar user
-	                List<User> listForEdit = model.listU();
-	                list(listForEdit);
-	                
-	                int idForEdit = selectIdUser();
-	                User userForEdit = model.findById(idForEdit);
-	                
-	                User modifiedUser = editUser(userForEdit);
-	                try {
-	                    model.editUser(idForEdit, modifiedUser);
-	                } catch (Exception e) {
-	                    showError(e);
-	                }
-	                break;
-	                
-	            case 4: // Eliminar user
-	                List<User> listForRemove = model.listU();
-	                list(listForRemove);
-	                
-	                int idForRemove = selectIdUser();
-	                User userForRemove = model.findById(idForRemove);
-	                
-	                try {
-	                    model.removeUser(userForRemove);
-	                } catch (Exception e) {
-	                    showError(e);
-	                }
-	                break;
-	                
-	            default:
-	        }
-	    } while (option != 0);
+	public int mainMenu() {
+        int option;
+        
+        TerminalUtils.output("Menú de user");
+        TerminalUtils.output("================");
+        
+        TerminalUtils.output("1.- Listar user");
+        TerminalUtils.output("2.- Añadir user");
+        TerminalUtils.output("3.- Editar user");
+        TerminalUtils.output("4.- Eliminar user");
+        TerminalUtils.output("0.- Salir");
+        
+        try {
+            option = TerminalUtils.inputInt();
+        } catch (Exception e) {
+            option = -1;
+        }
+        
+        return option;
+    }
+    
+    public void exit() {
+        TerminalUtils.output("Adios");
+    }
+    
+    public void list(List<User> listU) {
+        TerminalUtils.output("Lista de user");
+        TerminalUtils.output("Id - Nombre - Contraseña");
+        
+        for(User user : listU) {
+            TerminalUtils.output(user.toString());
+        }
+    }
+    
+    public User add() {
+        TerminalUtils.output("Nuevo user");
+        TerminalUtils.output("================");
+        
+        TerminalUtils.output("Introduzca el nombre");
+        String name = TerminalUtils.inputText();
+        
+        TerminalUtils.output("Introduzca la contraseña");
+        String password = TerminalUtils.inputText();
+        
+        User user = new User(0, name, password);
+        return user;
+    }
+    
+    public int selectIdUser() {
+        TerminalUtils.output("Introduzca el id:");
+        int id = TerminalUtils.inputInt();
+        return id;
+    }
+    
+    public User editUser(User userForEdit) {
+        TerminalUtils.output("Editar usuario");
+        TerminalUtils.output("================");
+        
+        TerminalUtils.output("Introduzca el nombre (si lo deja vacío no se modificará)");
+        String name = TerminalUtils.inputText();
+        if(isValidString(name)) {
+            userForEdit.setName(name);
+        }
+        
+        TerminalUtils.output("Introduzca la nueva contraseña (si lo deja vacío no se modificará)");
+        String password = TerminalUtils.inputText();
+        if(isValidString(password)) {
+            userForEdit.setPassword(password);
+        }
+        
+        return userForEdit;
+    }
+    
+    public boolean isValidString(String value) {
+        return value != null && !value.isEmpty() && !value.isBlank();
+    }
+    
+    public void showError(Exception e) {
+        TerminalUtils.output(e.getMessage());
+    }
+
+	public void output(String string) {
+		// TODO Auto-generated method stub
 	}
 
-	private void showError(Exception e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private User editUser(User userForEdit) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private int selectIdUser() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	private void exit() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private User add() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private void list(List<User> list) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private int mainMenu() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	private void showMessage(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }

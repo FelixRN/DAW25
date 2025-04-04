@@ -1,5 +1,5 @@
 -- Vemos los usuarios que hay en el sistema
--- select * from mysql.user;
+select * from mysql.user;
 
 -- Creamos un usuario nuevo, pero en este momento no tiene permisos para nada
 CREATE USER 'teresa'@'localhost' IDENTIFIED BY '1234';

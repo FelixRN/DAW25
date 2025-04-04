@@ -1771,6 +1771,7 @@ IEclipsePreferences#org-eclipse-jdt-ui {
 		'java_operator=216,216,216'
 		'java_single_line_comment=199,221,12'
 		'java_string=255,198,0'
+		'javadocElementsStyling.darkModeDefaultColors=true'
 		'matchingBracketsColor=244,245,246'
 		'pf_coloring_argument=141,203,226'
 		'pf_coloring_assignment=216,216,216'
@@ -2179,6 +2180,7 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.jdt.ui.typeVariableDeclarationHighlighting=247,173,123'
 		'org.eclipse.jface.REVISION_NEWEST_COLOR=185,124,52'
 		'org.eclipse.jface.REVISION_OLDEST_COLOR=25,29,31'
+		'org.eclipse.mylyn.tasks.ui.color.text.quoted=106,133,255'
 		'org.eclipse.mylyn.tasks.ui.colors.category.gradient.end=120,135,145'
 		'org.eclipse.mylyn.tasks.ui.colors.category.gradient.start=73,83,90'
 		'org.eclipse.mylyn.tasks.ui.colors.foreground.completed=110,124,135'
@@ -2197,6 +2199,7 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 		'org.eclipse.ui.editors.foregroundColor=255,255,255'
 		'org.eclipse.ui.editors.lineNumberRulerColor=120,135,145'
 		'org.eclipse.ui.editors.printMarginColor=62,70,76'
+		'org.eclipse.ui.editors.stickyLinesSeparatorColor=18,21,22'
 		'org.eclipse.ui.showkeys.backgroundColor=182,190,195'
 }
 IEclipsePreferences#org-eclipse-wst-css-ui {

@@ -33,4 +33,9 @@ public class Rol {
 	}
 	
 	
+	@Override
+	public String toString() {
+	    return id + " - " + occupation;
+	}
+	
 }

@@ -1,7 +1,0 @@
-package tests;
-
-public class UnitTesting {
-	public int square(intn) {
-		return*n;
-	}
-}

@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module JunitTesting {
-	requires junit;
-}

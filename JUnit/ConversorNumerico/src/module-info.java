@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ConversorNumerico {
+	requires junit;
+}

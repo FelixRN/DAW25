@@ -30,14 +30,14 @@ insert into rol (id, occupation) values
 
 insert into user (id, name, password) values 
 (1, 'Juan', 'a'),
-(2, 'Juan', 'b'),
-(3, 'Juan', 'c'),
-(4, 'Juan', 'd'),
-(5, 'Juan', 'e'),
-(6, 'Juan', 'f'),
-(7, 'Juan', 'g'),
-(8, 'Juan', 'h'),
-(9, 'Juan', 'i'),
-(10, 'Juan', 'j');
+(2, 'Adrian', 'b'),
+(3, 'Lucas', 'c'),
+(4, 'Carlos', 'd'),
+(5, 'Felix', 'e'),
+(6, 'Guty', 'f'),
+(7, 'Frank', 'g'),
+(8, 'Jorge', 'h'),
+(9, 'Mario', 'i'),
+(10, 'Tomy', 'j');
 
-select * from rol;
+select * from user;

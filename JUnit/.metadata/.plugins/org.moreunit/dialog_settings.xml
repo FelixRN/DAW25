@@ -6,4 +6,14 @@
 	<item key="NewTestCaseCreationWizardPage.USE_SETUPCLASS" value="false"/>
 	<item key="NewTestCaseCreationWizardPage.USE_TEARDOWNCLASS" value="false"/>
 	<item key="NewTestCaseCreationWizardPage.USE_CONSTRUCTOR" value="false"/>
+	<item key="org.moreunit.wizards.NewTestCaseWizard.packageFragmentRoot.ejemploDepuracion" value="=ejemploDepuracion/src"/>
+	<item key="org.moreunit.wizards.NewTestCaseWizard.packageFragmentRoot.ConversorNumerico" value="=ConversorNumerico/src"/>
+	<item key="org.moreunit.wizards.NewTestCaseWizard.packageFragmentRoot.Netflix" value="=Netflix/src"/>
+	<section name="NewTestCaseWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="250"/>
+		<item key="DIALOG_Y_ORIGIN" value="220"/>
+		<item key="DIALOG_WIDTH" value="526"/>
+		<item key="DIALOG_HEIGHT" value="582"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
 </section>
